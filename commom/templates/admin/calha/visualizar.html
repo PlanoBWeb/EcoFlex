@@ -1,0 +1,43 @@
+﻿{include file="admin/topo.html"}
+
+<!-- Conteúdo -->
+<form class="form-admin" name="frm_cadastro" method="POST" enctype="multipart/form-data" onSubmit="return checa()">
+        <p class="texto">VISUALIZAÇÃO DE CALHA</p>
+        
+        <label>*Código: <strong>{$dados[0].codigo}</strong></label>
+
+        <label>*Super Calha? <strong>
+            {if $dados[0].super}
+                Sim
+            {else}
+                Não
+            {/if}
+            </strong>
+        </label>
+        
+
+        <label>*Portas: <strong>{$dados[0].porta}</strong></label>
+        
+        <label>*Modelos:</label>
+        {section name=i loop=$dadosModelo}
+            <li>{$dadosModelo[i].titulo}</li>
+        {/section}
+
+        <label>*Descrição:</label>
+        <label><strong>{$dados[0].descricaoBR}</strong></label></br></br>
+            
+        {if $dados[0].caminhoImagem}
+            <img src="{$dados[0].caminhoImagem}" width="100" border="0"/>
+        {/if}
+
+        {if $dados[0].caminhoImagem2}
+            <img src="{$dados[0].caminhoImagem2}" width="100" border="0"/>
+        {/if}
+
+        </br></br>
+        <input name="voltar" type="button" class="botao" value="Próximo Registro" onClick="location.href='adm_calha.php';" /> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="voltar" type="button" class="botao" value="Editar esse Registro" onClick="location.href='adm_calha.php?acao=editar&id={$dados[0].id}';" />
+    </form>
+<!-- FIM Conteúdo -->
+
+{include file="admin/rodape.html"}

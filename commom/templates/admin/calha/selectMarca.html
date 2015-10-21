@@ -1,0 +1,19 @@
+﻿{include file="admin/topo.html"}
+
+<!-- Conteúdo -->
+    <form class="form-admin" name="frm_cadastro" method="POST" enctype="multipart/form-data" onSubmit="return checa()">
+        <p class="texto">CADASTRO DE CALHA - Seleção da Marca</p>
+        <input type="hidden" name="acao" value="cadastrar" />
+
+        <label>*Marca:</label>
+        <select name="idMarca">
+            {section name=i loop=$dadosMarca}
+                <option value="{$dadosMarca[i].id}" {if $dados[0].idMarca == $dadosMarca[i].id} selected="selected"{/if}>{$dadosMarca[i].titulo}</option>
+            {/section}
+        </select>
+
+        <input name="submit" type="submit" class="botao" value="Próxima etapa" />
+    </form>
+<!-- FIM Conteúdo -->
+
+{include file="admin/rodape.html"}

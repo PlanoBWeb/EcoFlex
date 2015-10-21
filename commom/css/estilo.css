@@ -1,0 +1,1316 @@
+@font-face{
+    font-family: 'Luna Kronik Light';
+    src: url('../../theme/fonts/LUNAKRONIKLIGHT.ttf'),
+    url('../../theme/fonts/LUNAKRONIKLIGHT.eot');
+}
+
+@font-face{
+    font-family: 'belta-regular';
+    src: url('../../theme/fonts/belta-regular.eot') format('embedded-opentype'),
+    url('../../theme/fonts/belta-regular.ttf');
+}
+
+
+@font-face{
+    font-family: 'DroidSans';
+    src: url('../fonts/DroidSans.eot') format('embedded-opentype'),
+    url('../fonts/DroidSans.ttf');
+}
+
+@font-face{
+    font-family: 'DroidSans-Bold';
+    src: url('../fonts/DroidSans-Bold.eot') format('embedded-opentype'),
+    url('../fonts/DroidSans-Bold.ttf');
+}
+
+
+/* Reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:  none !important;
+}
+
+a:hover{
+    color: inherit;
+}
+
+a:focus{
+    color: inherit;
+}
+
+.row{
+    margin: 0px;
+}
+
+/*
+*   Menu drop
+*/
+
+.menu > ul > li:hover > ul {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+
+.menu-drop-aparece{
+    display: none;
+    position: absolute;
+    height: auto;
+    padding-top: 21px;
+    margin-top: 15px;
+}
+
+.bloco-drop-down{
+    border: solid 1px #999;
+    border-top: transparent;
+    background: #fff;
+    z-index: 99999999999;
+    padding: 7px 5px 17px 0px;
+}
+
+.link-menu-drop{
+    color: #555;
+    font-family: 'Roboto-Regular';
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.link-menu-drop:hover{
+    color: #f8981d;
+    font-weight: bold;
+}
+
+.linha-menu-topo{
+    float: left;
+    margin-right: 5px;
+}
+
+.link-menu-topo{
+    color: #000;
+}
+
+      
+.faixa-index{
+    width: 100%;
+    max-width: 100%;
+    height: 61px;
+    background: #fff;
+    position: absolute; 
+    z-index: 999;
+    -webkit-box-shadow: 0px 4px 29px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 4px 29px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 4px 29px 0px rgba(50, 50, 50, 0.75);
+}
+
+.topo{
+    width: 1240px !important;
+    margin: auto !important;
+    display: table;
+    position: relative;
+    z-index: 999;
+}
+
+.logo{
+    width: 209px;
+    height: 91px;
+    background-image: url('../../theme/images/logo.jpg');
+    z-index: 20;
+    background-size: cover;
+    float: left;
+}
+
+.menu-topo{
+    position: relative;
+    float: left;
+    margin-left: 13px; 
+    margin-top: 25px;
+    z-index: 10;
+    width: 1000px;
+    display: block;
+}
+
+.txt-menu-mobile{
+    display: none;
+}
+
+.link-menu-topo{
+    font-family: 'Luna Kronik Light';
+    font-size: 19px;
+    color: #231f20;
+    float: left;
+    padding: 0px 13px 0px 0px !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+
+/**
+*   Default formulário
+*/
+
+.form-admin{
+    width: 700px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    display: table;
+}
+
+.form-admin label{
+    font-family: 'Luna Kronik Light';
+    font-size: 20px;
+    color: #231f20;
+    display: block;
+    margin-top: 15px;
+}
+
+.form-admin input[type="text"]{
+    width: 98%;
+    /*height: 20px;*/
+    padding: 10px 10px;
+    border: solid 1px #999;
+    color: #333;
+}
+
+
+.form-admin select{
+    width: 98%;
+    height: 35px;
+    padding: 0px 10px;
+    border: solid 1px #999;
+    color: #333;
+}
+
+.form-admin input[type="password"]{
+    width: 50%;
+    /*height: 20px;*/
+    padding: 10px 10px;
+    border: solid 1px #999;
+    color: #333;
+}
+
+
+.form-admin input[type="submit"]{
+    width: 20%;
+    height: 30px;
+    border: solid 1px #999;
+    color: #fff;
+    background: #999;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.form-admin input[type="file"]{
+    width: 100%;
+    height: 30px;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}
+
+.form-admin textarea{
+    width: 98%;
+    padding: 10px 10px;
+    min-height: 100px;
+    color: #000;
+    display: block;
+    margin-top: 20px;
+    font-family: 'Luna Kronik Light';
+    font-size: 17px;
+    color: #000;
+}
+
+.form-admin img{
+    width: 100px;
+    max-height: 200px;
+    padding: 15px 10px;
+    border: solid 1px #999;
+    color: #333;
+    max-width: 100px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.no-top{
+    margin-top: 0px;
+}
+
+.texto{
+    font-family: 'Luna Kronik Light';
+    font-size: 25px;
+    font-weight: bold;
+    color: #231f20;
+    display: block;
+    margin-top: 15px;
+}
+
+.ddd{
+    width: 15% !important;
+    margin-right: 3% !important;
+    float: left !important;
+}
+
+.telefone{
+    width: 80% !important;
+    float: left;
+}
+/**
+*   Default formulário
+*/
+
+/**
+*   Default tabela
+*/
+.tabela-mostra-dados{
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.tabela-mostra-dados tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.tabela-mostra-dados tr:hover{
+    background: #ddd;
+}
+
+.texto-consulta{
+    font-family: 'Luna Kronik Light';
+    font-size: 20px;
+    font-weight: normal;
+    color: #231f20;
+    /*display: block;*/
+    margin-top: 15px;
+}
+
+.no-hover{
+    background: transparent !important;
+}
+
+.no-hover:hover{
+    background: transparent !important;
+}
+
+.no-hover p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/**
+*   Default tabela
+*/
+
+/* ------------- Site ------------- */
+
+/* topo */
+.pd-none{
+    padding: 0px;
+}
+
+.navbar-brand{
+    display: none;
+}
+
+.navbar-collapse{
+    width: 100%;
+    margin: 0px !important;
+}
+
+.navbar-toggle{
+    margin-top: 28px;
+    background: #fff;
+}
+
+.navbar-toggle:focus, .navbar-toggle:hover{
+    background-color: #fff !important;
+}
+
+.encapsula-topo{
+    width: 100%;
+    max-width: 1088px;
+    height: auto;
+    display: table;
+    position: relative;
+    margin: auto;
+}
+
+.navbar-default{
+    background-color: #ffdd00;
+    border-color: transparent;
+    margin-bottom: 0px;
+}
+
+.link-menu{
+    font-family: DroidSans-Bold;
+    color: #404041 !important;
+    font-size: 0.8em;    
+}
+
+.link-menu-ativo{
+    color: #9f8b08 !important;    
+}
+
+.divisao-menu{
+    padding: 15px 0px;
+    color: #000;
+}
+
+.link-logo img{
+    max-width: 100%;
+    margin-top: -10px;
+    margin-left: 10%;
+}
+    
+.icon-contato-topo{
+    float: left;
+    margin-right: 5px;
+}
+
+.link-contato-topo{
+    float: left;
+    margin-top: 10px;
+    color: #555555;
+    font-size: 0.9em;
+}
+
+.linha-baixo-topo{
+    background: #404041;
+}
+
+.bloco-baixo-topo{
+    width: 100%;
+    max-width: 1088px;
+    margin: auto;
+    height: auto;
+    display: table;
+    position: relative;
+}
+
+.linha-menu-baixo-topo{
+    float: left;
+    margin-right: 10px;
+    padding: 20px 10px;
+}
+
+.link-baixo-topo{
+    font-family: DroidSans-Bold;
+    color: #fff !important;
+    font-size: 0.9em;
+}
+
+.linha-menu-baixo-topo-ativo{
+    background: #ffdd00;
+}
+
+.linha-menu-baixo-topo:hover{
+    background: #ffdd00;    
+}
+
+.linha-menu-baixo-topo:hover .link-baixo-topo{
+    color: #000 !important;
+}
+
+.linha-menu-baixo-topo-ativo a{
+    color: #000 !important;
+}
+
+.nav-linha-baixo-topo{
+    float: right;
+}
+
+.buscar{
+    width: 67px;
+    height: 34px;
+    margin-left: -7px;
+    background: url('../img/buscar.jpg');
+    border: #cacccc solid 1px;
+    border-left: 0px;
+    border-radius: 5px;
+}
+
+.busca{
+    width: 198px;
+    height: 34px;
+    float: left;
+    border: #cacccc solid 1px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.form-search{
+    width: 260px;
+    float: right;
+    margin-top: 10px;
+}
+
+.encapsula-contato-topo{
+    width: 560px;
+    float: right;
+}
+
+.search-mobile{
+    display: none;
+}
+
+.drop-down{
+    display: none;
+}
+
+.linha-menu-baixo-topo:hover .drop-down{
+    display: block;
+    position: absolute;
+    padding-top: 19px;
+    margin-left: -10px;
+    z-index: 99;
+}
+
+.encapsula-drop-down{
+    background: #404041;
+    opacity: 0.95;
+    padding: 10px;
+    padding-right: 40px;
+}
+
+.link-drop{
+    color: #fff;
+    font-family: DroidSans-Bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.link-drop:hover{
+    color: #ffdd00;
+}
+/* topo */
+
+/*
+* Banner
+*/
+.banner{
+    width: 100%;
+    height: auto;
+    /*min-height: 386px;*/
+    display: table;
+    position: relative;
+    background: #f4f3ee;
+}
+
+.bloco-desc-banner{
+    background-color: #282828;
+    opacity: 0.7;
+    padding: 18px 18px;
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    max-width: 460px;
+}
+
+.bloco-desc-banner h2{
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.bloco-desc-banner p{
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.2;
+    text-align: justify;
+    direction: ltr;
+}
+
+.linha-desc-banner{
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.banner-interna{
+    display: table;
+    margin: auto;
+    max-width: 100%;
+}
+
+.bloco-breadcrumb{
+    width: 100%;
+    height: auto;
+    display: table;
+    position: relative;
+    background: #f4f3ee;
+    padding: 10px 0px;
+    border-top: 1px solid #babcbb;
+    border-bottom: 1px solid #babcbb;
+}
+
+.breadcrumb{
+    margin-bottom: 0px;
+    background: #f4f3ee;   
+    padding: 8px 0px;
+}
+
+.breadcrumb>li+li:before{
+    color: #464646;
+}
+/*
+* Banner
+*/
+
+/*
+* Conteudo
+*/
+.conteudo{
+    width: 100%;
+    max-width: 1088px;
+    height: auto;
+    display: table;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.titulo-destaque-pag{
+    color: #404041;
+    font-family: 'DroidSans-Bold';
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.txt-destaque-pag{
+    color: #404041;
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ffdd00;
+    font-family: 'DroidSans';
+    display: table;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.produto-home{
+    padding: 7px 7px;
+    max-width: 276px;
+}
+
+.bloco-produtos-destaque{
+    margin-bottom: 40px;
+}
+
+.bloco-produto-home{
+    padding: 10px 10px;
+    background-color: #404041;
+}
+    
+.bloco-produto-home img{
+    margin: auto;
+    display: table;
+    max-width: 100%;
+}
+
+.txt-produto-home{
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+    font-family: 'DroidSans';
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.btn-default{
+    color: #404041;
+    font-size: 0.8em;
+    padding: 5px;
+    display: table;
+    margin: auto;
+    background-color: #ffdd00;
+    border: none;
+    border-radius: 2px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'DroidSans-Bold';
+}
+
+.btn-default img{
+    float: left;
+    margin-right: 5px;
+}
+
+.btn-default:hover{
+    background-color: #ffdd00;
+}
+
+.super-produto-home{
+    width: 137px;
+    height: 37px;
+    background: url('../img/bg-produto-home.png');
+    position: absolute;
+    left: 0px;
+}
+
+.txt-super-produto{
+    font-size: 0.9em;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: 'DroidSans-Bold';
+    padding-left: 30px;
+    padding-top: 8px;
+}
+
+.img-marca{
+    border: 1px solid #dfdede;
+    margin: 0px 5px 10px 5px;
+    float: left;    
+}
+
+.img-catalogo{
+    max-width: 110px;
+    height: auto;
+    float: left;
+    margin-right: 11px;
+}
+
+.txt-catalogo{
+    color: #404041;
+    font-size: 1em;
+    text-align: center;
+    font-family: 'DroidSans';
+}
+
+.btn-download{
+    padding-top: 10px;
+    font-size: 0.9em;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: 1px solid #ccc;
+}
+
+.btn-download img{
+    float: left;
+    margin-right: 9px;
+    margin-top: -8px;
+}
+
+.mg-bottom-txt{
+    margin-bottom: 15px;
+}
+
+.bloco-parceiro-catalogo{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.bloco-parceiro-catalogo div{
+    margin-bottom: 40px;
+    display: table;
+    position: relative;
+}
+
+.bloco-parceiro-catalogo div:last-child{
+    margin-bottom: 0px;
+}
+/*
+* Conteudo
+*/
+
+/*
+* Internas
+*/
+.img-banner-interna{
+    max-width: 1256px;
+    width: 100%;
+    margin: auto;
+    display: table;
+}
+
+.titulo-interna{
+    color: #fff;
+    font-family: 'DroidSans-Bold';
+    font-size: 1.8em;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -8.40%;
+    text-transform: uppercase;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.txt-interna{
+    color: #404041;
+    font-size: 0.8em;
+    text-align: left;
+    line-height: 1.4;
+    font-family: 'DroidSans';
+}
+
+.control-label{
+    font-family: 'DroidSans';
+    color: #404041;
+    font-size: 0.9em;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.btn-enviar{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+    
+.campo-msg{
+    min-height: 140px;
+}
+
+.bloco-contato-fale{
+    padding-top: 60px;
+}
+
+.bloco-contato-fale .titulo-rodape{
+    color: #404041;
+}
+
+.bloco-contato-fale .linha-rodape, .bloco-contato-fale .link-rodape{
+    color: #404041;   
+}
+
+.encapsula-contato-fale{
+    display: table;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.conteudo-interna iframe{
+    width: 100%;
+    max-width: 100%;
+    height: 284px;
+    margin-top: 63px;
+}
+
+.pd-top-30{
+    padding-top: 30px;
+}
+/*
+* Internas
+*/
+
+/*
+* Produto
+*/
+.menu-lateral-produto{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: table;
+}
+
+.linha-menu-produto:first-child{
+    border-top: 1px solid #c5c5c6;    
+}
+
+.linha-menu-produto{
+    /*list-style: none;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid #c5c5c6;
+    height: auto;
+    display: inline-block;
+    background: url('../img/icon-menu.png');
+    background-repeat: no-repeat;
+    background-position-Y: 50%;
+    background-position-x: 95%;*/
+    list-style: none;
+    /* padding: 5px; */
+    width: 100%;
+    /* border-bottom: 1px solid #c5c5c6; */
+    height: auto;
+    display: inline-block;
+    
+}
+
+.menu-produto-icon{
+    background: url('../img/icon-menu.png');
+    background-repeat: no-repeat;
+    background-position: 95% 10px;
+    /*
+    background-position-Y: 10px;
+    background-position-x: 95%;*/
+}
+
+.menu-produto-icon-ativo{
+    background: url('../img/icon-menu-ativo.png');
+    background-repeat: no-repeat;
+    background-position-Y: 10px;
+    background-position-x: 95%;
+}
+
+.link-menu-produto{
+    /*color: #404041;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'DroidSans-Bold';
+    font-size: 0.9em;*/
+    /*margin-top: 6px;
+    margin-left: 10px;
+    float: left;*/
+
+    /*display: block;
+    margin-top: 6px;
+    margin-left: 50px;*/
+    color: #404041;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'DroidSans-Bold';
+    font-size: 0.9em;
+    display: block;
+    margin-top: 6px;
+    padding-left: 50px;
+    padding-bottom: 7px;
+    padding-top: 5px;
+    border-bottom: 1px solid #c5c5c6;
+    width: 100%;
+}
+
+.img-marca-lateral{
+    /*float: left;
+    max-width: 35px;*/
+    float: left;
+    max-width: 35px;
+    position: absolute;
+    padding-top: 5px;
+}
+
+.submenu-produto-lateral{
+    display: none;
+    border-bottom: 1px solid #c5c5c6;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.linha-submenu-produto{
+    list-style: none;
+}
+
+.link-submenu-produto{
+    color: #404041;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'DroidSans-Bold';
+    font-size: 0.9em;
+    padding-left: 70px;
+}
+
+.link-submenu-produto:hover{
+    color: #b5a015;    
+}
+
+.link-submenu-produto-ativo{
+    color: #b5a015;    
+}
+
+.encapusla-produtos-interna{
+    padding-top: 30px;
+}
+
+.seta-pagin{
+    text-decoration: none;
+    color: #404041;
+    font-size: 1em;
+    font-family: 'DroidSans';
+}
+
+.bloco-paginacao{
+    padding-top: 50px;
+    display: table;
+    margin: auto;
+}
+
+.link-paginacao{
+    color: #404041;
+    text-decoration: none;
+    padding: 5px 7px;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 0.9em;
+    background-color: #ececec;
+    font-family: 'DroidSans-Bold';
+}
+
+.link-paginacao-ativo{
+    color: #0d8bb5;    
+}
+
+.produto-detalhe{
+    border: 1px solid #d2d0d0;
+    max-width: 322px;
+    padding: 10px;
+    float: left;
+}
+
+.produto-detalhe img{
+    max-width: 100%;
+    display: block;
+    margin: auto;    
+}
+
+.titulo-produto{
+    color: #404041;
+    font-family: 'DroidSans-Bold';
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.txt-detalhe-produto{
+    font-size: 0.9em;
+    color: #404041;   
+    padding-top: 4px;
+    font-family: 'DroidSans';
+    text-transform: uppercase;
+    margin-left: 48px;
+}
+
+.icon-desc-produto{
+    margin-right: 10px;
+}
+
+.bloco-desc-ind{
+    padding-bottom: 15px;
+    /*height: 60px;*/
+    min-height: 60px;
+}
+
+.encapsula-desc-produto{
+    padding-left: 20px;    
+}
+
+.icon-img-desc{
+    max-width: 50px;
+    margin-top: -13px;   
+}
+
+.bloco-orcamento-produto{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.linha-baixo-titulo{
+    width: 70%;
+    display: table;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffdd00;
+    margin-bottom: 20px;
+}
+/*
+* Produto
+*/
+
+/*
+* Rodape
+*/
+.rodape{
+    width: 100%;
+    height: auto;
+    display: table;
+    position: relative;
+    background: url('../img/bg-rodape.jpg');    
+}
+
+.bloco-rodape{
+    width: 100%;
+    max-width: 1088px;
+    height: auto;
+    display: table;
+    position: relative;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.titulo-rodape{
+    color: #ffdd00;
+    text-align: left;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-family: 'DroidSans-Bold';
+}
+
+.linha-rodape{
+    color: #fff;
+    text-align: left;
+    font-size: 0.9em;
+    list-style: none;
+    font-family: 'DroidSans'; 
+    line-height: 1.6;  
+}
+
+.link-rodape{
+    font-family: 'DroidSans'; 
+    text-decoration: none;
+    color: #fff     
+}
+
+iframe{
+    width: 100%;
+    max-width: 274px;
+    height: 146px;
+}
+
+.bloco-linha-dev{
+    width: 100%;
+    height: auto;
+    display: table;
+    position: relative;
+    background-color: #f4f3f3;
+}
+
+.encapsula-linha-dev{
+    width: 100%;
+    max-width: 1088px;
+    height: auto;
+    display: table;
+    margin: auto;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.txt-direitos{
+    color: #2c343a;
+    font-family: 'DroidSans'; 
+    text-align: left;
+    font-size: 0.8em;
+    padding-top: 16px;
+}
+/*
+* Rodape
+*/
+
+@media all and (max-width: 767px){
+    .navbar-brand{
+        display: block;
+        width: 70%;
+        height: 100px;
+    }
+
+    .navbar-brand img{
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .bloco-contato-topo{
+        /*position: absolute;*/
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        width: 100%;
+        height: auto;
+        display: table;
+        /*margin-left: -15px;*/
+        border-bottom: 2px solid #ccc;
+        border-top: 2px solid #ccc;
+    }
+
+    .bloco-tel-topo{
+        padding-bottom: 10px;
+    }
+
+    .encapsula-contato-topo {
+        width: 100%;
+        float: left;
+    }
+    
+    .banner{
+        display: none;
+    }
+
+    .link-contato-topo {
+        margin-top: 2px;
+        font-size: 1.4em;
+    }
+
+    .icon-contato-topo{
+        width: 25px;
+    }
+
+    .busca-mobile{
+        margin-top: 31px;
+        margin-right: 10px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .form-search{
+        width: 300px;
+        float: none;
+        margin: auto;
+    }
+
+    .busca {
+        width: 238px;
+    }
+    
+    .buscar{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .produto-home{
+        display: table;
+        margin: auto;
+        float: none;
+    }
+
+    .img-marca{
+        margin: auto;
+        margin-bottom: 5px;    
+        float: none;
+    }
+
+    .bloco-ind-rodape{
+        margin: auto;
+        display: table;
+        max-width: 300px;
+        float: none;
+        margin-bottom: 30px;
+    }
+
+    .txt-direitos{
+        text-align: center;
+    }
+
+    .titulo-interna {
+        color: #404041;
+        font-family: 'DroidSans-Bold';
+        font-size: 1.8em;
+        position: relative; 
+        text-align: center;
+        padding-bottom: 25px;
+        margin: auto;
+        margin-top: 8%;
+    }
+
+    .conteudo-interna iframe{
+        margin-top: 15px;
+    }
+
+    .bloco-produtos-interna{
+        padding-top: 30px;
+    }
+
+    .menu-lateral-produto{
+        display: none;
+    }
+
+    .menu-lateral-produto-mobile{
+        display: block;
+    }
+
+    .menu-lateral-produto-mobile select{
+        width: 100%;
+        height: 40px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media all and (min-width: 768px){
+    .bloco-tel-topo{
+        width: 160px;
+        padding-top: 60px;
+        /*float: left;*/
+        float: right;
+    }
+
+    .bloco-email-topo{
+        width: 230px;
+        padding-top: 60px;
+        /*float: left;*/
+        float: right;
+    }
+
+    .bloco-local-topo{
+        width: 170px;
+        padding-top: 60px;
+        float: left;
+    }
+    
+    .bloco-contato-topo{
+        /*position: absolute;
+        width: 100%;*/
+        width: 100%;
+        max-width: 1088px;
+        min-height: 110px;
+        margin: auto;
+        display: table;
+        height: auto;
+    }
+
+    .busca-mobile{
+        display: none !important;
+    }
+
+    .menu-lateral-produto-mobile{
+        display: none;
+    }
+    
+}

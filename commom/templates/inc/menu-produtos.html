@@ -1,0 +1,35 @@
+<!-- Desktop -->
+<ul class="menu-lateral-produto">
+    <li class="linha-menu-produto">
+        <ul>
+            {assign var="nmTipo" value=$nmTipo|default:""}
+            {section name=i loop=$menuLateral}
+                {if $nmTipo <> $menuLateral[i].marca}
+                    </ul>
+                </li>
+                <li class="linha-menu-produto menu-produto-icon">
+                        <img class="img-marca-lateral" src="commom/img/marca-menu-lateral.jpg" alt="audi" title="audi">
+                        <a class="link-menu-produto" href="javascript: void(0)">{$menuLateral[i].marca}</a>
+                    <ul class="submenu-produto-lateral">
+                    {/if}
+                    <li class="linha-submenu-produto">
+                        <a class="link-submenu-produto" href="calhas.php?idMod={$menuLateral[i].idModelo}">{$menuLateral[i].modelo}</a>
+                    </li>
+            {assign var="nmTipo" value=$menuLateral[i].marca}
+            {/section}
+        </ul>
+    </li>
+</ul>
+<!-- Desktop -->
+
+<!-- Mobile -->
+<div class="menu-lateral-produto-mobile">
+    <h2 class="titulo-destaque-pag pull-left">Marcas</h2>
+    <select name="">
+        <option>Selecione uma marca</option>
+        {section name=i loop=$marca}
+            <option>Audi</option>
+        {/section}
+    </select>
+</div>
+<!-- Mobile -->

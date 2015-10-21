@@ -1,0 +1,45 @@
+﻿{include file="admin/topo.html"}
+
+{literal}
+<script>
+
+	function checa()
+	{
+		frm = document.frm_cadastro;
+		
+		if(trim(frm.titulo.value) == "")
+		{
+			alert("Preencha o campo Título!");
+			frm.titulo.focus();
+			return false;
+		}
+				
+		return true;
+	}
+
+</script>
+{/literal}
+
+<!-- Conteúdo -->
+    <form class="form-admin" name="frm_cadastro" method="POST" enctype="multipart/form-data" onSubmit="return checa()">
+        <input type="hidden" name="acao" value="gravar" />
+        <input type="hidden" name="id" value="{$dados[0].id}" />
+
+        <p class="texto">CADASTRO DE MODELO</p>
+
+        <label>*Título:</label>
+        <input type="text" name="titulo" size="50" value="{$dados[0].titulo}" class="formu" />
+
+        <label>*Marca:</label>
+        <select name="idMarca">
+        	{section name=i loop=$dadosMarca}
+        		<option value="{$dadosMarca[i].id}" {if $dados[0].idMarca == $dadosMarca[i].id} selected="selected"{/if}>{$dadosMarca[i].titulo}</option>
+        	{/section}
+        </select>
+
+        <input name="submit" type="submit" class="botao" value="{$botao}" />
+        <label class="no-top">* Campos obrigatórios.</label>
+    </form>
+<!-- FIM Conteúdo -->
+
+{include file="admin/rodape.html"}

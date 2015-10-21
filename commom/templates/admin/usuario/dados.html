@@ -1,0 +1,90 @@
+﻿{include file="admin/topo.html"}
+
+{literal}
+<script>
+
+	function checa()
+	{
+		frm = document.frm_cadastro;
+		msg = "Preencha o campo ";
+		
+		if(frm.perfil.value != 'M' && frm.perfil.value != 'C')
+		{
+			alert("Selecione o perfil!");
+			frm.perfil.focus();
+			return false;
+		}
+		
+		if(trim(frm.nome.value) == "")
+		{
+			alert(msg + "Nome!");
+			frm.nome.focus();
+			return false;
+		}
+		
+		if(trim(frm.email.value) == "")
+		{
+			alert(msg + "E-mail!");
+			frm.email.focus();
+			return false;
+		}
+		
+		if(!email(frm.email, 'E-mail inválido!'))
+			return false;
+		
+		if(trim(frm.senha.value) == "")
+		{
+			alert(msg + "Senha!");
+			frm.senha.focus();
+			return false;
+		}
+		
+		if(trim(frm.senha2.value) == "")
+		{
+			alert(msg + "Repetir Senha!");
+			frm.senha2.focus();
+			return false;
+		}
+		
+		if(trim(frm.senha.value) != trim(frm.senha2.value))
+		{
+			alert("As senhas estão diferentes!");
+			return false;
+		}
+		
+		return true;
+	}
+
+</script>
+{/literal}
+
+<!-- Conteúdo -->
+    <form class="form-admin" name="frm_cadastro" onsubmit="return checa()" method="POST">
+    	<p class="texto">CADASTRO DE USUÁRIOS DO SISTEMA</p>
+	    <input type="hidden" name="acao" value="gravar" />
+	    <input type="hidden" name="id" value="{$dados[0].usu_id}" />
+
+	    <label>*Pefil:</label>
+        <select name="perfil" class="formu">
+            <option value="M" {if $dados[0].usu_perfil == "M"}selected="selected"{/if}>Master</option>
+            <option value="C" {if $dados[0].usu_perfil == "C"}selected="selected"{/if}>Colaborador</option>
+        </select>
+
+	    <label>*Nome do usuário:</label>
+	    <input type="text" name="nome" class="formu" size="50" value="{$dados[0].usu_nome}" />
+	    
+	    <label>*E-mail do usuário:</label>
+	    <input type="text" name="email" class="formu" size="50" value="{$dados[0].usu_email}" />
+	    
+	    <label>*Senha:</label>
+	    <input type="password" name="senha" class="formu" size="30" value="{$dados[0].usu_senha}" />
+	    
+	    <label>*Repetir Senha:</label>
+	    <input type="password" name="senha2" class="formu" size="30" value="{$dados[0].usu_senha}" />
+	    
+		<input name="submit" type="submit" class="botao" value="{$botao}" /><br>
+	    <label class="no-top">* Campos obrigatórios.</label>
+    </form>
+<!-- FIM Conteúdo -->
+
+{include file="admin/rodape.html"}

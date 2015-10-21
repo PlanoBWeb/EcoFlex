@@ -1,0 +1,99 @@
+<header>
+	<nav class="navbar navbar-default">
+		<div class="encapsula-topo">
+	        <div class="container-fluid">
+	            <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <img class="busca-mobile" src="commom/img/lupa.png" alt="busca" title="busca">
+		            <a class="navbar-brand" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
+	            </div>
+	            <div class="col-xs-12 search-mobile">
+			    	<form class="form-search" action="" method="post" name="search">
+			    		<input class="busca" type="search" name="busca" placeholder="Pesquisar...">
+			    		<input class="buscar" type="submit" value="">
+			    	</form>
+			    </div>
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	             	<ul class="nav navbar-nav">
+		                <li class="linha-menu"><a class="link-menu {if $pagina == 'index.php'} link-menu-ativo {/if}" href="index.php">Home</a></li>
+		                <li class="divisao-menu hidden-xs">|</li>
+		                <li class="linha-menu"><a class="link-menu {if $pagina == 'quem-somos.php'} link-menu-ativo {/if}" href="quem-somos.php">Quem somos</a></li>
+		                <li class="divisao-menu hidden-xs">|</li>
+		                <li class="linha-menu"><a class="link-menu {if $pagina == 'localizacao.php'} link-menu-ativo {/if}" href="localizacao.php">Localização</a></li>
+		                <li class="divisao-menu hidden-xs">|</li>
+		                <li class="linha-menu"><a class="link-menu {if $pagina == 'fale-conosco.php'} link-menu-ativo {/if}" href="fale-conosco.php">Fale Conosco</a></li>  
+		                <li class="linha-menu visible-xs-block {if $pagina == 'calhas.php'} link-menu-ativo {/if}"><a class="link-menu" href="calhas.php">Calhas Automotivas</a></li>  
+		                <li class="linha-menu visible-xs-block dropdown">
+		                	<a class="link-menu dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Marcas</a>
+			                <ul class="dropdown-menu">
+			                	{assign var="nmTipo" value=$nmTipo|default:""}
+			                	{section name=i loop=$menuLateral}
+			                		{if $nmTipo <> $menuLateral[i].marca}
+			                    		<li><a class="link-menu" href="#">{$menuLateral[i].marca}</a></li>
+			                    	{/if}
+									{assign var="nmTipo" value=$menuLateral[i].marca}
+			                    {/section}
+			                </ul>
+		                </li>  
+		                <li class="linha-menu visible-xs-block"><a class="link-menu {if $pagina == 'onde-comprar.php'} link-menu-ativo {/if}" href="#">Onde comprar</a></li>
+	              	</ul>
+	            </div>
+	        </div>
+	    </div>
+	</nav>
+	<div class="bloco-contato-topo">
+    	<div class="col-sm-3 col-md-5">
+			<a class="link-logo hidden-xs" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
+    	</div>
+		<div class="encapsula-contato-topo pd-none">
+	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-tel-topo pd-none">
+				<img class="icon-contato-topo" src="commom/img/icon-tel.png" alt="Icone telefone" title="Icone telefone">
+				<a href="tel:11988643325" class="link-contato-topo" alt="" title="">11  0000-0000</a>
+	    	</div> 
+	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-email-topo pd-none">
+				<img class="icon-contato-topo" src="commom/img/icon-email.png" alt="Icone telefone" title="Icone telefone">
+				<a href="mailto:contato@ecoflex.com.br" class="link-contato-topo" alt="contato@ecoflex.com.br" title="contato@ecoflex.com.br">contato@ecoflex.com.br</a>
+	    	</div>
+	    	<!-- <div class="col-xs-12 col-sm-2 col-md-2 bloco-local-topo pd-none hidden-xs">
+	    		<img class="icon-contato-topo" src="commom/img/icon-local.png" alt="Icone telefone" title="Icone telefone">
+				<a href="" class="link-contato-topo" alt="Onde comprar" title="Onde comprar">Onde comprar</a>
+	    	</div> -->
+	    </div>
+    </div>
+    <div class="linha-baixo-topo hidden-xs">
+	    <div class="bloco-baixo-topo">
+	    	<div class="col-xs-12 col-sm-6 col-md-6 pd-none">
+		    	<nav class="nav-linha-baixo-topo">
+		    		<ul>
+		    			<li class="linha-menu-baixo-topo {if $pagina == 'calhas.php'} linha-menu-baixo-topo-ativo {/if}"><a class="link-baixo-topo" href="calhas.php">CALHAS AUTOMOTIVAS</a></li>
+		    			<li class="linha-menu-baixo-topo">
+		    				<a class="link-baixo-topo" href="">MARCAS</a>
+		    				<ul class="drop-down">
+		    					<div class="encapsula-drop-down">
+		    						{assign var="nmTipo" value=$nmTipo|default:""}
+									{section name=i loop=$menuLateral}
+										{if $nmTipo <> $menuLateral[i].marca}
+											<li class="linha-drop"><a class="link-drop" href="calhas.php?idMarca={$menuLateral[i].idMarca}">{$menuLateral[i].marca}</a></li>
+										{/if}
+										{assign var="nmTipo" value=$menuLateral[i].marca}
+									{/section}
+			    				</div>
+		    				</ul>
+		    			</li>
+		    		</ul>
+		    	</nav>
+		    </div>
+		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
+		    	<form class="form-search" action="calhas.php" method="post" name="search">
+		    		<input class="busca" type="search" name="busca" placeholder="Pesquisar...">
+		    		<input class="buscar" type="submit" value="">
+		    	</form>
+		    </div>
+	    </div>
+	</div>
+</header>
