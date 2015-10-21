@@ -1,10 +1,10 @@
-<?php /* Smarty version 2.6.12, created on 2015-09-26 11:20:20
+<?php /* Smarty version 2.6.12, created on 2015-10-21 15:20:01
          compiled from mensagem.html */ ?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CHAMEX</title>
+<title>EcoFlex</title>
 
 <link rel="stylesheet" href="base.css" type="text/css">
 </head>

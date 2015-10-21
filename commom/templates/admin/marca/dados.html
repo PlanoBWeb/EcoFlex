@@ -24,11 +24,19 @@
     <form class="form-admin" name="frm_cadastro" method="POST" enctype="multipart/form-data" onSubmit="return checa()">
         <input type="hidden" name="acao" value="gravar" />
         <input type="hidden" name="id" value="{$dados[0].id}" />
+        <input type="hidden" name="caminhoImagem" value="{$dados[0].caminhoImagem}" />
+		<input type="hidden" name="extencoeValidas" value="jpg|jpeg|gif|png">
 
         <p class="texto">CADASTRO DE MARCA</p>
 
         <label>*Título:</label>
         <input type="text" name="titulo" size="50" value="{$dados[0].titulo}" class="formu" />
+
+        <label>Imagem Icone:</label>
+        <input type="file" name="arquivo" value="{$dados[0].caminhoImagem}" size="50"/>
+        {if $dados[0].caminhoImagem}
+            <img src="{$dados[0].caminhoImagem}" width="100" border="0"/>
+        {/if}
 
         <input name="submit" type="submit" class="botao" value="{$botao}" />
         <label class="no-top">* Campos obrigatórios.</label>

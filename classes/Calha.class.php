@@ -677,7 +677,7 @@ class Calha
 		while( $rows = mysql_fetch_array($result) )
 		{
 			$dados[$i] 					= $rows;
-			$dados[$i]['descricao'] 	= $rows['descricao'];
+			$dados[$i]['descricao'] 	= utf8_encode($rows['descricao']);
 			$dados[$i]['tituloMarca'] 	= utf8_encode($rows['tituloMarca']);
 			$dados[$i]['nmModelo'] 		= utf8_encode($rows['nmModelo']);
 

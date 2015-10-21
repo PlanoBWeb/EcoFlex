@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-09-26 11:40:27
+<?php /* Smarty version 2.6.12, created on 2015-10-21 17:42:52
          compiled from admin/marca/dados.html */ ?>
 ﻿<?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "admin/topo.html", 'smarty_include_vars' => array()));
@@ -32,12 +32,23 @@ unset($_smarty_tpl_vars);
         <input type="hidden" name="acao" value="gravar" />
         <input type="hidden" name="id" value="<?php echo $this->_tpl_vars['dados'][0]['id']; ?>
 " />
+        <input type="hidden" name="caminhoImagem" value="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+" />
+		<input type="hidden" name="extencoeValidas" value="jpg|jpeg|gif|png">
 
         <p class="texto">CADASTRO DE MARCA</p>
 
         <label>*Título:</label>
         <input type="text" name="titulo" size="50" value="<?php echo $this->_tpl_vars['dados'][0]['titulo']; ?>
 " class="formu" />
+
+        <label>Imagem Icone:</label>
+        <input type="file" name="arquivo" value="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+" size="50"/>
+        <?php if ($this->_tpl_vars['dados'][0]['caminhoImagem']): ?>
+            <img src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+" width="100" border="0"/>
+        <?php endif; ?>
 
         <input name="submit" type="submit" class="botao" value="<?php echo $this->_tpl_vars['botao']; ?>
 " />
