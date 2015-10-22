@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-21 15:27:26
+<?php /* Smarty version 2.6.12, created on 2015-10-22 15:09:00
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -43,12 +43,12 @@ unset($_smarty_tpl_vars);
                 
                     <!-- <h2 class="titulo-destaque-pag">Não existe resultados para: "<?php echo $this->_tpl_vars['postBusca']; ?>
 "</h2> -->
-
-                    <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.</p>
-                    <p class="txt-interna">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-                    
-                    <div class="row encapusla-produtos-interna">
-                        <?php unset($this->_sections['i']);
+                    <?php if ($this->_tpl_vars['dados']): ?>
+                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.</p>
+                        <p class="txt-interna">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+                        
+                        <div class="row encapusla-produtos-interna">
+                            <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';
 $this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['i']['show'] = true;
@@ -72,41 +72,40 @@ $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_s
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?>
-                            <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                                <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['super'] == 1): ?>
-                                    <div class="super-produto-home">
-                                        <p class="txt-super-produto">Super Calha</p>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="bloco-produto-home">
-                                    <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']): ?>
-                                        <img src="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+                                <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
+                                    <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['super'] == 1): ?>
+                                        <div class="super-produto-home">
+                                            <p class="txt-super-produto">Super Calha</p>
+                                        </div>
+                                    <?php endif; ?>
+                                    <div class="bloco-produto-home">
+                                        <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']): ?>
+                                            <img src="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
-                                    <?php else: ?>
-                                        <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
+                                        <?php else: ?>
+                                            <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
-                                    <?php endif; ?>
-                                    <p class="txt-produto-home"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
+                                        <?php endif; ?>
+                                        <p class="txt-produto-home"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
-                                    <a href="calha.php?id=<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['id']; ?>
+                                        <a href="calha.php?id=<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['id']; ?>
 " class="btn-default" alt="Saiba mais sobre <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 " title="Saiba mais <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
-                                        <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                        saiba mais
-                                    </a>
+                                            <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                            saiba mais
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        <?php endfor; endif; ?>
-                        
-                    </div>
-                    <div class="bloco-paginacao">
-                        <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
-                            <a href="calhas.php" class="seta-pagin pull-left"> << </a>
-                            <?php unset($this->_sections['j']);
+                            <?php endfor; endif; ?>
+                        </div>
+                        <div class="bloco-paginacao">
+                            <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
+                                <a href="calhas.php" class="seta-pagin pull-left"> << </a>
+                                <?php unset($this->_sections['j']);
 $this->_sections['j']['start'] = (int)1;
 $this->_sections['j']['name'] = 'j';
 $this->_sections['j']['loop'] = is_array($_loop=$this->_tpl_vars['Numpaginas']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -134,20 +133,29 @@ $this->_sections['j']['index_next'] = $this->_sections['j']['index'] + $this->_s
 $this->_sections['j']['first']      = ($this->_sections['j']['iteration'] == 1);
 $this->_sections['j']['last']       = ($this->_sections['j']['iteration'] == $this->_sections['j']['total']);
 ?>
-                                <?php if ($this->_tpl_vars['idMarca']): ?>
-                                    <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+                                    <?php if ($this->_tpl_vars['idMarca']): ?>
+                                        <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
 &idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
 "><?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
 </a>
-                                <?php else: ?>
-                                    <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+                                    <?php elseif ($this->_tpl_vars['postBusca']): ?>
+                                        <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+&busca=<?php echo $this->_tpl_vars['postBusca']; ?>
 "><?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
 </a>
-                                <?php endif; ?>
-                            <?php endfor; endif; ?>
-                            <a href="calhas.php" class="seta-pagin pull-right">  >> </a>
-                        <?php endif; ?>
-                    </div>
+                                    <?php else: ?>
+                                        <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+"><?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+</a>
+                                    <?php endif; ?>
+                                <?php endfor; endif; ?>
+                                <a href="calhas.php" class="seta-pagin pull-right">  >> </a>
+                            <?php endif; ?>
+                        </div>
+                    <?php else: ?>
+                        <h1 class="titulo-destaque-pag align-left">Nenhum resultado encontrado por "<?php echo $this->_tpl_vars['postBusca']; ?>
+"</h1>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>

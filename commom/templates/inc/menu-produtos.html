@@ -8,7 +8,7 @@
                     </ul>
                 </li>
                 <li class="linha-menu-produto menu-produto-icon">
-                        <img class="img-marca-lateral" src="commom/img/marca-menu-lateral.jpg" alt="audi" title="audi">
+                        <img class="img-marca-lateral" src="{$menuLateral[i].caminhoImagem}" alt="{$menuLateral[i].marca}" title="{$menuLateral[i].marca}">
                         <a class="link-menu-produto" href="javascript: void(0)">{$menuLateral[i].marca}</a>
                     <ul class="submenu-produto-lateral">
                     {/if}
@@ -24,11 +24,16 @@
 
 <!-- Mobile -->
 <div class="menu-lateral-produto-mobile">
-    <h2 class="titulo-destaque-pag pull-left">Marcas</h2>
-    <select name="">
-        <option>Selecione uma marca</option>
-        {section name=i loop=$marca}
-            <option>Audi</option>
+    <h2 class="titulo-destaque-pag pull-left">Marcas/Modelo</h2>
+    <select class="mod-mobile" name="mod-mobile">
+        <option>Selecione um modelo</option>
+        {assign var="nmTipo" value=$nmTipo|default:""}
+        {section name=i loop=$menuLateral}
+            {if $nmTipo <> $menuLateral[i].marca}
+                <option class="marca-mob" name="marca-mob" {if $idMarca == $menuLateral[i].idMarca} selected {/if} value="_m{$menuLateral[i].idMarca}">{$menuLateral[i].marca}</option>
+            {/if}
+            <option class="select-modelo-mob" {if $idMod == $menuLateral[i].idModelo} selected {/if} value="{$menuLateral[i].idModelo}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$menuLateral[i].modelo}</option>
+            {assign var="nmTipo" value=$menuLateral[i].marca}
         {/section}
     </select>
 </div>

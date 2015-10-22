@@ -118,6 +118,22 @@
                 
                 d.submit();
             }
+
+            $('.mod-mobile').change(function(){
+                var modeloMob = $('.mod-mobile').val();
+                var retornoExiste = modeloMob.indexOf('_m');
+
+                if (modeloMob == "Selecione um modelo"){
+                    alert('Selecione um modelo');
+                }else{
+                    if(retornoExiste == 0){
+                        var modeloMob = modeloMob.replace('_m', '');
+                        window.location.href = "calhas.php?idMarca="+modeloMob;
+                    }else{
+                        window.location.href = "calhas.php?idMod="+modeloMob;    
+                    }
+                }
+            });
         </script>
     {/literal}
 </body>

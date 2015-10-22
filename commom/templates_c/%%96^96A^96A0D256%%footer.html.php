@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-19 13:52:44
+<?php /* Smarty version 2.6.12, created on 2015-10-22 16:39:21
          compiled from inc/footer.html */ ?>
 		<footer class="rodape">
 			<article class="bloco-rodape">
@@ -120,6 +120,22 @@
                 
                 d.submit();
             }
+
+            $(\'.mod-mobile\').change(function(){
+                var modeloMob = $(\'.mod-mobile\').val();
+                var retornoExiste = modeloMob.indexOf(\'_m\');
+
+                if (modeloMob == "Selecione um modelo"){
+                    alert(\'Selecione um modelo\');
+                }else{
+                    if(retornoExiste == 0){
+                        var modeloMob = modeloMob.replace(\'_m\', \'\');
+                        window.location.href = "calhas.php?idMarca="+modeloMob;
+                    }else{
+                        window.location.href = "calhas.php?idMod="+modeloMob;    
+                    }
+                }
+            });
         </script>
     '; ?>
 

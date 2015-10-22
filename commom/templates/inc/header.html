@@ -13,8 +13,8 @@
 		            <a class="navbar-brand" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
 	            </div>
 	            <div class="col-xs-12 search-mobile">
-			    	<form class="form-search" action="" method="post" name="search">
-			    		<input class="busca" type="search" name="busca" placeholder="Pesquisar...">
+			    	<form class="form-search" action="" method="get" name="search">
+			    		<input class="busca" type="search" name="busca" value="{$postBusca}" placeholder="Pesquisar...">
 			    		<input class="buscar" type="submit" value="">
 			    	</form>
 			    </div>
@@ -28,7 +28,7 @@
 		                <li class="divisao-menu hidden-xs">|</li>
 		                <li class="linha-menu"><a class="link-menu {if $pagina == 'fale-conosco.php'} link-menu-ativo {/if}" href="fale-conosco.php">Fale Conosco</a></li>  
 		                <li class="linha-menu visible-xs-block {if $pagina == 'calhas.php'} link-menu-ativo {/if}"><a class="link-menu" href="calhas.php">Calhas Automotivas</a></li>  
-		                <li class="linha-menu visible-xs-block dropdown">
+		                <!-- <li class="linha-menu visible-xs-block dropdown">
 		                	<a class="link-menu dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Marcas</a>
 			                <ul class="dropdown-menu">
 			                	{assign var="nmTipo" value=$nmTipo|default:""}
@@ -39,7 +39,7 @@
 									{assign var="nmTipo" value=$menuLateral[i].marca}
 			                    {/section}
 			                </ul>
-		                </li>  
+		                </li>   -->
 		                <li class="linha-menu visible-xs-block"><a class="link-menu {if $pagina == 'onde-comprar.php'} link-menu-ativo {/if}" href="#">Onde comprar</a></li>
 	              	</ul>
 	            </div>
@@ -89,8 +89,8 @@
 		    	</nav>
 		    </div>
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-		    	<form class="form-search" action="calhas.php" method="post" name="search">
-		    		<input class="busca" type="search" name="busca" placeholder="Pesquisar...">
+		    	<form class="form-search" action="calhas.php" method="get" name="search">
+		    		<input class="busca" type="search" name="busca" value="{$postBusca}" placeholder="Pesquisar...">
 		    		<input class="buscar" type="submit" value="">
 		    	</form>
 		    </div>

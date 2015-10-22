@@ -56,7 +56,29 @@
                 <p class="txt-destaque-pag">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
             </div>
             <article class="row bloco-produtos-destaque">
-                <div class="col-xs-12 col-sm-3 col-md-3 produto-home">
+                {section name=i loop=$RetornoDestaque max=4}                     
+                    <div class="col-xs-12 col-sm-3 col-md-3 produto-home">
+                        {if $RetornoDestaque[i].super == 1}
+                            <div class="super-produto-home">
+                                <p class="txt-super-produto">Super Calha</p>
+                            </div>
+                        {/if}
+                        <div class="bloco-produto-home">
+                            {if $RetornoDestaque[i].caminhoImagem}
+                                <img src="{$RetornoDestaque[i].caminhoImagem}" title="{$RetornoDestaque[i].descricao}" alt="{$RetornoDestaque[i].descricao}">
+                            {else}
+                                <img src="commom/img/sem-foto.jpg" title="{$RetornoDestaque[i].descricao}" alt="{$RetornoDestaque[i].descricao}">
+                            {/if}
+                            <p class="txt-produto-home">{$RetornoDestaque[i].descricao}</p>
+                            <a href="calha.php?id={$RetornoDestaque[i].id}" class="btn-default" alt="Saiba mais sobre {$RetornoDestaque[i].descricao}" title="Saiba mais sobre {$RetornoDestaque[i].descricao}">
+                                <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                saiba mais
+                            </a>
+                        </div>
+                    </div>
+                {/section}
+
+                <!-- <div class="col-xs-12 col-sm-3 col-md-3 produto-home">
                     <div class="super-produto-home">
                         <p class="txt-super-produto">Super Calha</p>        
                     </div>
@@ -101,7 +123,7 @@
                             saiba mais
                         </a>
                     </div>
-                </div>
+                </div> -->
             </article>
             <div class="row">
                 <h2 class="titulo-destaque-pag">trabalhamos com as Marcas</h2>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-21 15:26:47
+<?php /* Smarty version 2.6.12, created on 2015-10-22 15:11:40
          compiled from inc/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 34, false),)), $this); ?>
@@ -17,8 +17,9 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
 		            <a class="navbar-brand" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
 	            </div>
 	            <div class="col-xs-12 search-mobile">
-			    	<form class="form-search" action="" method="post" name="search">
-			    		<input class="busca" type="search" name="busca" placeholder="Pesquisar...">
+			    	<form class="form-search" action="" method="get" name="search">
+			    		<input class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+" placeholder="Pesquisar...">
 			    		<input class="buscar" type="submit" value="">
 			    	</form>
 			    </div>
@@ -32,7 +33,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
 		                <li class="divisao-menu hidden-xs">|</li>
 		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'fale-conosco.php'): ?> link-menu-ativo <?php endif; ?>" href="fale-conosco.php">Fale Conosco</a></li>  
 		                <li class="linha-menu visible-xs-block <?php if ($this->_tpl_vars['pagina'] == 'calhas.php'): ?> link-menu-ativo <?php endif; ?>"><a class="link-menu" href="calhas.php">Calhas Automotivas</a></li>  
-		                <li class="linha-menu visible-xs-block dropdown">
+		                <!-- <li class="linha-menu visible-xs-block dropdown">
 		                	<a class="link-menu dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Marcas</a>
 			                <ul class="dropdown-menu">
 			                	<?php $this->assign('nmTipo', ((is_array($_tmp=@$this->_tpl_vars['nmTipo'])) ? $this->_run_mod_handler('default', true, $_tmp, "") : smarty_modifier_default($_tmp, ""))); ?>
@@ -67,7 +68,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 									<?php $this->assign('nmTipo', $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']); ?>
 			                    <?php endfor; endif; ?>
 			                </ul>
-		                </li>  
+		                </li>   -->
 		                <li class="linha-menu visible-xs-block"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'onde-comprar.php'): ?> link-menu-ativo <?php endif; ?>" href="#">Onde comprar</a></li>
 	              	</ul>
 	            </div>
@@ -142,8 +143,9 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 		    	</nav>
 		    </div>
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-		    	<form class="form-search" action="calhas.php" method="post" name="search">
-		    		<input class="busca" type="search" name="busca" placeholder="Pesquisar...">
+		    	<form class="form-search" action="calhas.php" method="get" name="search">
+		    		<input class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+" placeholder="Pesquisar...">
 		    		<input class="buscar" type="submit" value="">
 		    	</form>
 		    </div>

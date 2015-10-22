@@ -4,7 +4,7 @@
 	include_once "url.php";
 	include_once "classes/Calha.class.php";
 	$class 			= new Calha();
-	$paginaRetorno = "calhas";
+	$paginaRetorno  = "calhas";
 	$smarty->assign("titulo", utf8_encode(TITULO));
 	$smarty->assign("nome", $_SESSION['nome']);
 	$smarty->assign("pagina", $pagina);
@@ -20,13 +20,20 @@
 	}
 	// Traz os modelos para o menu lateral
 
+	// Busca
+	// if($_POST['busca']){
+	// 	$parametro['busca'] = $_POST['busca'];
+	// 	$smarty->assign("postBusca", $parametro['busca']);
+	// }
+	// Busca
+
 	$totalPorPagina = 6;
 	$_GET['p'] = (!$_GET['p'] ? 1 : $_GET['p']);
 	//  Fim Paginação
 
 	if($parametro = $_GET['idMod']){
 		$retornoPag = $class->PesquisarCalhasModelo($parametro, null, null);
-		$retorno = $class->PesquisarCalhasModelo($parametro, $totalPorPagina, $_GET['p']);
+		$retorno 	= $class->PesquisarCalhasModelo($parametro, $totalPorPagina, $_GET['p']);
 		if( $retorno[0] )
 		{
 			$smarty->assign("mensagem", $retorno[1]);
@@ -35,11 +42,12 @@
 			exit();
 		}
 	}else{
-		$parametro['idMarca'] = $_GET['idMarca'];
+		$parametro['idMarca'] 	= $_GET['idMarca'];
+		$parametro['busca'] 	= $_GET['busca'];
 
-		if($parametro['idMarca']){
+		if($parametro['idMarca'] || $_GET['busca']){
 			$retornoPag = $class->Pesquisar($parametro, null, null);	
-			$retorno = $class->Pesquisar($parametro, $totalPorPagina, $_GET['p']);	
+			$retorno 	= $class->Pesquisar($parametro, $totalPorPagina, $_GET['p']);
 		}else{
 			$PaginaSemFiltro = array();
 			for ($i=0; $i < 60; $i++) { 
@@ -66,7 +74,8 @@
 	for($j=0; $j <= $totalPaginas; $j++) { 
 		$Numpaginas[$j] = $j;
 	}
-	
+
+	$smarty->assign("postBusca", $_GET['busca']);
 	$smarty->assign("idMod", $_GET['idMod']);
 	$smarty->assign("idMarca", $_GET['idMarca']);
 	$smarty->assign("Numpaginas", $Numpaginas);
@@ -75,11 +84,4 @@
 	$smarty->assign("dados", $retorno[1]);
 	$smarty->display($paginaRetorno.'.html');
 	exit;
-
-// Busca
-// if($_POST['busca']){
-// 	$parametro['busca'] = $_POST['busca'];
-// 	$smarty->assign("postBusca", $parametro['busca']);
-// }
-// Busca
 ?>

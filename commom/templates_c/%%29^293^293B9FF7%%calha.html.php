@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-21 13:30:06
+<?php /* Smarty version 2.6.12, created on 2015-10-22 12:43:13
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -132,6 +132,71 @@ unset($_smarty_tpl_vars);
                         <div class="linha-baixo-titulo">
                             <h2 class="titulo-destaque-pag">veja também</h2>
                         </div>
+                        <?php unset($this->_sections['i']);
+$this->_sections['i']['name'] = 'i';
+$this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['RetornoDestaque']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['i']['max'] = (int)3;
+$this->_sections['i']['show'] = true;
+if ($this->_sections['i']['max'] < 0)
+    $this->_sections['i']['max'] = $this->_sections['i']['loop'];
+$this->_sections['i']['step'] = 1;
+$this->_sections['i']['start'] = $this->_sections['i']['step'] > 0 ? 0 : $this->_sections['i']['loop']-1;
+if ($this->_sections['i']['show']) {
+    $this->_sections['i']['total'] = min(ceil(($this->_sections['i']['step'] > 0 ? $this->_sections['i']['loop'] - $this->_sections['i']['start'] : $this->_sections['i']['start']+1)/abs($this->_sections['i']['step'])), $this->_sections['i']['max']);
+    if ($this->_sections['i']['total'] == 0)
+        $this->_sections['i']['show'] = false;
+} else
+    $this->_sections['i']['total'] = 0;
+if ($this->_sections['i']['show']):
+
+            for ($this->_sections['i']['index'] = $this->_sections['i']['start'], $this->_sections['i']['iteration'] = 1;
+                 $this->_sections['i']['iteration'] <= $this->_sections['i']['total'];
+                 $this->_sections['i']['index'] += $this->_sections['i']['step'], $this->_sections['i']['iteration']++):
+$this->_sections['i']['rownum'] = $this->_sections['i']['iteration'];
+$this->_sections['i']['index_prev'] = $this->_sections['i']['index'] - $this->_sections['i']['step'];
+$this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_sections['i']['step'];
+$this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
+$this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
+?>                     
+                            <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
+                                <?php if ($this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['super'] == 1): ?>
+                                    <div class="super-produto-home">
+                                        <p class="txt-super-produto">Super Calha</p>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="bloco-produto-home">
+                                    <?php if ($this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']): ?>
+                                        <img src="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+" alt="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+">
+                                    <?php else: ?>
+                                        <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+" alt="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+">
+                                    <?php endif; ?>
+                                    <p class="txt-produto-home"><?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+</p>
+                                    <a href="calha.php?id=<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['id']; ?>
+" class="btn-default" alt="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+" title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+">
+                                        <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                        saiba mais
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endfor; endif; ?>
+                        <!-- <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
+                            <div class="bloco-produto-home">
+                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
+                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
+                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
+                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                    saiba mais
+                                </a>
+                            </div>
+                        </div>
                         <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
                             <div class="super-produto-home">
                                 <p class="txt-super-produto">Super Calha</p>        
@@ -144,30 +209,7 @@ unset($_smarty_tpl_vars);
                                     saiba mais
                                 </a>
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                            <div class="bloco-produto-home">
-                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
-                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
-                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
-                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                    saiba mais
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                            <div class="super-produto-home">
-                                <p class="txt-super-produto">Super Calha</p>        
-                            </div>
-                            <div class="bloco-produto-home">
-                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
-                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
-                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
-                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                    saiba mais
-                                </a>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>                        
                 </div>
             </div>

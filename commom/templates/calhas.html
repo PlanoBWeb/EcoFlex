@@ -32,47 +32,51 @@
                 <div class="col-xs-12 col-sm-9 col-md-9 bloco-produtos-interna"> 
                 
                     <!-- <h2 class="titulo-destaque-pag">Não existe resultados para: "{ $postBusca }"</h2> -->
-
-                    <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.</p>
-                    <p class="txt-interna">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
-                    
-                    <div class="row encapusla-produtos-interna">
-                        {section name=i loop=$dados}
-                            <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                                {if $dados[i].super == 1}
-                                    <div class="super-produto-home">
-                                        <p class="txt-super-produto">Super Calha</p>
-                                    </div>
-                                {/if}
-                                <div class="bloco-produto-home">
-                                    {if $dados[i].caminhoImagem}
-                                        <img src="{$dados[i].caminhoImagem}" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
-                                    {else}
-                                        <img src="commom/img/sem-foto.jpg" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
-                                    {/if}
-                                    <p class="txt-produto-home">{$dados[i].descricao}</p>
-                                    <a href="calha.php?id={$dados[i].id}" class="btn-default" alt="Saiba mais sobre {$dados[i].descricao}" title="Saiba mais {$dados[i].descricao}">
-                                        <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                        saiba mais
-                                    </a>
-                                </div>
-                            </div>
-                        {/section}
+                    {if $dados}
+                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.</p>
+                        <p class="txt-interna">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
                         
-                    </div>
-                    <div class="bloco-paginacao">
-                        {if $totalPaginas > 1}
-                            <a href="calhas.php" class="seta-pagin pull-left"> << </a>
-                            {section start=1 name=j loop=$Numpaginas}
-                                {if $idMarca}
-                                    <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&idMarca={$idMarca}">{$Numpaginas[j]}</a>
-                                {else}
-                                    <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}">{$Numpaginas[j]}</a>
-                                {/if}
+                        <div class="row encapusla-produtos-interna">
+                            {section name=i loop=$dados}
+                                <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
+                                    {if $dados[i].super == 1}
+                                        <div class="super-produto-home">
+                                            <p class="txt-super-produto">Super Calha</p>
+                                        </div>
+                                    {/if}
+                                    <div class="bloco-produto-home">
+                                        {if $dados[i].caminhoImagem}
+                                            <img src="{$dados[i].caminhoImagem}" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
+                                        {else}
+                                            <img src="commom/img/sem-foto.jpg" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
+                                        {/if}
+                                        <p class="txt-produto-home">{$dados[i].descricao}</p>
+                                        <a href="calha.php?id={$dados[i].id}" class="btn-default" alt="Saiba mais sobre {$dados[i].descricao}" title="Saiba mais {$dados[i].descricao}">
+                                            <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                            saiba mais
+                                        </a>
+                                    </div>
+                                </div>
                             {/section}
-                            <a href="calhas.php" class="seta-pagin pull-right">  >> </a>
-                        {/if}
-                    </div>
+                        </div>
+                        <div class="bloco-paginacao">
+                            {if $totalPaginas > 1}
+                                <a href="calhas.php" class="seta-pagin pull-left"> << </a>
+                                {section start=1 name=j loop=$Numpaginas}
+                                    {if $idMarca}
+                                        <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&idMarca={$idMarca}">{$Numpaginas[j]}</a>
+                                    {elseif $postBusca}
+                                        <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&busca={$postBusca}">{$Numpaginas[j]}</a>
+                                    {else}
+                                        <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}">{$Numpaginas[j]}</a>
+                                    {/if}
+                                {/section}
+                                <a href="calhas.php" class="seta-pagin pull-right">  >> </a>
+                            {/if}
+                        </div>
+                    {else}
+                        <h1 class="titulo-destaque-pag align-left">Nenhum resultado encontrado por "{$postBusca}"</h1>
+                    {/if}
                 </div>
             </div>
         </section>

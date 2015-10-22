@@ -29,10 +29,19 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
-	// echo "<pre>";
-	// print_r($retorno);
-	// die();
+
+	// Produto em destaque
+	$destaque['destaque'] = 1;
+	$retornoDes 		= $class->Pesquisar($destaque, null, null);
+
+	// Rand do array para a parte de destaques
+	$RetornoDestaque = array_rand($retornoDes[1], 9);
+	for ($i=0; $i < 3; $i++) { 
+		$RetornoDestaque[$i] = $retornoDes[1][$RetornoDestaque[$i]];
+	}
+
 	
+	$smarty->assign("RetornoDestaque", $RetornoDestaque);
 	$smarty->assign("dados", $retorno[1]);
 	$smarty->assign("menuLateral", $retornoMenuLateral[1]);
 	$smarty->display("calha.html");

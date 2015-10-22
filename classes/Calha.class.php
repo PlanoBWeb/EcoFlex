@@ -276,10 +276,19 @@ class Calha
 
 			$sqlLimit = "LIMIT ".$_limit.",".$totalPorPagina."";
 		}
+
+		if ($post['destaque']) {
+			$sqlLimit = "LIMIT 10";
+		}
 		
 		if($post['id'])
 		{
 			$query .= " AND C.id = '".$post['id']."' ";
+		}
+
+		if($post['busca'])
+		{
+			$query .= " AND C.descricao LIKE '%".$post['busca']."%' ";
 		}
 
 		if($post['idMarca'])
@@ -301,7 +310,6 @@ class Calha
 				ORDER BY
 					C.id DESC, C.id DESC
 			".$sqlLimit." ";
-
 			
 		$result = mysql_query($sql);
 		if (!($result))
@@ -377,7 +385,7 @@ class Calha
 
 		// Localiza imagem para exclusão do registro
 		$parametro['id'] = $id;
-		$dados = $this->Pesquisar($parametro);
+		$dados = $this->Pesquisar($parametro, null, null);
 		if( $dados[0] )
 		{
 			$retorno[0] = "1";
@@ -388,7 +396,7 @@ class Calha
 
 		// Localiza imagem para exclusão do registro
 		$parametro2['id'] = $id;
-		$dados2 = $this->Pesquisar($parametro2);
+		$dados2 = $this->Pesquisar($parametro2, null, null);
 		if( $dados2[0] )
 		{
 			$retorno[0] = "1";
@@ -482,6 +490,7 @@ class Calha
 					CM.idModelo AS idModelo,
 					Mo.titulo AS modelo,
 					Ma.id AS idMarca,
+					Ma.caminhoImagem,
 					Ma.titulo AS marca
 				FROM
 					calha Ca
