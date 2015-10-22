@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ecoflex</title>
+    <title>{$dados[0].tituloMarca} - {$dados[0].descricao}</title>
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="{$dados[0].descricao}" />
     <link href="commom/img/icon-tab.png" rel="icon">
     <link href="commom/css/bootstrap.min.css" rel="stylesheet">
     <link href="commom/css/estilo.css" rel="stylesheet">
@@ -59,7 +59,7 @@
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-marca.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Marca</strong></p>
-                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="commom/img/audi.png" alt="{$dados[0].nmModelo}" title="{$dados[0].nmModelo}"></p>
+                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="{$dados[0].caminhoImagem2}" alt="{$dados[0].nmModelo}" title="{$dados[0].nmModelo}"></p>
                                 </div>  
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-material.png" alt="icone" title="icone">
@@ -109,29 +109,6 @@
                                 </div>
                             </div>
                         {/section}
-                        <!-- <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                            <div class="bloco-produto-home">
-                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
-                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
-                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
-                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                    saiba mais
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                            <div class="super-produto-home">
-                                <p class="txt-super-produto">Super Calha</p>        
-                            </div>
-                            <div class="bloco-produto-home">
-                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
-                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
-                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
-                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                    saiba mais
-                                </a>
-                            </div>
-                        </div> -->
                     </div>                        
                 </div>
             </div>

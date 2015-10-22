@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 12:43:13
+<?php /* Smarty version 2.6.12, created on 2015-10-22 17:01:55
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -6,9 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ecoflex</title>
+    <title><?php echo $this->_tpl_vars['dados'][0]['tituloMarca']; ?>
+ - <?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+</title>
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+" />
     <link href="commom/img/icon-tab.png" rel="icon">
     <link href="commom/css/bootstrap.min.css" rel="stylesheet">
     <link href="commom/css/estilo.css" rel="stylesheet">
@@ -96,7 +99,8 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-marca.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Marca</strong></p>
-                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="commom/img/audi.png" alt="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
+                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem2']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
 "></p>
                                 </div>  

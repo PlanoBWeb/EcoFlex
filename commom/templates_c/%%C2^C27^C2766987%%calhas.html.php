@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 15:09:00
+<?php /* Smarty version 2.6.12, created on 2015-10-22 16:53:23
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ecoflex</title>
+    <title>Trabalhamos com diversas marcas de carros.</title>
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="Calhas de chuva automotivas de diversas marcas como Nissan, Volkswagen, Hyundai, Citroen, Toyota" />
     <link href="commom/img/icon-tab.png" rel="icon">
     <link href="commom/css/bootstrap.min.css" rel="stylesheet">
     <link href="commom/css/estilo.css" rel="stylesheet">
@@ -44,8 +44,7 @@ unset($_smarty_tpl_vars);
                     <!-- <h2 class="titulo-destaque-pag">Não existe resultados para: "<?php echo $this->_tpl_vars['postBusca']; ?>
 "</h2> -->
                     <?php if ($this->_tpl_vars['dados']): ?>
-                        <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.</p>
-                        <p class="txt-interna">Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+                        <p class="txt-interna">Os produtos comercializados pela Ecoflex têm como objetivo trazer conforto e segurança em seu automóvel nos dias de chuva!  Com a calha de chuva a água da chuva não entrará no interior do veículo e evita que os vidros embacem.</p>
                         
                         <div class="row encapusla-produtos-interna">
                             <?php unset($this->_sections['i']);

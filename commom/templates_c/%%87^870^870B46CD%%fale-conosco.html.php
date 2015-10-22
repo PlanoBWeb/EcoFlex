@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-19 17:14:20
+<?php /* Smarty version 2.6.12, created on 2015-10-22 16:46:34
          compiled from fale-conosco.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -33,7 +33,8 @@ unset($_smarty_tpl_vars);
         <section class="conteudo">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <h1 class="titulo-destaque-pag align-left">Entre em contato conosco!</h1><br><br>
+                    <h1 class="titulo-destaque-pag align-left">Entre em contato conosco!</h1><br>
+                    <p class="txt-interna">Venha conhecer a Ecoflex. Preencha seus dados que entraremos em contato.</p><br><br>
                     <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "inc/form.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

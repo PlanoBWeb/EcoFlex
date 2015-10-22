@@ -14,10 +14,12 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
   $email = $_POST['email'];
   $telefone = $_POST['tel'];
   $msg = $_POST['msg'];
+  $cod = $_POST['cod'];
 
   $cont = "$ip\r\n";
   $cont .= "$data\r\n";
   $cont .= "$hora\r\n\r\n";
+  $cont .= "Código Produto: \t$cod\r\n";
   $cont .= "Nome: \t$nome\r\n";
   $cont .= "E-mail: \t$email\r\n";
   $cont .= "Telefone: \t$tel\r\n";

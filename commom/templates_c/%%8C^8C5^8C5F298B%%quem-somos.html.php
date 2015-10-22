@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-19 18:01:21
+<?php /* Smarty version 2.6.12, created on 2015-10-22 16:46:04
          compiled from quem-somos.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -34,14 +34,10 @@ unset($_smarty_tpl_vars);
             <div class="row">
                 <div class="col-xs-12 col-sm-7 col-md-7">
                     <h1 class="titulo-destaque-pag align-left">ecoflex automotive</h1><br>
-                    <h2 class="txt-interna"><strong>Missão</strong></h2>
-                    <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p><br>
-
-                    <h2 class="txt-interna"><strong>Visão</strong></h2>
-                    <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p><br>
-
-                    <h2 class="txt-interna"><strong>Valores</strong></h2>
-                    <p class="txt-interna">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p><br>
+                    <!-- <h2 class="txt-interna"><strong>Missão</strong></h2> -->
+                    <p class="txt-interna">Somos uma empresa que comercializa calhas de chuva automotiva para as mais diversas marcas de automóveis.</p><br>
+                    
+                    <p class="txt-interna">Oferecemos serviços de qualidade atendendo aos nossos clientes com perfeição e comercializar produtos de qualidade nos comprometendo com a satisfação do cliente.</p><br>
                 </div>  
                 <div class="col-xs-12 col-sm-5 col-md-5">  
                     <img class="img-responsive" src="commom/img/empresa.jpg" alt="empresa" title="empresa">

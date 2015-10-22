@@ -44,7 +44,11 @@ else if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '1
 }
 else
 {
-
+	define("DB_HOST", 'localhost');
+	define("DB_USER", 'root');
+	define("DB_PASS", 'pass');
+	define("DB_BASE", 'ecoflex');
+	define("PATH_SERVIDOR","E:/Home/ecoflexautomotive/Web/");
 }
 
 //Acesso ao MyAdmin

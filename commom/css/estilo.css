@@ -1275,6 +1275,10 @@ iframe{
     .select-modelo-mob{
         padding-left: 15px;
     }
+
+    .txt-destaque-pag-index{
+        width: 100%;
+    }
 }
 
 @media all and (min-width: 768px){
@@ -1317,4 +1321,7 @@ iframe{
         display: none;
     }
     
+    .txt-destaque-pag-index{
+        width: 60%;
+    }
 }
