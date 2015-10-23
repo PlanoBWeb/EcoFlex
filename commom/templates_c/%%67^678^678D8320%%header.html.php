@@ -1,7 +1,12 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 17:53:33
+<?php /* Smarty version 2.6.12, created on 2015-10-23 12:25:24
          compiled from inc/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 34, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 35, false),)), $this); ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "inc/analyticstracking.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
 <header>
 	<nav class="navbar navbar-default">
 		<div class="encapsula-topo">
@@ -84,9 +89,9 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 				<img class="icon-contato-topo" src="commom/img/icon-tel.png" alt="Icone telefone" title="Icone telefone">
 				<a href="tel:11988643325" class="link-contato-topo" title="11  0000-0000">11  0000-0000</a>
 	    	</div> 
-	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-email-topo pd-none">
+	    	<div class="col-xs-12 col-sm-3 col-md-3 bloco-email-topo pd-none">
 				<img class="icon-contato-topo" src="commom/img/icon-email.png" alt="Icone telefone" title="Icone telefone">
-				<a href="mailto:contato@ecoflex.com.br" class="link-contato-topo" title="contato@ecoflex.com.br">contato@ecoflex.com.br</a>
+				<a href="mailto:contato@ecoflexautomotive.com.br" class="link-contato-topo" title="contato@ecoflexautomotive.com.br">contato@ecoflexautomotive.com.br</a>
 	    	</div>
 	    	<!-- <div class="col-xs-12 col-sm-2 col-md-2 bloco-local-topo pd-none hidden-xs">
 	    		<img class="icon-contato-topo" src="commom/img/icon-local.png" alt="Icone telefone" title="Icone telefone">

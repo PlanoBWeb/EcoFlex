@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 10:32:59
+<?php /* Smarty version 2.6.12, created on 2015-10-23 10:39:38
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -76,7 +76,8 @@ unset($_smarty_tpl_vars);
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-modelo.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Modelo</strong></p>
-                                    <?php unset($this->_sections['i']);
+                                    <ul>
+                                        <?php unset($this->_sections['i']);
 $this->_sections['i']['name'] = 'i';
 $this->_sections['i']['loop'] = is_array($_loop=$this->_tpl_vars['dados']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $this->_sections['i']['show'] = true;
@@ -100,9 +101,10 @@ $this->_sections['i']['index_next'] = $this->_sections['i']['index'] + $this->_s
 $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?>
-                                        <p class="txt-detalhe-produto"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['nmModelo']; ?>
-</p>
-                                    <?php endfor; endif; ?>
+                                            <li class="txt-detalhe-produto"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['nmModelo']; ?>
+</li>
+                                        <?php endfor; endif; ?>
+                                    </ul>
                                 </div>  
                             </div>  
                             <div class="col-xs-12 col-sm-5 col-md-5 pd-none">  

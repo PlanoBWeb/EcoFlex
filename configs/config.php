@@ -48,7 +48,7 @@ else
 	define("DB_USER", 'ecoflexautomot');
 	define("DB_PASS", 'ec0546ex');
 	define("DB_BASE", 'ecoflexautomot');
-	define("PATH_SERVIDOR","E:/Home/ecoflexautomotive/Web/");
+	define("PATH_SERVIDOR","E:/Home/ecoflexautomotive/Web/homologacao/");
 }
 
 //Acesso ao MyAdmin

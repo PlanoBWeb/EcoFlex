@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 16:46:04
+<?php /* Smarty version 2.6.12, created on 2015-10-23 10:58:32
          compiled from quem-somos.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ecoflex</title>
+    <title>Empresa especialista em calha de chuva automotiva.</title>
     <meta name="robots" content="index, follow">
-    <meta name="description" content="" />
+    <meta name="description" content="Empresa que comercializa calha de chuva automotiva." />
     <link href="commom/img/icon-tab.png" rel="icon">
     <link href="commom/css/bootstrap.min.css" rel="stylesheet">
     <link href="commom/css/estilo.css" rel="stylesheet">

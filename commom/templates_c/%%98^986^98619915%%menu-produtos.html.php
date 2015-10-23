@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 17:53:33
+<?php /* Smarty version 2.6.12, created on 2015-10-23 12:34:47
          compiled from inc/menu-produtos.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/menu-produtos.html', 5, false),)), $this); ?>
@@ -39,8 +39,8 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 " alt="<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
 " title="<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
 ">
-                        <a class="link-menu-produto" href="javascript: void(0)"><?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
-</a>
+                        <span class="link-menu-produto" href="javascript: void(0)"><?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
+</span>
                     <ul class="submenu-produto-lateral">
                     <?php endif; ?>
                     <li class="linha-submenu-produto">

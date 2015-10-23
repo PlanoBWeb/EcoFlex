@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 16:39:21
+<?php /* Smarty version 2.6.12, created on 2015-10-23 12:41:32
          compiled from inc/footer.html */ ?>
 		<footer class="rodape">
 			<article class="bloco-rodape">
@@ -6,7 +6,7 @@
 					<p class="titulo-rodape">Atendimento:</p>
 					<ul>
 						<li class="linha-rodape"><a class="link-rodape" href="tel:1100000000 ">(11) 0000-0000</a></li>
-						<li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflex.com.br">contato@ecoflex.com.br</a></li>
+						<li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflexautomotive.com.br">contato@ecoflexautomotive.com.br</a></li>
 						<li class="linha-rodape">Seg a Sáb das 9:00 às 18:30hs.</li>
 					</ul>
 			    </div>
@@ -30,7 +30,7 @@
 					<p class="txt-direitos">Ecoflex Automotive - Todos os direitos reservados</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-					<a href="http://www.planobweb.com.br/"><img class="pull-right" src="commom/img/planobweb.jpg" alt="Desenvolvido pela PlanoBWeb" title="Desenvolvido pela PlanoBWeb"></a>
+					<a href="http://www.planobweb.com.br/" target="_blank"><img class="pull-right" src="commom/img/planobweb.jpg" alt="Desenvolvido pela PlanoBWeb" title="Desenvolvido pela PlanoBWeb"></a>
 					<p class="txt-direitos pull-right">Desenvolvimento:</p>
 				</div>
 			</div>
@@ -66,8 +66,8 @@
                 $(\'.search-mobile\').animate({ width: "toggle" });
             });
 
-            $(\'.link-menu-produto\').click(function(e){
-            	event.preventDefault();
+            $(\'.link-menu-produto\').click(function(){
+            	// event.preventDefault();
             	menu = $(this).next(\'.submenu-produto-lateral\');
                 link = $(this).parent(\'.linha-menu-produto\');
 

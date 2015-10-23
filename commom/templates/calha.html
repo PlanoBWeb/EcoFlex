@@ -55,9 +55,11 @@
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-modelo.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Modelo</strong></p>
-                                    {section name=i loop=$dados}
-                                        <p class="txt-detalhe-produto">{$dados[i].nmModelo}</p>
-                                    {/section}
+                                    <ul>
+                                        {section name=i loop=$dados}
+                                            <li class="txt-detalhe-produto">{$dados[i].nmModelo}</li>
+                                        {/section}
+                                    </ul>
                                 </div>  
                             </div>  
                             <div class="col-xs-12 col-sm-5 col-md-5 pd-none">  

@@ -30,15 +30,23 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
 
   $headers 	= "MIME-Version: 1.1\r\n";
   $headers 	.= "Content-type: text/plain; charset=UTF-8\n";
-  $assunto 	.= "Ecoflex - Fale Conosco";
+  $assunto 	.= "Ecoflex Automotive - Contato";
   $conteudo 	.= "$cont\r\n";
-  $headers 	.= "From: joseygor@planobweb.com.br\n"; // remetente-empresa
-  $headers 	.= "Return-Path: joseygor@planobweb.com.br\r\n"; // return-path - empresa
-  //$headers 	.= "Bcc: contato@planobweb.com.br\r\n"; // cópia
+  $headers 	.= "From: contato@ecoflexautomotive.com.br\n"; // remetente-empresa
+  $headers 	.= "Return-Path: contato@ecoflexautomotive.com.br\r\n"; // return-path - empresa
+  $headers 	.= "Bcc: contato@planobweb.com.br\r\n"; // cópia
   $headers 	.= "Reply-To: $email\n";
-  $envio 		= mail("joseygor@planobweb.com.br", $assunto,$conteudo,$headers); //enviado
+  $envio 		= mail("contato@ecoflexautomotive.com.br", $assunto,$conteudo,$headers); //enviado
   
-  echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-fale-conosco.php'</script>";
+  if ($pagina == "localizacao.php") {
+    echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-localizacao.php'</script>";
+  }elseif ($pagina == "fale-conosco.php") {
+    echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-fale-conosco.php'</script>";
+  }elseif ($pagina == "calha.php") {
+    echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-produto.php'</script>";
+  }
+
+  // echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-fale-conosco.php'</script>";
 }
 
 ?>
