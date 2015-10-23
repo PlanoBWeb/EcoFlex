@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 16:53:14
+<?php /* Smarty version 2.6.12, created on 2015-10-23 10:30:20
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -108,8 +108,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                             <p class="txt-produto-home"><?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
                             <a href="calha.php?id=<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['id']; ?>
-" class="btn-default" alt="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
-" title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+" class="btn-default" title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                 <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                 saiba mais
@@ -153,7 +152,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                     <div class="txt-destaque-pag txt-destaque-pag-index">
                         <img class="img-catalogo" src="commom/img/catalogo.png" alt="Catálogo" title="Catálogo">
                         <p class="txt-catalogo">Baixe nosso catálogo de produtos.</p><br>
-                        <a href="" class="btn-default btn-download" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
+                        <a href="" class="btn-default btn-download" title="Saiba mais sobre esse produto">
                             <img src="commom/img/download.png" alt="icone download" title="icone download">
                             Download
                         </a>

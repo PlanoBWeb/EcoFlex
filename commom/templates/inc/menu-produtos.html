@@ -30,7 +30,7 @@
         {assign var="nmTipo" value=$nmTipo|default:""}
         {section name=i loop=$menuLateral}
             {if $nmTipo <> $menuLateral[i].marca}
-                <option class="marca-mob" name="marca-mob" {if $idMarca == $menuLateral[i].idMarca} selected {/if} value="_m{$menuLateral[i].idMarca}">{$menuLateral[i].marca}</option>
+                <option class="marca-mob" {if $idMarca == $menuLateral[i].idMarca} selected {/if} value="_m{$menuLateral[i].idMarca}">{$menuLateral[i].marca}</option>
             {/if}
             <option class="select-modelo-mob" {if $idMod == $menuLateral[i].idModelo} selected {/if} value="{$menuLateral[i].idModelo}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$menuLateral[i].modelo}</option>
             {assign var="nmTipo" value=$menuLateral[i].marca}

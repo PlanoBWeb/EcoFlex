@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 15:11:40
+<?php /* Smarty version 2.6.12, created on 2015-10-22 17:53:33
          compiled from inc/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 34, false),)), $this); ?>
@@ -17,7 +17,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
 		            <a class="navbar-brand" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
 	            </div>
 	            <div class="col-xs-12 search-mobile">
-			    	<form class="form-search" action="" method="get" name="search">
+			    	<form class="form-search" action="calhas.php" method="get" name="search">
 			    		<input class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
 " placeholder="Pesquisar...">
 			    		<input class="buscar" type="submit" value="">
@@ -82,11 +82,11 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 		<div class="encapsula-contato-topo pd-none">
 	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-tel-topo pd-none">
 				<img class="icon-contato-topo" src="commom/img/icon-tel.png" alt="Icone telefone" title="Icone telefone">
-				<a href="tel:11988643325" class="link-contato-topo" alt="" title="">11  0000-0000</a>
+				<a href="tel:11988643325" class="link-contato-topo" title="11  0000-0000">11  0000-0000</a>
 	    	</div> 
 	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-email-topo pd-none">
 				<img class="icon-contato-topo" src="commom/img/icon-email.png" alt="Icone telefone" title="Icone telefone">
-				<a href="mailto:contato@ecoflex.com.br" class="link-contato-topo" alt="contato@ecoflex.com.br" title="contato@ecoflex.com.br">contato@ecoflex.com.br</a>
+				<a href="mailto:contato@ecoflex.com.br" class="link-contato-topo" title="contato@ecoflex.com.br">contato@ecoflex.com.br</a>
 	    	</div>
 	    	<!-- <div class="col-xs-12 col-sm-2 col-md-2 bloco-local-topo pd-none hidden-xs">
 	    		<img class="icon-contato-topo" src="commom/img/icon-local.png" alt="Icone telefone" title="Icone telefone">

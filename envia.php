@@ -19,7 +19,9 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
   $cont = "$ip\r\n";
   $cont .= "$data\r\n";
   $cont .= "$hora\r\n\r\n";
-  $cont .= "Código Produto: \t$cod\r\n";
+  if ($pagina == "calha.php") {
+    $cont .= "Código Produto: \t$cod\r\n"; 
+  }
   $cont .= "Nome: \t$nome\r\n";
   $cont .= "E-mail: \t$email\r\n";
   $cont .= "Telefone: \t$tel\r\n";

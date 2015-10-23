@@ -658,6 +658,7 @@ class Calha
 		$sql = "SELECT
 					C.*,
 					M.titulo AS nmModelo,
+					MA.caminhoImagem AS imgMarca,
 					CM.idCalha,
 					MA.titulo AS tituloMarca
 				FROM  

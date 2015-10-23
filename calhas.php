@@ -74,7 +74,9 @@
 	for($j=0; $j <= $totalPaginas; $j++) { 
 		$Numpaginas[$j] = $j;
 	}
+	$ultimaPaginacao = end($Numpaginas);
 
+	$smarty->assign("ultimaPaginacao", $ultimaPaginacao);
 	$smarty->assign("postBusca", $_GET['busca']);
 	$smarty->assign("idMod", $_GET['idMod']);
 	$smarty->assign("idMarca", $_GET['idMarca']);

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 16:53:23
+<?php /* Smarty version 2.6.12, created on 2015-10-22 18:03:15
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -91,8 +91,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                         <p class="txt-produto-home"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
                                         <a href="calha.php?id=<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['id']; ?>
-" class="btn-default" alt="Saiba mais sobre <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
-" title="Saiba mais <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
+" class="btn-default" title="Saiba mais <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                             <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                             saiba mais
@@ -103,7 +102,19 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         </div>
                         <div class="bloco-paginacao">
                             <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
-                                <a href="calhas.php" class="seta-pagin pull-left"> << </a>
+                                <?php if ($this->_tpl_vars['idMarca']): ?>
+                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+&idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
+" class="seta-pagin pull-left"> << </a>
+                                <?php elseif ($this->_tpl_vars['postBusca']): ?>
+                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+&busca=<?php echo $this->_tpl_vars['postBusca']; ?>
+" class="seta-pagin pull-left"> << </a>
+                                <?php else: ?>
+                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+" class="seta-pagin pull-left"> << </a>
+                                <?php endif; ?>
+
                                 <?php unset($this->_sections['j']);
 $this->_sections['j']['start'] = (int)1;
 $this->_sections['j']['name'] = 'j';
@@ -148,7 +159,20 @@ $this->_sections['j']['last']       = ($this->_sections['j']['iteration'] == $th
 </a>
                                     <?php endif; ?>
                                 <?php endfor; endif; ?>
-                                <a href="calhas.php" class="seta-pagin pull-right">  >> </a>
+                                <!-- <a href="calhas.php" class="seta-pagin pull-right">  >> </a> -->
+
+                                <?php if ($this->_tpl_vars['idMarca']): ?>
+                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+&idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
+" class="seta-pagin pull-right"> >> </a>
+                                <?php elseif ($this->_tpl_vars['postBusca']): ?>
+                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+&busca=<?php echo $this->_tpl_vars['postBusca']; ?>
+" class="seta-pagin pull-right"> >> </a>
+                                <?php else: ?>
+                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+" class="seta-pagin pull-right"> >> </a>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                     <?php else: ?>

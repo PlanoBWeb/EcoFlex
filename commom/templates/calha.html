@@ -32,7 +32,12 @@
                 <div class="col-xs-12 col-sm-9 col-md-9 bloco-produtos-interna">  
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-4 pd-none produto-detalhe">
-                            <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
+                            <!-- <img src="commom/img/produto.jpg" title="Produto" alt="Produto"> -->
+                            {if $dados[0].caminhoImagem}
+                                <img src="{$dados[0].caminhoImagem}" title="{$dados[0].descricao}" alt="{$dados[0].descricao}">
+                            {else}
+                                <img src="commom/img/sem-foto.jpg" title="{$dados[0].descricao}" alt="{$dados[0].descricao}">
+                            {/if}
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 pd-none encapsula-desc-produto">
                             <h1 class="titulo-produto">{$dados[0].descricao}</h1>
@@ -59,7 +64,7 @@
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-marca.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Marca</strong></p>
-                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="{$dados[0].caminhoImagem2}" alt="{$dados[0].nmModelo}" title="{$dados[0].nmModelo}"></p>
+                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="{$dados[0].imgMarca}" alt="{$dados[0].nmModelo}" title="{$dados[0].nmModelo}"></p>
                                 </div>  
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-material.png" alt="icone" title="icone">

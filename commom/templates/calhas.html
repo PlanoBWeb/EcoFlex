@@ -50,7 +50,7 @@
                                             <img src="commom/img/sem-foto.jpg" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
                                         {/if}
                                         <p class="txt-produto-home">{$dados[i].descricao}</p>
-                                        <a href="calha.php?id={$dados[i].id}" class="btn-default" alt="Saiba mais sobre {$dados[i].descricao}" title="Saiba mais {$dados[i].descricao}">
+                                        <a href="calha.php?id={$dados[i].id}" class="btn-default" title="Saiba mais {$dados[i].descricao}">
                                             <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                             saiba mais
                                         </a>
@@ -60,7 +60,14 @@
                         </div>
                         <div class="bloco-paginacao">
                             {if $totalPaginas > 1}
-                                <a href="calhas.php" class="seta-pagin pull-left"> << </a>
+                                {if $idMarca}
+                                    <a href="calhas.php?p={$Numpaginas[0]}&idMarca={$idMarca}" class="seta-pagin pull-left"> << </a>
+                                {elseif $postBusca}
+                                    <a href="calhas.php?p={$Numpaginas[0]}&busca={$postBusca}" class="seta-pagin pull-left"> << </a>
+                                {else}
+                                    <a href="calhas.php?p={$Numpaginas[0]}" class="seta-pagin pull-left"> << </a>
+                                {/if}
+
                                 {section start=1 name=j loop=$Numpaginas}
                                     {if $idMarca}
                                         <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&idMarca={$idMarca}">{$Numpaginas[j]}</a>
@@ -70,7 +77,15 @@
                                         <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}">{$Numpaginas[j]}</a>
                                     {/if}
                                 {/section}
-                                <a href="calhas.php" class="seta-pagin pull-right">  >> </a>
+                                <!-- <a href="calhas.php" class="seta-pagin pull-right">  >> </a> -->
+
+                                {if $idMarca}
+                                    <a href="calhas.php?p={$ultimaPaginacao}&idMarca={$idMarca}" class="seta-pagin pull-right"> >> </a>
+                                {elseif $postBusca}
+                                    <a href="calhas.php?p={$ultimaPaginacao}&busca={$postBusca}" class="seta-pagin pull-right"> >> </a>
+                                {else}
+                                    <a href="calhas.php?p={$ultimaPaginacao}" class="seta-pagin pull-right"> >> </a>
+                                {/if}
                             {/if}
                         </div>
                     {else}

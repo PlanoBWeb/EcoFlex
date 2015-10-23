@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 17:01:55
+<?php /* Smarty version 2.6.12, created on 2015-10-23 10:32:59
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -45,7 +45,17 @@ unset($_smarty_tpl_vars);
                 <div class="col-xs-12 col-sm-9 col-md-9 bloco-produtos-interna">  
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-4 pd-none produto-detalhe">
-                            <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
+                            <!-- <img src="commom/img/produto.jpg" title="Produto" alt="Produto"> -->
+                            <?php if ($this->_tpl_vars['dados'][0]['caminhoImagem']): ?>
+                                <img src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+">
+                            <?php else: ?>
+                                <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+">
+                            <?php endif; ?>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 pd-none encapsula-desc-produto">
                             <h1 class="titulo-produto"><?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
@@ -99,7 +109,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                 <div class="row bloco-desc-ind">
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-marca.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Marca</strong></p>
-                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem2']; ?>
+                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="<?php echo $this->_tpl_vars['dados'][0]['imgMarca']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
 "></p>
@@ -191,29 +201,6 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                 </div>
                             </div>
                         <?php endfor; endif; ?>
-                        <!-- <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                            <div class="bloco-produto-home">
-                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
-                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
-                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
-                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                    saiba mais
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 produto-home">
-                            <div class="super-produto-home">
-                                <p class="txt-super-produto">Super Calha</p>        
-                            </div>
-                            <div class="bloco-produto-home">
-                                <img src="commom/img/produto.jpg" title="Produto" alt="Produto">
-                                <p class="txt-produto-home">Calha de Chuva Renegade 15 4P</p>
-                                <a href="calha.php" class="btn-default" alt="Saiba mais sobre esse produto" title="Saiba mais sobre esse produto">
-                                    <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
-                                    saiba mais
-                                </a>
-                            </div>
-                        </div> -->
                     </div>                        
                 </div>
             </div>
