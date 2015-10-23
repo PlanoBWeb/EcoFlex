@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-22 18:03:15
+<?php /* Smarty version 2.6.12, created on 2015-10-23 17:49:21
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -30,6 +30,11 @@ unset($_smarty_tpl_vars);
             <img class="img-banner-interna" src="commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
             <h1 class="titulo-interna">calhas automotivas</h1>
         </div>
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "inc/bradcrumb.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
         <section class="conteudo">
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3">

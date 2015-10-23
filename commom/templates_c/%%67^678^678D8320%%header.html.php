@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 12:25:24
+<?php /* Smarty version 2.6.12, created on 2015-10-23 15:14:29
          compiled from inc/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 35, false),)), $this); ?>
@@ -24,7 +24,7 @@ unset($_smarty_tpl_vars);
 	            <div class="col-xs-12 search-mobile">
 			    	<form class="form-search" action="calhas.php" method="get" name="search">
 			    		<input class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
-" placeholder="Pesquisar...">
+" placeholder="Digite o modelo...">
 			    		<input class="buscar" type="submit" value="">
 			    	</form>
 			    </div>
@@ -74,7 +74,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 			                    <?php endfor; endif; ?>
 			                </ul>
 		                </li>   -->
-		                <li class="linha-menu visible-xs-block"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'onde-comprar.php'): ?> link-menu-ativo <?php endif; ?>" href="#">Onde comprar</a></li>
+		                <!-- <li class="linha-menu visible-xs-block"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'onde-comprar.php'): ?> link-menu-ativo <?php endif; ?>" href="#">Onde comprar</a></li> -->
 	              	</ul>
 	            </div>
 	        </div>
@@ -87,7 +87,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 		<div class="encapsula-contato-topo pd-none">
 	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-tel-topo pd-none">
 				<img class="icon-contato-topo" src="commom/img/icon-tel.png" alt="Icone telefone" title="Icone telefone">
-				<a href="tel:11988643325" class="link-contato-topo" title="11  0000-0000">11  0000-0000</a>
+				<a href="tel:01140430356" class="link-contato-topo" title="11  40430356">11  40430356</a>
 	    	</div> 
 	    	<div class="col-xs-12 col-sm-3 col-md-3 bloco-email-topo pd-none">
 				<img class="icon-contato-topo" src="commom/img/icon-email.png" alt="Icone telefone" title="Icone telefone">
@@ -150,7 +150,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
 		    	<form class="form-search" action="calhas.php" method="get" name="search">
 		    		<input class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
-" placeholder="Pesquisar...">
+" placeholder="Digite o modelo...">
 		    		<input class="buscar" type="submit" value="">
 		    	</form>
 		    </div>

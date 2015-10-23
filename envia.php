@@ -13,6 +13,7 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $telefone = $_POST['tel'];
+  $como = $_POST['como'];
   $msg = $_POST['msg'];
   $cod = $_POST['cod'];
 
@@ -25,6 +26,7 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
   $cont .= "Nome: \t$nome\r\n";
   $cont .= "E-mail: \t$email\r\n";
   $cont .= "Telefone: \t$tel\r\n";
+  $cont .= "Onde nos encontrou: \t$como\r\n";
   $cont .= "\r\nMensagem: \n";
   $cont .= "$msg";
 

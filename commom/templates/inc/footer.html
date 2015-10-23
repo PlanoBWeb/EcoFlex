@@ -3,7 +3,7 @@
 			    <div class="col-xs-12 col-sm-4 col-md-4 bloco-ind-rodape">
 					<p class="titulo-rodape">Atendimento:</p>
 					<ul>
-						<li class="linha-rodape"><a class="link-rodape" href="tel:1100000000 ">(11) 0000-0000</a></li>
+						<li class="linha-rodape"><a class="link-rodape" href="tel:01140430356">(11) 40430356</a></li>
 						<li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflexautomotive.com.br">contato@ecoflexautomotive.com.br</a></li>
 						<li class="linha-rodape">Seg a Sáb das 9:00 às 18:30hs.</li>
 					</ul>
@@ -11,14 +11,14 @@
 			    <div class="col-xs-12 col-sm-4 col-md-4 bloco-ind-rodape">
 			    	<p class="titulo-rodape">Localização:</p>
 					<ul>
-						<li class="linha-rodape">Rua Nononon nnono, 4487</li>
-						<li class="linha-rodape">Nome Bairro - São Paulo - SP</li>
-						<li class="linha-rodape">CEP:00000-000</li>
+						<li class="linha-rodape">Rua Álvares Cabral 477</li>
+						<li class="linha-rodape">Vila Conceição  - Diadema - SP</li>
+						<li class="linha-rodape">CEP: 09981-030</li>
 					</ul>
 			    </div>
 			    <div class="col-xs-12 col-sm-4 col-md-4 bloco-ind-rodape">
 					<p class="titulo-rodape">Como chegar:</p>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.9782809666535!2d-46.44387798501994!3d-23.676734684625707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6bf928c4a2d1%3A0x193cebfd6813595a!2sR.+Dr.+M%C3%A1rio%2C+327+-+Vila+Falchi%2C+Mau%C3%A1+-+SP%2C+09350-355!5e0!3m2!1spt-BR!2sbr!4v1445018399733" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.4189813192834!2d-46.61176578501967!3d-23.696727484615845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce446132a2c075%3A0x6f9c2f8eacaa7f72!2sR.+%C3%81lvares+Cabral%2C+477+-+Concei%C3%A7%C3%A3o%2C+Diadema+-+SP%2C+09981-030!5e0!3m2!1spt-BR!2sbr!4v1445620710856" allowfullscreen ></iframe>
 			    </div>
 			</article>	   
 		</footer>
@@ -41,6 +41,7 @@
     <!-- vitrine -->
     <script src="commom/js/vitrine/owl.carousel.js"></script>
     <script src="commom/js/funcoes.js"></script>
+    
     <!-- vitrine -->
     {literal}
         <script>
@@ -106,6 +107,13 @@
                 {
                     alert("O campo TELEFONE deve ser preenchido!");
                     d.telefone.focus();
+                    return false;
+                }
+
+                if(trim(d.como.value)=="" || trim(d.como.value)=="*Como nos conheceu?")
+                {
+                    alert("O campo ONDE NOS ENCONTROU deve ser preenchido!");
+                    d.como.focus();
                     return false;
                 }
 

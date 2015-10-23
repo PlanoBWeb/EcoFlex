@@ -73,9 +73,13 @@
 	$Numpaginas = array();
 	for($j=0; $j <= $totalPaginas; $j++) { 
 		$Numpaginas[$j] = $j;
+		if ($Numpaginas[$j] == "10") {
+			break;
+		}
 	}
 	$ultimaPaginacao = end($Numpaginas);
 
+	$smarty->assign("breadCrumb", "Calhas");
 	$smarty->assign("ultimaPaginacao", $ultimaPaginacao);
 	$smarty->assign("postBusca", $_GET['busca']);
 	$smarty->assign("idMod", $_GET['idMod']);

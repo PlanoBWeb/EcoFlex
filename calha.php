@@ -40,7 +40,11 @@
 		$RetornoDestaque[$i] = $retornoDes[1][$RetornoDestaque[$i]];
 	}
 
+	// echo "<pre>";
+	// print_r($retorno);
+	// die();
 	
+	$smarty->assign("breadCrumb", "Calha");
 	$smarty->assign("RetornoDestaque", $RetornoDestaque);
 	$smarty->assign("dados", $retorno[1]);
 	$smarty->assign("menuLateral", $retornoMenuLateral[1]);

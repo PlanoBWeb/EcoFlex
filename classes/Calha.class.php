@@ -609,17 +609,21 @@ class Calha
 					CM.idModelo AS idCalhaMod,
 					CM.idModelo AS idModelo,
 					CA.id AS idCalha,
-					CA.descricao
+					CA.super,
+					CA.descricao, 
+					M.titulo as tituloModelo
 				FROM
 					calha_modelo CM
 				INNER JOIN
 					calha CA ON CM.idCalha = CA.id
+				INNER JOIN
+					modelo M ON CM.idModelo = M.id
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY	
 					CA.id
 		";
-		
+
 		$result = mysql_query($sql);
 		if (!($result))
 		{

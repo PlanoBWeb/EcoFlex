@@ -16,6 +16,7 @@
 	}
 	// Traz os modelos para o menu lateral
 
+	$smarty->assign("breadCrumb", "Fale Conosco");
 	$smarty->assign("pagina", $pagina);
 	$smarty->assign("titulo", utf8_encode(TITULO));
 	$smarty->assign("nome", $_SESSION['nome']);

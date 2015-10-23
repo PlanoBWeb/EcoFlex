@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 12:29:12
+<?php /* Smarty version 2.6.12, created on 2015-10-23 13:20:51
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -123,7 +123,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                 </div>
                 <p class="txt-destaque-pag no-border-top">Trabalhamos com as mais diversas marcas.</p>
             </div>
-            <div class="row">
+            <div class="row bloco-encapsula-marcas">
                 <img src="commom/img/audi.png" alt="audi" title="audi" class="img-marca">
                 <img src="commom/img/bmw.png" alt="bmw" title="bmw" class="img-marca">
                 <img src="commom/img/chery.png" alt="chery" title="chery" class="img-marca">

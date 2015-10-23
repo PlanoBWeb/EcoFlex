@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="breadcrumb">
+        <ul class="encapsula-breadcrumb">
+            <li><a href="index.php">HOME / </a></li>
+            
+            {if $pagina == "calha.php"}
+                <li><a href="calhas.php">CALHAS / </a></li>
+                <li><a href="calhas.php?idMarca={$dados[0].idMarca}">{$dados[0].tituloMarca} / </a></li>
+                <li class="active">{$dados[0].descricao}</li>
+            {else}
+                {if $idMarca}
+                    <li><a href="calhas.php">CALHAS / </a></li>
+                    <li class="active">{$dados[0].nmMarca}</li>
+                {elseif $idMod}
+                    <li><a href="calhas.php">CALHAS / </a></li>
+                    <li class="active">{$dados[0].tituloModelo}</li>
+                {elseif $postBusca}
+                    <li><a href="calhas.php">CALHAS / </a></li>
+                    <li class="active">{$postBusca}</li>
+                {else}
+                    <li class="active">{$breadCrumb}</li>
+                {/if}
+            {/if}
+            <!-- <li class="active">{$pagina}</li> -->
+        </ul>
+    </div>
+</div>

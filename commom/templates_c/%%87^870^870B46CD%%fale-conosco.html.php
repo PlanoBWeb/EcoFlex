@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 10:58:36
+<?php /* Smarty version 2.6.12, created on 2015-10-23 16:29:09
          compiled from fale-conosco.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -30,6 +30,11 @@ unset($_smarty_tpl_vars);
             <img class="img-banner-interna" src="commom/img/banner-fale-conosco.jpg" alt="fale conosco" title="fale conosco">
             <h2 class="titulo-interna">fale conosco</h2>
         </div>
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "inc/bradcrumb.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
         <section class="conteudo">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8">
@@ -45,8 +50,8 @@ unset($_smarty_tpl_vars);
                     <div class="encapsula-contato-fale">
                         <p class="titulo-rodape">Atendimento:</p>
                         <ul>
-                            <li class="linha-rodape"><a class="link-rodape" href="tel:1100000000 ">(11) 0000-0000</a></li>
-                            <li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflex.com.br">contato@ecoflex.com.br</a></li>
+                            <li class="linha-rodape"><a class="link-rodape" href="tel:01140430356">(11) 40430356</a></li>
+                            <li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflexautomotive.com.br">contato@ecoflexautomotive.com.br</a></li>
                             <li class="linha-rodape">Seg a Sáb das 9:00 às 18:30hs.</li>
                         </ul>
                     </div>
@@ -54,9 +59,9 @@ unset($_smarty_tpl_vars);
                     <div class="encapsula-contato-fale">
                         <p class="titulo-rodape">Localização:</p>
                         <ul>
-                            <li class="linha-rodape">Rua Nononon nnono, 4487</li>
-                            <li class="linha-rodape">Nome Bairro - São Paulo - SP</li>
-                            <li class="linha-rodape">CEP:00000-000</li>
+                            <li class="linha-rodape">Rua Álvares Cabral 477</li>
+                            <li class="linha-rodape">Vila Conceição - Diadema - SP</li>
+                            <li class="linha-rodape">CEP: 09981-030</li>
                         </ul>
                     </div>
                 </div>

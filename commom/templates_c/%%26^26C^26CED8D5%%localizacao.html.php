@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 10:58:33
+<?php /* Smarty version 2.6.12, created on 2015-10-23 16:32:00
          compiled from localizacao.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -30,10 +30,16 @@ unset($_smarty_tpl_vars);
             <img class="img-banner-interna" src="commom/img/banner-fale-conosco.jpg" alt="Localização" title="Localização">
             <h2 class="titulo-interna">localização</h2>
         </div>
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "inc/bradcrumb.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
         <section class="conteudo conteudo-interna">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
-                    <h1 class="titulo-destaque-pag align-left">localização</h1><br><br>
+                    <h1 class="titulo-destaque-pag align-left">localização</h1><br>
+                    <p class="txt-interna">Venha conhecer a Ecoflex. Preencha seus dados que entraremos em contato.</p><br><br>
                     <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "inc/form.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -41,7 +47,8 @@ unset($_smarty_tpl_vars);
  ?>
                 </div>  
                 <div class="col-xs-12 col-sm-6 col-md-6">  
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.9782809666535!2d-46.44387798501994!3d-23.676734684625707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6bf928c4a2d1%3A0x193cebfd6813595a!2sR.+Dr.+M%C3%A1rio%2C+327+-+Vila+Falchi%2C+Mau%C3%A1+-+SP%2C+09350-355!5e0!3m2!1spt-BR!2sbr!4v1445018399733" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.4189813192834!2d-46.61176578501967!3d-23.696727484615845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce446132a2c075%3A0x6f9c2f8eacaa7f72!2sR.+%C3%81lvares+Cabral%2C+477+-+Concei%C3%A7%C3%A3o%2C+Diadema+-+SP%2C+09981-030!5e0!3m2!1spt-BR!2sbr!4v1445620710856" allowfullscreen></iframe><br><br>
+                    <p class="txt-interna">Rua Álvares Cabral 477 - Vila Conceição - Diadema - SP - CEP: 09981-030</p>
                 </div>
             </div>
         </section>

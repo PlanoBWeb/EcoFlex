@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-21 13:34:09
+<?php /* Smarty version 2.6.12, created on 2015-10-23 15:27:52
          compiled from inc/form.html */ ?>
 <form class="form-horizontal" method="post" name="contato" action="envia.php">
     <input type="hidden" name="pagina" value="<?php echo $this->_tpl_vars['pagina']; ?>
@@ -21,6 +21,20 @@
         <label for="telefone" class="col-sm-2 control-label">Telefone*</label>
         <div class="col-sm-10">
             <input type="text" name="tel" class="form-control" id="telefone">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="como" class="col-sm-2 control-label">Onde nos encontrou*</label>
+         <div class="col-sm-10">
+            <select class="form-control" id="como" name="como">
+                <option>*Como nos conheceu?</option>
+                <option>Google</option>
+                <option>Facebook</option>
+                <option>Folheto</option>
+                <option>Indicação</option>
+                <option>E-mail marketing</option>
+                <option>Outros...</option>
+            </select>
         </div>
     </div>
     <div class="form-group">

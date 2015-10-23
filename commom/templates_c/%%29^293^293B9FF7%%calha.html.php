@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 10:39:38
+<?php /* Smarty version 2.6.12, created on 2015-10-23 17:21:25
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -15,6 +15,8 @@
     <link href="commom/img/icon-tab.png" rel="icon">
     <link href="commom/css/bootstrap.min.css" rel="stylesheet">
     <link href="commom/css/estilo.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="commom/js/lightbox.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,6 +35,11 @@ unset($_smarty_tpl_vars);
             <img class="img-banner-interna" src="commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
             <h2 class="titulo-interna">calhas automotivas</h2>
         </div>
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "inc/bradcrumb.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
         <section class="conteudo">
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3">
@@ -47,10 +54,21 @@ unset($_smarty_tpl_vars);
                         <div class="col-xs-12 col-sm-4 col-md-4 pd-none produto-detalhe">
                             <!-- <img src="commom/img/produto.jpg" title="Produto" alt="Produto"> -->
                             <?php if ($this->_tpl_vars['dados'][0]['caminhoImagem']): ?>
-                                <img src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+                                <div class="mtlsr-images-for-lightbox">
+                                    <ul>
+                                        <li>
+                                            <a href="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+"></a>
+                                            <img src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 ">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mtlsr-lightbox">
+                                    <a href="#" class="close">&#9421;</a>
+                                </div>
                             <?php else: ?>
                                 <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
@@ -112,8 +130,8 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                     <img class="icon-desc-produto pull-left" src="commom/img/icon-marca.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Marca</strong></p>
                                     <p class="txt-detalhe-produto"><img class="icon-img-desc" src="<?php echo $this->_tpl_vars['dados'][0]['imgMarca']; ?>
-" alt="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
-" title="<?php echo $this->_tpl_vars['dados'][0]['nmModelo']; ?>
+" alt="<?php echo $this->_tpl_vars['dados'][0]['tituloMarca']; ?>
+" title="<?php echo $this->_tpl_vars['dados'][0]['tituloMarca']; ?>
 "></p>
                                 </div>  
                                 <div class="row bloco-desc-ind">

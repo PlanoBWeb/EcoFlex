@@ -9,8 +9,8 @@
                 </li>
                 <li class="linha-menu-produto menu-produto-icon">
                         <img class="img-marca-lateral" src="{$menuLateral[i].caminhoImagem}" alt="{$menuLateral[i].marca}" title="{$menuLateral[i].marca}">
-                        <span class="link-menu-produto" href="javascript: void(0)">{$menuLateral[i].marca}</span>
-                    <ul class="submenu-produto-lateral">
+                        <a class="link-menu-produto" href="calhas.php?idMarca={$menuLateral[i].idMarca}">{$menuLateral[i].marca}</a>
+                    <ul class="submenu-produto-lateral" }{if $menuLateral[i].idMarca ==  $smarty.get.idMarca} style="display:block" {/if}>
                     {/if}
                     <li class="linha-submenu-produto">
                         <a class="link-submenu-produto" href="calhas.php?idMod={$menuLateral[i].idModelo}">{$menuLateral[i].modelo}</a>

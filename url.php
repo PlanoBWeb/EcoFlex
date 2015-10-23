@@ -1,6 +1,6 @@
 <?php 
 
-	$pastaProjeto	= "homologacao/";
+	$pastaProjeto	= "clientes/EcoflexAutomotive/Web/";
 	$urlCompleta 	= $_SERVER['REQUEST_URI'];
 	$posInicio		= strpos($urlCompleta, $pastaProjeto);
 	$priimeiraEtapa	= substr($urlCompleta, ($posInicio+strlen($pastaProjeto)));

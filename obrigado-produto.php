@@ -17,6 +17,7 @@
 	// Traz os modelos para o menu lateral
 
 
+	$smarty->assign("breadCrumb", "Obrigado Contato");
 	$smarty->assign("menuLateral", $retornoMenuLateral[1]);
 	$smarty->assign("pagina", $pagina);
 	$smarty->assign("titulo", utf8_encode(TITULO));
