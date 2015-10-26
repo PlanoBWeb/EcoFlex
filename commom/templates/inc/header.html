@@ -15,7 +15,8 @@
 	            </div>
 	            <div class="col-xs-12 search-mobile">
 			    	<form class="form-search" action="calhas.php" method="get" name="search">
-			    		<input class="busca" type="search" name="busca" value="{$postBusca}" placeholder="Digite o modelo...">
+			    		<input autocomplete="off" id="buscaValorMobile" class="busca" type="search" name="busca" value="{$postBusca}" placeholder="Digite o modelo...">
+			    		<div  id="carrega-busca-mobile" class="carrega-busca"></div>
 			    		<input class="buscar" type="submit" value="">
 			    	</form>
 			    </div>
@@ -91,7 +92,8 @@
 		    </div>
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
 		    	<form class="form-search" action="calhas.php" method="get" name="search">
-		    		<input class="busca" type="search" name="busca" value="{$postBusca}" placeholder="Digite o modelo...">
+		    		<input class="busca" id="buscaValor" type="search" name="busca" value="{$postBusca}" autocomplete="off" placeholder="Digite o modelo...">
+		    		<div  id="carrega-busca" class="carrega-busca"></div>
 		    		<input class="buscar" type="submit" value="">
 		    	</form>
 		    </div>

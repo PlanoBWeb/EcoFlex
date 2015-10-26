@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 17:49:21
+<?php /* Smarty version 2.6.12, created on 2015-10-26 11:06:26
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -93,7 +93,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                         <?php endif; ?>
-                                        <p class="txt-produto-home"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
+                                        <p class="txt-produto-home txt-produto-titulo titulo-valor-busca"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
                                         <a href="calha.php?id=<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['id']; ?>
 " class="btn-default" title="Saiba mais <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>

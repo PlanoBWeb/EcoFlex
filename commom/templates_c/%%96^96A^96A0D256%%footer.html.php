@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 16:52:23
+<?php /* Smarty version 2.6.12, created on 2015-10-26 13:17:24
          compiled from inc/footer.html */ ?>
 		<footer class="rodape">
 			<article class="bloco-rodape">
@@ -143,6 +143,84 @@
                         window.location.href = "calhas.php?idMod="+modeloMob;    
                     }
                 }
+            });
+
+            // Ajax Busca Desktop
+            $(document).ready(function(){
+                $("#buscaValor").keyup(function(){
+                    var valorBusca = $(\'#buscaValor\').val();
+                    var min_length = 0;
+                    var contaValor = $(\'#buscaValor\').val().length;
+
+                    if (contaValor != min_length) {
+
+                        $.ajax({
+                        type: "GET",
+                        url: "calhas.php",
+                        // data:\'busca=\'+$(this).val(),
+                        data: {busca: valorBusca, buscaAjax: "buscaAjax"},
+                  
+                            success: function(data){
+                                $("#carrega-busca").show();
+                                $("#carrega-busca").html(data);
+                                $("#buscaValor").css("background","#FFF");
+                            }
+                        });
+                    }else{
+                          $(\'#carrega-busca\').hide();
+                    }
+                });
+            });
+
+            $(\'#carrega-busca\').on(\'click\',\'.selectProduto\', function(){
+                var valorTxtBusca = $(this).text();
+
+                $("#buscaValor").val(valorTxtBusca);
+                $("#carrega-busca").hide();
+                
+            });
+            // Ajax Busca Desktop
+
+
+            // Ajax Busca Mobile
+            $(document).ready(function(){
+                $("#buscaValorMobile").keyup(function(){
+                    var valorBusca = $(\'#buscaValorMobile\').val();
+                    var min_length = 0;
+                    var contaValor = $(\'#buscaValorMobile\').val().length;
+
+                    if (contaValor != min_length) {
+
+                        $.ajax({
+                        type: "GET",
+                        url: "calhas.php",
+                        // data:\'busca=\'+$(this).val(),
+                        data: {busca: valorBusca, buscaAjax: "buscaAjax"},
+                  
+                            success: function(data){
+                                $("#carrega-busca-mobile").show();
+                                $("#carrega-busca-mobile").html(data);
+                                $("#buscaValorMobile").css("background","#FFF");
+                            }
+                        });
+                    }else{
+                          $(\'#carrega-busca-mobile\').hide();
+                    }
+                });
+            });
+
+            $(\'#carrega-busca-mobile\').on(\'click\',\'.selectProduto\', function(){
+                var valorTxtBusca = $(this).text();
+
+                $("#buscaValorMobile").val(valorTxtBusca);
+                $("#carrega-busca-mobile").hide();
+                
+            });
+            // Ajax Busca Mobile
+
+            $(\'html\').on(\'click\',\'body\', function(){
+                $("#carrega-busca-mobile").hide();
+                $("#carrega-busca").hide();
             });
         </script>
     '; ?>

@@ -48,6 +48,17 @@
 		if($parametro['idMarca'] || $_GET['busca']){
 			$retornoPag = $class->Pesquisar($parametro, null, null);	
 			$retorno 	= $class->Pesquisar($parametro, $totalPorPagina, $_GET['p']);
+
+			if ($retorno[1]) {
+				foreach ($retorno[1] as $key) {
+					echo '
+						<ul class="carrega-busca-ajax">					    		
+							<li class="selectProduto">'.$key["descricao"].'</li>
+						</ul>
+					';
+				}	
+			}
+
 		}else{
 			$PaginaSemFiltro = array();
 			for ($i=0; $i < 60; $i++) { 
@@ -88,6 +99,8 @@
 	$smarty->assign("totalPaginas", $totalPaginas);
 	$smarty->assign("menuLateral", $retornoMenuLateral[1]);
 	$smarty->assign("dados", $retorno[1]);
-	$smarty->display($paginaRetorno.'.html');
+	if (!$_GET['buscaAjax']) {
+		$smarty->display($paginaRetorno.'.html');
+	}
 	exit;
 ?>

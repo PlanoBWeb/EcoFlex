@@ -611,6 +611,7 @@ class Calha
 					CA.id AS idCalha,
 					CA.super,
 					CA.descricao, 
+					CA.idMarca, 
 					M.titulo as tituloModelo
 				FROM
 					calha_modelo CM

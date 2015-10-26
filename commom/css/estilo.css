@@ -1104,6 +1104,10 @@ a:focus{
     border-bottom: 1px solid #ffdd00;
     margin-bottom: 20px;
 }
+
+.txt-produto-titulo{
+    height: 40px;
+}
 /*
 * Produto
 */
@@ -1464,4 +1468,27 @@ iframe{
         margin-top: 2px;
         font-size: 1.1em;
     }
+}
+
+.carrega-busca{
+    width: 248px;
+    max-height: 200px;
+    height: auto;
+    overflow: auto;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    margin-top: 33px;
+    z-index: 999;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.carrega-busca .carrega-busca-ajax{
+    display: block;
+}
+
+.carrega-busca-ajax{
+    display: none;
 }
