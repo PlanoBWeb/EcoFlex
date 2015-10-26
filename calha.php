@@ -29,6 +29,7 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
+	$LateralModeAtivo = $retorno[1][0]['idMarca'];
 
 	// Produto em destaque
 	$destaque['destaque'] = 1;
@@ -43,7 +44,7 @@
 	// echo "<pre>";
 	// print_r($retorno);
 	// die();
-	
+	$smarty->assign("LateralModeAtivo", $LateralModeAtivo);
 	$smarty->assign("breadCrumb", "Calha");
 	$smarty->assign("RetornoDestaque", $RetornoDestaque);
 	$smarty->assign("dados", $retorno[1]);

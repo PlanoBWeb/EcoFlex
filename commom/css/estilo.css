@@ -1492,3 +1492,9 @@ iframe{
 .carrega-busca-ajax{
     display: none;
 }
+
+.carrega-busca li{
+    color: #404041;
+    font-family: 'DroidSans';
+    font-size: 0.9em;
+}

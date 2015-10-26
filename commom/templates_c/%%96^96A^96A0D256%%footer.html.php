@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-26 13:17:24
+<?php /* Smarty version 2.6.12, created on 2015-10-26 14:50:57
          compiled from inc/footer.html */ ?>
 		<footer class="rodape">
 			<article class="bloco-rodape">
@@ -83,6 +83,11 @@
                     $(link).removeClass(\'menu-produto-icon\'); 
                     $(link).addClass(\'menu-produto-icon-ativo\'); 
             	}
+            });
+
+            $(\'.link-submenu-produto\').click(function(){
+                var blocoPaiLateral = $(this).parent(".submenu-produto-lateral");
+                $(blocoPaiLateral).show();
             });
  
             function enviardados()

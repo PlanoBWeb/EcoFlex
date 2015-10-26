@@ -82,6 +82,11 @@
                     $(link).addClass('menu-produto-icon-ativo'); 
             	}
             });
+
+            $('.link-submenu-produto').click(function(){
+                var blocoPaiLateral = $(this).parent(".submenu-produto-lateral");
+                $(blocoPaiLateral).show();
+            });
  
             function enviardados()
             {

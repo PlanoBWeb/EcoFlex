@@ -41,6 +41,8 @@
 			$smarty->display("mensagem.html");
 			exit();
 		}
+		$LateralModeAtivo = $retorno[1][0]['idMarca'];
+
 	}else{
 		$parametro['idMarca'] 	= $_GET['idMarca'];
 		$parametro['busca'] 	= $_GET['busca'];
@@ -90,6 +92,7 @@
 	}
 	$ultimaPaginacao = end($Numpaginas);
 
+	$smarty->assign("LateralModeAtivo", $LateralModeAtivo);
 	$smarty->assign("breadCrumb", "Calhas");
 	$smarty->assign("ultimaPaginacao", $ultimaPaginacao);
 	$smarty->assign("postBusca", $_GET['busca']);

@@ -640,6 +640,7 @@ class Calha
 			$dados[$i]['titulo'] 		= utf8_encode($rows['titulo']);
 			$dados[$i]['descricao'] 	= utf8_encode($rows['descricao']);
 			$dados[$i]['id'] 			= utf8_encode($rows['idCalha']);
+			$dados[$i]['tituloModelo'] 	= utf8_encode($rows['tituloModelo']);
 
 			$i++;
 		}

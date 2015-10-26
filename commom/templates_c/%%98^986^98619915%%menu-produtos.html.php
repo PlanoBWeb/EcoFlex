@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 17:26:56
+<?php /* Smarty version 2.6.12, created on 2015-10-26 14:55:07
          compiled from inc/menu-produtos.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/menu-produtos.html', 5, false),)), $this); ?>
@@ -41,8 +41,9 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 ">
                         <a class="link-menu-produto" href="calhas.php?idMarca=<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca']; ?>
 "><?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
+ <?php echo $this->_tpl_vars['LateralModeAtivo']; ?>
 </a>
-                    <ul class="submenu-produto-lateral" }<?php if ($this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca'] == $_GET['idMarca']): ?> style="display:block" <?php endif; ?>>
+                    <ul class="submenu-produto-lateral" <?php if ($this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca'] == $_GET['idMarca'] || $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca'] == $this->_tpl_vars['LateralModeAtivo']): ?> style="display:block" <?php endif; ?>>
                     <?php endif; ?>
                     <li class="linha-submenu-produto">
                         <a class="link-submenu-produto" href="calhas.php?idMod=<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idModelo']; ?>
