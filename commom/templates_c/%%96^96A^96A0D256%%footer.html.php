@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-04 12:41:26
+<?php /* Smarty version 2.6.12, created on 2016-01-05 12:02:18
          compiled from inc/footer.html */ ?>
 		<footer class="rodape">
 			<article class="bloco-rodape">
@@ -147,9 +147,10 @@ commom/js/funcoes.js"></script>
                 }else{
                     if(retornoExiste == 0){
                         var modeloMob = modeloMob.replace(\'_m\', \'\');
-                        window.location.href = "calhas.php?idMarca="+modeloMob;
+                        // window.location.href = "calhas.php?idMarca="+modeloMob;
+                        window.location.href = modeloMob;
                     }else{
-                        window.location.href = "calhas.php?idMod="+modeloMob;    
+                        window.location.href = modeloMob;    
                     }
                 }
             });
@@ -160,12 +161,13 @@ commom/js/funcoes.js"></script>
                     var valorBusca = $(\'#buscaValor\').val();
                     var min_length = 0;
                     var contaValor = $(\'#buscaValor\').val().length;
+                    var urlAction = $(\'.urlAction\').val();  
 
                     if (contaValor != min_length) {
 
                         $.ajax({
-                        type: "GET",
-                        url: "calhas.php",
+                        type: "POST",
+                        url: urlAction,
                         // data:\'busca=\'+$(this).val(),
                         data: {busca: valorBusca, buscaAjax: "buscaAjax"},
                   
@@ -197,12 +199,13 @@ commom/js/funcoes.js"></script>
                     var valorBusca = $(\'#buscaValorMobile\').val();
                     var min_length = 0;
                     var contaValor = $(\'#buscaValorMobile\').val().length;
+                    var urlAction = $(\'.urlAction\').val();  
 
                     if (contaValor != min_length) {
 
                         $.ajax({
-                        type: "GET",
-                        url: "calhas.php",
+                        type: "POST",
+                        url: urlAction,
                         // data:\'busca=\'+$(this).val(),
                         data: {busca: valorBusca, buscaAjax: "buscaAjax"},
                   

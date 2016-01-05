@@ -23,18 +23,10 @@
 	if( $retornoMenuLateral[0] )
 	{
 		$smarty->assign("mensagem", $retornoMenuLateral[1]);
-		$smarty->assign("redir", $paginaRetorno.".php");
+		$smarty->assign("redir", $paginaRetorno);
 		$smarty->display("mensagem.html");
 		exit();
 	}
-
-	// echo "<pre>";
-	// print_r($retornoMenuLateral);
-	// die();
-
-	// echo "<pre>";
-	// print_r($retornoMenuLateral);
-	// die();
 	// Traz os modelos para o menu lateral
 
 	// Busca
@@ -45,18 +37,19 @@
 	// Busca
 
 	$totalPorPagina = 6;
-	$_GET['p'] = (!$_GET['p'] ? 1 : $_GET['p']);
+	$_POST['p'] = (!$_POST['p'] ? 1 : $_POST['p']);
+
 	//  Fim Paginação
 
 	if($url[2]){
 		// $url[1] == "modelo"
-		$parametro = $url[2];
+		$parametro 	= $url[2];
 		$retornoPag = $class->PesquisarCalhasModelo($parametro, null, null);
-		$retorno 	= $class->PesquisarCalhasModelo($parametro, $totalPorPagina, $_GET['p']);
+		$retorno 	= $class->PesquisarCalhasModelo($parametro, $totalPorPagina, $_POST['p']);
 		if( $retorno[0] )
 		{
 			$smarty->assign("mensagem", $retorno[1]);
-			$smarty->assign("redir", $paginaRetorno.".php");
+			$smarty->assign("redir", $paginaRetorno);
 			$smarty->display("mensagem.html");
 			exit();
 		}
@@ -64,11 +57,13 @@
 
 	}else{
 		$parametro['idMarca'] 	= $url[1];
-		$parametro['busca'] 	= $_GET['busca'];
-
-		if($parametro['idMarca'] || $_GET['busca']){
+		$parametro['busca'] 	= $_POST['busca'];
+// echo "<pre>";
+// print_r($_POST);
+// die();
+		if($parametro['idMarca'] || $_POST['busca']){
 			$retornoPag = $class->Pesquisar($parametro, null, null);	
-			$retorno 	= $class->Pesquisar($parametro, $totalPorPagina, $_GET['p']);
+			$retorno 	= $class->Pesquisar($parametro, $totalPorPagina, $_POST['p']);
 
 			if ($retorno[1]) {
 				foreach ($retorno[1] as $key) {
@@ -79,22 +74,19 @@
 					';
 				}	
 			}
-	// echo "<pre>";
-	// print_r($retornoMenuLateral);
-	// die();
 		}else{
 			$PaginaSemFiltro = array();
 			for ($i=0; $i < 60; $i++) { 
 				$PaginaSemFiltro[$i] = $i;
 			}
 			$retornoPag[1] 	= $PaginaSemFiltro;
-			$retorno 		= $class->Pesquisar($parametro, $totalPorPagina, $_GET['p']);	
+			$retorno 		= $class->Pesquisar($parametro, $totalPorPagina, $_POST['p']);	
 		}
 		
 		if( $retorno[0] )
 		{
 			$smarty->assign("mensagem", $retorno[1]);
-			$smarty->assign("redir", $paginaRetorno.".php");
+			$smarty->assign("redir", $paginaRetorno);
 			$smarty->display("mensagem.html");
 			exit();
 		}
@@ -112,23 +104,22 @@
 		}
 	}
 	$ultimaPaginacao = end($Numpaginas);
-	// echo "<pre>";
-	// print_r($retorno[1]);
-	// die();
+
 	// $smarty->assign("id", $url[1]);
+	$smarty->assign("numPagina", $_POST['p']);
 	$smarty->assign("url", $url);
 	$smarty->assign("URL", URL);
 	$smarty->assign("LateralModeAtivo", $LateralModeAtivo);
 	$smarty->assign("breadCrumb", "Calhas");
 	$smarty->assign("ultimaPaginacao", $ultimaPaginacao);
-	$smarty->assign("postBusca", $url[1]);
-	$smarty->assign("idMod", $url[1]);
+	$smarty->assign("postBusca", $_POST['busca']);
+	$smarty->assign("idMod", $url[2]);
 	$smarty->assign("idMarca", $url[1]);
 	$smarty->assign("Numpaginas", $Numpaginas);
 	$smarty->assign("totalPaginas", $totalPaginas);
 	$smarty->assign("menuLateral", $retornoMenuLateral[1]);
 	$smarty->assign("dados", $retorno[1]);
-	if (!$_GET['buscaAjax']) {
+	if (!$_POST['buscaAjax']) {
 		$smarty->display($paginaRetorno.'.html');
 	}
 	exit;

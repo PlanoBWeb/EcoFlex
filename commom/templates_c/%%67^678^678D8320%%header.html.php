@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-04 16:06:11
+<?php /* Smarty version 2.6.12, created on 2016-01-05 11:27:02
          compiled from inc/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 36, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 37, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "inc/analyticstracking.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -26,9 +26,10 @@ commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
 	            </div>
 	            <div class="col-xs-12 search-mobile">
 			    	<form class="form-search" action="<?php echo $this->_tpl_vars['URL']; ?>
-calhas" method="get" name="search">
-			    		<input autocomplete="off" id="buscaValorMobile" class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
-" placeholder="Digite o modelo...">
+calhas" method="post" name="search">
+			    		<input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+			    		<input autocomplete="off" id="buscaValorMobile" class="busca" type="search" name="busca" value="" placeholder="Digite o modelo...">
 			    		<div  id="carrega-busca-mobile" class="carrega-busca"></div>
 			    		<input class="buscar" type="submit" value="">
 			    	</form>
@@ -165,9 +166,12 @@ calhas/<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']
 		    </div>
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
 		    	<form class="form-search" action="<?php echo $this->_tpl_vars['URL']; ?>
-calhas" method="get" name="search">
-		    		<input class="busca" id="buscaValor" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
-" autocomplete="off" placeholder="Digite o modelo...">
+calhas" method="post" name="search">
+		    		<input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+		    		<input class="busca" id="buscaValor" type="search" name="busca" value="" autocomplete="off" placeholder="Digite o modelo...">
+		    		<!-- value="<?php echo $this->_tpl_vars['postBusca']; ?>
+" -->
 		    		<div  id="carrega-busca" class="carrega-busca"></div>
 		    		<input class="buscar" type="submit" value="">
 		    	</form>

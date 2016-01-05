@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-05 10:27:15
+<?php /* Smarty version 2.6.12, created on 2016-01-05 11:36:42
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -117,19 +117,46 @@ commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                         <div class="bloco-paginacao">
                             <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
                                 <?php if ($this->_tpl_vars['idMarca']): ?>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas/<?php echo $this->_tpl_vars['idMarca']; ?>
+">
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+">
+                                        <input type="hidden" name="idMarca" value="<?php echo $this->_tpl_vars['idMarca']; ?>
+">
+                                        <input class="seta-pagin pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <!-- <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
 &idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
-" class="seta-pagin pull-left"> << </a>
+" class="seta-pagin pull-left"> << </a> -->
                                 <?php elseif ($this->_tpl_vars['postBusca']): ?>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                        <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                        <input type="hidden" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">   
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+">
+                                        <input type="hidden" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">
+                                        <input class="seta-pagin pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <!-- <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
 &busca=<?php echo $this->_tpl_vars['postBusca']; ?>
-" class="seta-pagin pull-left"> << </a>
+" class="seta-pagin pull-left"> << </a> -->
                                 <?php else: ?>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+">
+                                        <input class="seta-pagin pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <!-- <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
-" class="seta-pagin pull-left"> << </a>
+" class="seta-pagin pull-left"> << </a> -->
                                 <?php endif; ?>
 
                                 <?php unset($this->_sections['j']);
@@ -161,37 +188,94 @@ $this->_sections['j']['first']      = ($this->_sections['j']['iteration'] == 1);
 $this->_sections['j']['last']       = ($this->_sections['j']['iteration'] == $this->_sections['j']['total']);
 ?>
                                     <?php if ($this->_tpl_vars['idMarca']): ?>
-                                        <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+                                        <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas/<?php echo $this->_tpl_vars['idMarca']; ?>
+">
+                                            <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+">
+                                            <input type="hidden" name="idMarca" value="<?php echo $this->_tpl_vars['idMarca']; ?>
+">
+                                            <input class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $this->_tpl_vars['numPagina']): ?> link-paginacao-ativo <?php endif; ?>" type="submit" value=" <?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+ ">
+                                        </form>
+                                        <!-- <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
 &idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
 "><?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
-</a>
+</a> -->
                                     <?php elseif ($this->_tpl_vars['postBusca']): ?>
-                                        <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+                                        <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                            <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                            <input type="hidden" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">   
+                                            <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+">
+                                            <input type="hidden" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">
+                                            <input class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $this->_tpl_vars['numPagina']): ?> link-paginacao-ativo <?php endif; ?>" type="submit" value=" <?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+ ">
+                                        </form>
+                                        <!-- <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
 &busca=<?php echo $this->_tpl_vars['postBusca']; ?>
 "><?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
-</a>
+</a> -->
                                     <?php else: ?>
-                                        <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+                                        <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                            <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+">
+                                            <input class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $this->_tpl_vars['numPagina']): ?> link-paginacao-ativo <?php endif; ?>" type="submit" value=" <?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
+ ">
+                                        </form>
+                                        <!-- <a class="link-paginacao <?php if ($this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']] == $_GET['p']): ?> link-paginacao-ativo <?php endif; ?>" href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
 "><?php echo $this->_tpl_vars['Numpaginas'][$this->_sections['j']['index']]; ?>
-</a>
+</a> -->
                                     <?php endif; ?>
                                 <?php endfor; endif; ?>
                                 <!-- <a href="calhas.php" class="seta-pagin pull-right">  >> </a> -->
 
                                 <?php if ($this->_tpl_vars['idMarca']): ?>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas/<?php echo $this->_tpl_vars['idMarca']; ?>
+">
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+">
+                                        <input type="hidden" name="idMarca" value="<?php echo $this->_tpl_vars['idMarca']; ?>
+">
+                                        <input class="seta-pagin pull-left" type="submit" value=" >> ">
+                                    </form>
+                                    <!-- <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
 &idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
-" class="seta-pagin pull-right"> >> </a>
+" class="seta-pagin pull-right"> >> </a> -->
                                 <?php elseif ($this->_tpl_vars['postBusca']): ?>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                        <input type="hidden" class="urlAction" name="urlAction" value="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                        <input type="hidden" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">   
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+">
+                                        <input type="hidden" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
+">
+                                        <input class="seta-pagin pull-left" type="submit" value=" >> ">
+                                    </form>
+                                    <!-- <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
 &busca=<?php echo $this->_tpl_vars['postBusca']; ?>
-" class="seta-pagin pull-right"> >> </a>
+" class="seta-pagin pull-right"> >> </a> -->
                                 <?php else: ?>
-                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+                                    <form class="pull-left" method="post" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">
+                                        <input type="hidden" name="p" value="<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+">
+                                        <input class="seta-pagin pull-left" type="submit" value=" >> ">
+                                    </form>
+                                    <!-- <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
-" class="seta-pagin pull-right"> >> </a>
+" class="seta-pagin pull-right"> >> </a> -->
                                 <?php endif; ?>
                             <?php endif; ?>
                         </div>

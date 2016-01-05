@@ -1020,6 +1020,9 @@ a:focus{
     color: #404041;
     font-size: 1em;
     font-family: 'DroidSans';
+    border: none;
+    background: transparent;
+    margin-top: 4px;
 }
 
 .bloco-paginacao{
@@ -1030,8 +1033,9 @@ a:focus{
 
 .link-paginacao{
     color: #404041;
+    border: none;
     text-decoration: none;
-    padding: 5px 7px;
+    padding: 4px 5px;
     margin-right: 2px;
     margin-left: 2px;
     font-size: 0.9em;

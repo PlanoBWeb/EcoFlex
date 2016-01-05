@@ -141,9 +141,10 @@
                 }else{
                     if(retornoExiste == 0){
                         var modeloMob = modeloMob.replace('_m', '');
-                        window.location.href = "calhas.php?idMarca="+modeloMob;
+                        // window.location.href = "calhas.php?idMarca="+modeloMob;
+                        window.location.href = modeloMob;
                     }else{
-                        window.location.href = "calhas.php?idMod="+modeloMob;    
+                        window.location.href = modeloMob;    
                     }
                 }
             });
@@ -154,12 +155,13 @@
                     var valorBusca = $('#buscaValor').val();
                     var min_length = 0;
                     var contaValor = $('#buscaValor').val().length;
+                    var urlAction = $('.urlAction').val();  
 
                     if (contaValor != min_length) {
 
                         $.ajax({
-                        type: "GET",
-                        url: "calhas.php",
+                        type: "POST",
+                        url: urlAction,
                         // data:'busca='+$(this).val(),
                         data: {busca: valorBusca, buscaAjax: "buscaAjax"},
                   
@@ -191,12 +193,13 @@
                     var valorBusca = $('#buscaValorMobile').val();
                     var min_length = 0;
                     var contaValor = $('#buscaValorMobile').val().length;
+                    var urlAction = $('.urlAction').val();  
 
                     if (contaValor != min_length) {
 
                         $.ajax({
-                        type: "GET",
-                        url: "calhas.php",
+                        type: "POST",
+                        url: urlAction,
                         // data:'busca='+$(this).val(),
                         data: {busca: valorBusca, buscaAjax: "buscaAjax"},
                   

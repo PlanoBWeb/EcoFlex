@@ -119,48 +119,21 @@ function conv_data2($datahora, $tipo=1, $dataHora = true)
 
 function urlSeo($string){
 
-
-	 $a = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ"!@#$%&*()_-+={[}]/?;:.,\\\'<>';
-
-	 $b = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                              ';
-
-	 $string = utf8_decode($string);
-
-	 $string = strtr($string, utf8_decode($a), $b);
-
-	 $string = strip_tags(trim($string));
-
-
+	$a = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ"!@#$%&*()_-+={[}]/?;:.,\\\'<>';
+	$b = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                              ';
+	$string = utf8_decode($string);
+	$string = strtr($string, utf8_decode($a), $b);
+	$string = strip_tags(trim($string));
 
 	/*Agora, remove qualquer espaço em branco duplicado*/
-
 	$string = preg_replace('/\s(?=\s)/', '', $string);
 
-
-
 	/*Ssubstitui qualquer espaço em branco (não-espaço), com um espaço*/
-
 	$string = preg_replace('/[\n\r\t]/', ' ', $string);
 
-
-
 	/*Remove qualquer espaço vazio*/
-
 	$string = str_replace(" ","-",$string);
 
 	return strtolower(utf8_encode($string));
-
-
-
-
-
-}//FIM DE CONVERÇÃO DE STRING PARA URL AMIGÁVEL 
-
-
-		// $minhaString = 'Conversão da minha string';
-
-
-
-		// echo urlSEO($minhaString);
-
+} 
 ?>

@@ -14,8 +14,9 @@
 		            <a class="navbar-brand" href="{$URL}home"> <img src="{$URL}commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
 	            </div>
 	            <div class="col-xs-12 search-mobile">
-			    	<form class="form-search" action="{$URL}calhas" method="get" name="search">
-			    		<input autocomplete="off" id="buscaValorMobile" class="busca" type="search" name="busca" value="{$postBusca}" placeholder="Digite o modelo...">
+			    	<form class="form-search" action="{$URL}calhas" method="post" name="search">
+			    		<input type="hidden" class="urlAction" name="urlAction" value="{$URL}calhas">
+			    		<input autocomplete="off" id="buscaValorMobile" class="busca" type="search" name="busca" value="" placeholder="Digite o modelo...">
 			    		<div  id="carrega-busca-mobile" class="carrega-busca"></div>
 			    		<input class="buscar" type="submit" value="">
 			    	</form>
@@ -91,8 +92,10 @@
 		    	</nav>
 		    </div>
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-		    	<form class="form-search" action="{$URL}calhas" method="get" name="search">
-		    		<input class="busca" id="buscaValor" type="search" name="busca" value="{$postBusca}" autocomplete="off" placeholder="Digite o modelo...">
+		    	<form class="form-search" action="{$URL}calhas" method="post" name="search">
+		    		<input type="hidden" class="urlAction" name="urlAction" value="{$URL}calhas">
+		    		<input class="busca" id="buscaValor" type="search" name="busca" value="" autocomplete="off" placeholder="Digite o modelo...">
+		    		<!-- value="{$postBusca}" -->
 		    		<div  id="carrega-busca" class="carrega-busca"></div>
 		    		<input class="buscar" type="submit" value="">
 		    	</form>

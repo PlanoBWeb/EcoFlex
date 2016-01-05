@@ -50,10 +50,17 @@ else if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '1
 }
 else
 {
-	define("DB_HOST", '179.188.16.81');
-	define("DB_USER", 'ecoflexautomot');
+	// define("DB_HOST", '179.188.16.81');
+	// define("DB_USER", 'ecoflexautomot');
+	// define("DB_PASS", 'ec0546ex');
+	// define("DB_BASE", 'ecoflexautomot');
+	// define("PATH_SERVIDOR","E:/Home/ecoflexautomotive/Web/");
+	// define("PASTAPROJETO", "homologacao/");
+	// define("URL","http://ecoflexautomotive.com.br/homologacao/");
+	define("DB_HOST", '179.188.16.102');
+	define("DB_USER", 'ecoflexautomot1');
 	define("DB_PASS", 'ec0546ex');
-	define("DB_BASE", 'ecoflexautomot');
+	define("DB_BASE", 'ecoflexautomot1');
 	define("PATH_SERVIDOR","E:/Home/ecoflexautomotive/Web/");
 	define("PASTAPROJETO", "homologacao/");
 	define("URL","http://ecoflexautomotive.com.br/homologacao/");

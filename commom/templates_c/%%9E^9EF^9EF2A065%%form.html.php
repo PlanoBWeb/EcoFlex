@@ -1,7 +1,8 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-04 16:39:52
+<?php /* Smarty version 2.6.12, created on 2016-01-05 12:42:00
          compiled from inc/form.html */ ?>
-<form class="form-horizontal" method="post" name="contato" action="envia.php">
-    <input type="hidden" name="pagina" value="<?php echo $this->_tpl_vars['pagina']; ?>
+<form class="form-horizontal" method="post" name="contato" action="<?php echo $this->_tpl_vars['URL']; ?>
+envia">
+    <input type="hidden" name="pagina" value="<?php echo $this->_tpl_vars['url'][0]; ?>
 ">
     <input type="hidden" name="cod" value="<?php echo $this->_tpl_vars['dados'][0]['codigo']; ?>
 ">

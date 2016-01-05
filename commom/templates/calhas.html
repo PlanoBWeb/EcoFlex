@@ -62,30 +62,78 @@
                         <div class="bloco-paginacao">
                             {if $totalPaginas > 1}
                                 {if $idMarca}
-                                    <a href="{$URL}calhas.php?p={$Numpaginas[0]}&idMarca={$idMarca}" class="seta-pagin pull-left"> << </a>
+                                    <form class="pull-left" method="post" action="{$URL}calhas/{$idMarca}">
+                                        <input type="hidden" name="p" value="{$Numpaginas[0]}">
+                                        <input type="hidden" name="idMarca" value="{$idMarca}">
+                                        <input class="seta-pagin pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <!-- <a href="{$URL}calhas.php?p={$Numpaginas[0]}&idMarca={$idMarca}" class="seta-pagin pull-left"> << </a> -->
                                 {elseif $postBusca}
-                                    <a href="{$URL}calhas.php?p={$Numpaginas[0]}&busca={$postBusca}" class="seta-pagin pull-left"> << </a>
+                                    <form class="pull-left" method="post" action="{$URL}calhas">
+                                        <input type="hidden" class="urlAction" name="urlAction" value="{$URL}calhas">
+                                        <input type="hidden" name="busca" value="{$postBusca}">   
+                                        <input type="hidden" name="p" value="{$Numpaginas[0]}">
+                                        <input type="hidden" name="busca" value="{$postBusca}">
+                                        <input class="seta-pagin pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <!-- <a href="{$URL}calhas.php?p={$Numpaginas[0]}&busca={$postBusca}" class="seta-pagin pull-left"> << </a> -->
                                 {else}
-                                    <a href="{$URL}calhas.php?p={$Numpaginas[0]}" class="seta-pagin pull-left"> << </a>
+                                    <form class="pull-left" method="post" action="{$URL}calhas">
+                                        <input type="hidden" name="p" value="{$Numpaginas[0]}">
+                                        <input class="seta-pagin pull-left" type="submit" value=" << ">
+                                    </form>
+                                    <!-- <a href="{$URL}calhas.php?p={$Numpaginas[0]}" class="seta-pagin pull-left"> << </a> -->
                                 {/if}
 
                                 {section start=1 name=j loop=$Numpaginas}
                                     {if $idMarca}
-                                        <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&idMarca={$idMarca}">{$Numpaginas[j]}</a>
+                                        <form class="pull-left" method="post" action="{$URL}calhas/{$idMarca}">
+                                            <input type="hidden" name="p" value="{$Numpaginas[j]}">
+                                            <input type="hidden" name="idMarca" value="{$idMarca}">
+                                            <input class="link-paginacao {if $Numpaginas[j] == $numPagina} link-paginacao-ativo {/if}" type="submit" value=" {$Numpaginas[j]} ">
+                                        </form>
+                                        <!-- <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&idMarca={$idMarca}">{$Numpaginas[j]}</a> -->
                                     {elseif $postBusca}
-                                        <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&busca={$postBusca}">{$Numpaginas[j]}</a>
+                                        <form class="pull-left" method="post" action="{$URL}calhas">
+                                            <input type="hidden" class="urlAction" name="urlAction" value="{$URL}calhas">
+                                            <input type="hidden" name="busca" value="{$postBusca}">   
+                                            <input type="hidden" name="p" value="{$Numpaginas[j]}">
+                                            <input type="hidden" name="busca" value="{$postBusca}">
+                                            <input class="link-paginacao {if $Numpaginas[j] == $numPagina} link-paginacao-ativo {/if}" type="submit" value=" {$Numpaginas[j]} ">
+                                        </form>
+                                        <!-- <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}&busca={$postBusca}">{$Numpaginas[j]}</a> -->
                                     {else}
-                                        <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}">{$Numpaginas[j]}</a>
+                                        <form class="pull-left" method="post" action="{$URL}calhas">
+                                            <input type="hidden" name="p" value="{$Numpaginas[j]}">
+                                            <input class="link-paginacao {if $Numpaginas[j] == $numPagina} link-paginacao-ativo {/if}" type="submit" value=" {$Numpaginas[j]} ">
+                                        </form>
+                                        <!-- <a class="link-paginacao {if $Numpaginas[j] == $smarty.get.p} link-paginacao-ativo {/if}" href="calhas.php?p={$Numpaginas[j]}">{$Numpaginas[j]}</a> -->
                                     {/if}
                                 {/section}
                                 <!-- <a href="calhas.php" class="seta-pagin pull-right">  >> </a> -->
 
                                 {if $idMarca}
-                                    <a href="{$URL}calhas.php?p={$ultimaPaginacao}&idMarca={$idMarca}" class="seta-pagin pull-right"> >> </a>
+                                    <form class="pull-left" method="post" action="{$URL}calhas/{$idMarca}">
+                                        <input type="hidden" name="p" value="{$ultimaPaginacao}">
+                                        <input type="hidden" name="idMarca" value="{$idMarca}">
+                                        <input class="seta-pagin pull-left" type="submit" value=" >> ">
+                                    </form>
+                                    <!-- <a href="{$URL}calhas.php?p={$ultimaPaginacao}&idMarca={$idMarca}" class="seta-pagin pull-right"> >> </a> -->
                                 {elseif $postBusca}
-                                    <a href="{$URL}calhas.php?p={$ultimaPaginacao}&busca={$postBusca}" class="seta-pagin pull-right"> >> </a>
+                                    <form class="pull-left" method="post" action="{$URL}calhas">
+                                        <input type="hidden" class="urlAction" name="urlAction" value="{$URL}calhas">
+                                        <input type="hidden" name="busca" value="{$postBusca}">   
+                                        <input type="hidden" name="p" value="{$ultimaPaginacao}">
+                                        <input type="hidden" name="busca" value="{$postBusca}">
+                                        <input class="seta-pagin pull-left" type="submit" value=" >> ">
+                                    </form>
+                                    <!-- <a href="{$URL}calhas.php?p={$ultimaPaginacao}&busca={$postBusca}" class="seta-pagin pull-right"> >> </a> -->
                                 {else}
-                                    <a href="{$URL}calhas.php?p={$ultimaPaginacao}" class="seta-pagin pull-right"> >> </a>
+                                    <form class="pull-left" method="post" action="{$URL}calhas">
+                                        <input type="hidden" name="p" value="{$ultimaPaginacao}">
+                                        <input class="seta-pagin pull-left" type="submit" value=" >> ">
+                                    </form>
+                                    <!-- <a href="{$URL}calhas.php?p={$ultimaPaginacao}" class="seta-pagin pull-right"> >> </a> -->
                                 {/if}
                             {/if}
                         </div>

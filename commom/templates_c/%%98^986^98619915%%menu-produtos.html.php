@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-04 17:51:57
+<?php /* Smarty version 2.6.12, created on 2016-01-05 11:58:55
          compiled from inc/menu-produtos.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/menu-produtos.html', 5, false),)), $this); ?>
@@ -91,11 +91,14 @@ $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?>
             <?php if ($this->_tpl_vars['nmTipo'] <> $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']): ?>
-                <option class="marca-mob" <?php if ($this->_tpl_vars['idMarca'] == $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca']): ?> selected <?php endif; ?> value="_m<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca']; ?>
+                <option class="marca-mob" <?php if ($this->_tpl_vars['idMarca'] == $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca']): ?> selected <?php endif; ?> value="_m<?php echo $this->_tpl_vars['URL']; ?>
+calhas/<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 "><?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
 </option>
             <?php endif; ?>
-            <option class="select-modelo-mob" <?php if ($this->_tpl_vars['idMod'] == $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idModelo']): ?> selected <?php endif; ?> value="<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idModelo']; ?>
+            <option class="select-modelo-mob" <?php if ($this->_tpl_vars['idMod'] == $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idModelo']): ?> selected <?php endif; ?> value="<?php echo $this->_tpl_vars['URL']; ?>
+calhas/<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+/<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['urlAmigavelmod']; ?>
 ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['modelo']; ?>
 </option>
             <?php $this->assign('nmTipo', $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']); ?>
