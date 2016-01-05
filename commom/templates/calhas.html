@@ -7,9 +7,9 @@
     <title>Trabalhamos com diversas marcas de carros.</title>
     <meta name="robots" content="index, follow">
     <meta name="description" content="Calhas de chuva automotivas de diversas marcas como Nissan, Volkswagen, Hyundai, Citroen, Toyota" />
-    <link href="commom/img/icon-tab.png" rel="icon">
-    <link href="commom/css/bootstrap.min.css" rel="stylesheet">
-    <link href="commom/css/estilo.css" rel="stylesheet">
+    <link href="{$URL}commom/img/icon-tab.png" rel="icon">
+    <link href="{$URL}commom/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{$URL}commom/css/estilo.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
     <div class="container-fluid pd-none">
         {include file="inc/header.html"}
         <div class="row hidden-xs">
-            <img class="img-banner-interna" src="commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
+            <img class="img-banner-interna" src="{$URL}commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
             <h1 class="titulo-interna">calhas automotivas</h1>
         </div>
         {include file="inc/bradcrumb.html"}
@@ -46,13 +46,13 @@
                                     {/if}
                                     <div class="bloco-produto-home">
                                         {if $dados[i].caminhoImagem}
-                                            <img src="{$dados[i].caminhoImagem}" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
+                                            <img src="{$URL}{$dados[i].caminhoImagem}" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
                                         {else}
-                                            <img src="commom/img/sem-foto.jpg" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
+                                            <img src="{$URL}commom/img/sem-foto.jpg" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
                                         {/if}
                                         <p class="txt-produto-home txt-produto-titulo titulo-valor-busca">{$dados[i].descricao}</p>
-                                        <a href="calha.php?id={$dados[i].id}" class="btn-default" title="Saiba mais {$dados[i].descricao}">
-                                            <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                        <a href="{$URL}calha/{if $url[1]}{$url[1]}/{/if}{if $url[2]}{$url[2]}/{/if}{$dados[i].urlAmigavel}" class="btn-default" title="Saiba mais {$dados[i].descricao}">
+                                            <img src="{$URL}commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                             saiba mais
                                         </a>
                                     </div>
@@ -62,11 +62,11 @@
                         <div class="bloco-paginacao">
                             {if $totalPaginas > 1}
                                 {if $idMarca}
-                                    <a href="calhas.php?p={$Numpaginas[0]}&idMarca={$idMarca}" class="seta-pagin pull-left"> << </a>
+                                    <a href="{$URL}calhas.php?p={$Numpaginas[0]}&idMarca={$idMarca}" class="seta-pagin pull-left"> << </a>
                                 {elseif $postBusca}
-                                    <a href="calhas.php?p={$Numpaginas[0]}&busca={$postBusca}" class="seta-pagin pull-left"> << </a>
+                                    <a href="{$URL}calhas.php?p={$Numpaginas[0]}&busca={$postBusca}" class="seta-pagin pull-left"> << </a>
                                 {else}
-                                    <a href="calhas.php?p={$Numpaginas[0]}" class="seta-pagin pull-left"> << </a>
+                                    <a href="{$URL}calhas.php?p={$Numpaginas[0]}" class="seta-pagin pull-left"> << </a>
                                 {/if}
 
                                 {section start=1 name=j loop=$Numpaginas}
@@ -81,11 +81,11 @@
                                 <!-- <a href="calhas.php" class="seta-pagin pull-right">  >> </a> -->
 
                                 {if $idMarca}
-                                    <a href="calhas.php?p={$ultimaPaginacao}&idMarca={$idMarca}" class="seta-pagin pull-right"> >> </a>
+                                    <a href="{$URL}calhas.php?p={$ultimaPaginacao}&idMarca={$idMarca}" class="seta-pagin pull-right"> >> </a>
                                 {elseif $postBusca}
-                                    <a href="calhas.php?p={$ultimaPaginacao}&busca={$postBusca}" class="seta-pagin pull-right"> >> </a>
+                                    <a href="{$URL}calhas.php?p={$ultimaPaginacao}&busca={$postBusca}" class="seta-pagin pull-right"> >> </a>
                                 {else}
-                                    <a href="calhas.php?p={$ultimaPaginacao}" class="seta-pagin pull-right"> >> </a>
+                                    <a href="{$URL}calhas.php?p={$ultimaPaginacao}" class="seta-pagin pull-right"> >> </a>
                                 {/if}
                             {/if}
                         </div>

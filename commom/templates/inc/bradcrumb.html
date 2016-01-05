@@ -1,27 +1,27 @@
 <div class="row">
     <div class="breadcrumb">
         <ul class="encapsula-breadcrumb">
-            <li><a href="index.php">HOME / </a></li>
-            
-            {if $pagina == "calha.php"}
-                <li><a href="calhas.php">CALHAS / </a></li>
-                <li><a href="calhas.php?idMarca={$dados[0].idMarca}">{$dados[0].tituloMarca} / </a></li>
+            <li><a href="{$URL}home">HOME / </a></li>
+            <!-- <li><a href="{$URL}calhas.php?idMarca={$dados[0].idMarca}">{$dados[0].tituloMarca} / </a></li> -->
+            {if $url[0] == "calha"}
+                <li><a href="{$URL}calhas">CALHAS / </a></li>
+                <li><a href="{$URL}calhas/{$dados[0].idMarca}">{$dados[0].tituloMarca} / </a></li>
+                {if $url[3]}
+                    <li><a href="{$URL}calhas/{$dados[0].idMarca}/{$url[2]}">{$dados[0].nmModelo} / </a></li>
+                {/if}
                 <li class="active">{$dados[0].descricao}</li>
             {else}
-                {if $idMarca}
-                    <li><a href="calhas.php">CALHAS / </a></li>
+                {if $url[2]}
+                    <li><a href="{$URL}calhas">CALHAS / </a></li>
+                    <li><a href="{$URL}calhas/{$dados[0].idMarca}">{$dados[0].idMarca} / </a></li>
+                    <li class="active">{$dados[0].tituloModelo} </li>
+                {elseif $url[1]}
+                    <li><a href="{$URL}calhas">CALHAS / </a></li>
                     <li class="active">{$dados[0].nmMarca}</li>
-                {elseif $idMod}
-                    <li><a href="calhas.php">CALHAS / </a></li>
-                    <li class="active">{$dados[0].tituloModelo}</li>
-                {elseif $postBusca}
-                    <li><a href="calhas.php">CALHAS / </a></li>
-                    <li class="active">{$postBusca}</li>
                 {else}
                     <li class="active">{$breadCrumb}</li>
                 {/if}
             {/if}
-            <!-- <li class="active">{$pagina}</li> -->
         </ul>
     </div>
 </div>

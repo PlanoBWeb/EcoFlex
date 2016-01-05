@@ -263,9 +263,11 @@ class Calha
 		$retorno[1] = "Alteração feita com sucesso!";
 		return $retorno;
 	}
+
 	
 	function Pesquisar($post, $totalPorPagina, $pagina)
 	{
+
 		$query = "";
 
 		$sqlLimit = "";
@@ -300,11 +302,12 @@ class Calha
 	
 		$sql = "SELECT
 					C.*,
-					M.titulo AS nmMarca
+					M.titulo AS nmMarca,
+					M.urlAmigavel AS urlAmigavelMarca
 				FROM  
 					" . $this->entidade . " C
 				INNER JOIN marca M
-					ON M.id = C.idMarca
+					ON M.urlAmigavel = C.idMarca
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY
@@ -325,10 +328,15 @@ class Calha
 			$dados[$i] 					= $rows;
 			$dados[$i]['codigo'] 		= utf8_encode($rows['codigo']);
 			$dados[$i]['descricao'] 	= utf8_encode($rows['descricao']);
+			//$dados[$i]['urlAmigavel'] 	= utf8_encode(urlSeo($rows['descricao']));
 			$dados[$i]['descricaoBR'] 	= utf8_encode(nl2br($rows['descricao']));
 
 			$i++;
 		}
+
+		// echo "<pre>";
+		// print_r($dados);
+		// die();
 		
 		$retorno[0] = 0;
 		$retorno[1] = $dados;
@@ -489,7 +497,9 @@ class Calha
 					Ca.id AS idCalha,
 					CM.idModelo AS idModelo,
 					Mo.titulo AS modelo,
+					Mo.urlAmigavel AS urlAmigavelmod,
 					Ma.id AS idMarca,
+					Ma.urlAmigavel,
 					Ma.caminhoImagem,
 					Ma.titulo AS marca
 				FROM
@@ -497,7 +507,7 @@ class Calha
 				INNER JOIN
 					calha_modelo CM ON CM.idCalha = Ca.id
 				INNER JOIN
-					marca Ma ON Ma.id = Ca.idMarca
+					marca Ma ON Ma.urlAmigavel = Ca.idMarca
 				INNER JOIN
 					modelo Mo ON Mo.id = CM.idModelo
 				GROUP BY
@@ -600,7 +610,8 @@ class Calha
 		}
 
 		if($post){
-			$query .= " AND CM.idModelo = '".$post."' ";
+			// $query .= " AND CM.idModelo = '".$post."' ";
+			$query .= " AND M.urlAmigavel = '".$post."' ";
 		}
 		
 		$retorno = array();
@@ -610,6 +621,7 @@ class Calha
 					CM.idModelo AS idModelo,
 					CA.id AS idCalha,
 					CA.super,
+					CA.urlAmigavel,
 					CA.descricao, 
 					CA.idMarca, 
 					M.titulo as tituloModelo
@@ -656,7 +668,7 @@ class Calha
 
 		if($post['id'])
 		{
-			$query .= " AND C.id = '".$post['id']."' ";
+			$query .= " AND C.urlAmigavel = '".$post['id']."' ";
 		}
 		
 		$retorno = array();
@@ -699,6 +711,26 @@ class Calha
 
 			$i++;
 		}
+
+		$retorno[0] = 0;
+		$retorno[1] = $dados;
+		return $retorno;
+	}
+
+
+	function calhaaa(){
+		$sql = "Select * From calha";
+		$result = mysql_query($sql);
+		while( $rows = mysql_fetch_array($result) )
+		{
+			$dados[$i] 					= $rows;
+			$dados[$i]['url'] 		= utf8_encode(urlSeo($rows['titulo']));
+			$i++;
+		}
+
+		// echo "<pre>";
+		// print_r($dados);
+		// die();
 
 		$retorno[0] = 0;
 		$retorno[1] = $dados;

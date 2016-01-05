@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-19 17:23:45
+<?php /* Smarty version 2.6.12, created on 2015-11-12 08:23:40
          compiled from obrigado-fale-conosco.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -28,8 +28,13 @@ unset($_smarty_tpl_vars);
  ?>
         <div class="row hidden-xs">
             <img class="img-banner-interna" src="commom/img/banner-fale-conosco.jpg" alt="fale conosco" title="fale conosco">
-            <h2 class="titulo-interna">fale conosco</h2>
+            <h2 class="titulo-interna">contato</h2>
         </div>
+        <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "inc/bradcrumb.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
         <section class="conteudo">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8">
@@ -43,7 +48,7 @@ unset($_smarty_tpl_vars);
                         <p class="titulo-rodape">Atendimento:</p>
                         <ul>
                             <li class="linha-rodape"><a class="link-rodape" href="tel:1100000000 ">(11) 0000-0000</a></li>
-                            <li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflex.com.br">contato@ecoflex.com.br</a></li>
+                            <li class="linha-rodape"><a class="link-rodape" href="mailto:ecoflexautomotive@uol.com.br">ecoflexautomotive@uol.com.br</a></li>
                             <li class="linha-rodape">Seg a Sáb das 9:00 às 18:30hs.</li>
                         </ul>
                     </div>

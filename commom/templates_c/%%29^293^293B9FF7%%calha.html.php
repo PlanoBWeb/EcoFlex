@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 17:21:25
+<?php /* Smarty version 2.6.12, created on 2016-01-05 10:03:54
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -12,11 +12,15 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 " />
-    <link href="commom/img/icon-tab.png" rel="icon">
-    <link href="commom/css/bootstrap.min.css" rel="stylesheet">
-    <link href="commom/css/estilo.css" rel="stylesheet">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-tab.png" rel="icon">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/estilo.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="commom/js/lightbox.js"></script>
+    <script src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/js/lightbox.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,7 +36,8 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
         <div class="row hidden-xs">
-            <img class="img-banner-interna" src="commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
+            <img class="img-banner-interna" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
             <h2 class="titulo-interna">calhas automotivas</h2>
         </div>
         <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -57,9 +62,9 @@ unset($_smarty_tpl_vars);
                                 <div class="mtlsr-images-for-lightbox">
                                     <ul>
                                         <li>
-                                            <a href="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+                                            <a href="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
 "></a>
-                                            <img src="<?php echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
+                                            <img src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['caminhoImagem']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 ">
@@ -70,7 +75,8 @@ unset($_smarty_tpl_vars);
                                     <a href="#" class="close">&#9421;</a>
                                 </div>
                             <?php else: ?>
-                                <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][0]['descricao']; ?>
 ">
                             <?php endif; ?>
@@ -80,19 +86,22 @@ unset($_smarty_tpl_vars);
 </h1>
                             <div class="col-xs-12 col-sm-7 col-md-7 pd-none">
                                 <div class="row bloco-desc-ind">
-                                    <img class="icon-desc-produto pull-left" src="commom/img/icon-cod.png" alt="icone" title="icone">
+                                    <img class="icon-desc-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-cod.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Código do produto</strong></p>
                                     <p class="txt-detalhe-produto"><?php echo $this->_tpl_vars['dados'][0]['codigo']; ?>
 </p>
                                 </div>  
                                 <div class="row bloco-desc-ind">
-                                    <img class="icon-desc-produto pull-left" src="commom/img/icon-portas.png" alt="icone" title="icone">
+                                    <img class="icon-desc-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-portas.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Portas</strong></p>
                                     <p class="txt-detalhe-produto"><?php echo $this->_tpl_vars['dados'][0]['porta']; ?>
 </p>
                                 </div>  
                                 <div class="row bloco-desc-ind">
-                                    <img class="icon-desc-produto pull-left" src="commom/img/icon-modelo.png" alt="icone" title="icone">
+                                    <img class="icon-desc-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-modelo.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Modelo</strong></p>
                                     <ul>
                                         <?php unset($this->_sections['i']);
@@ -127,23 +136,27 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                             </div>  
                             <div class="col-xs-12 col-sm-5 col-md-5 pd-none">  
                                 <div class="row bloco-desc-ind">
-                                    <img class="icon-desc-produto pull-left" src="commom/img/icon-marca.png" alt="icone" title="icone">
+                                    <img class="icon-desc-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-marca.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Marca</strong></p>
-                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="<?php echo $this->_tpl_vars['dados'][0]['imgMarca']; ?>
+                                    <p class="txt-detalhe-produto"><img class="icon-img-desc" src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][0]['imgMarca']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][0]['tituloMarca']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][0]['tituloMarca']; ?>
 "></p>
                                 </div>  
                                 <div class="row bloco-desc-ind">
-                                    <img class="icon-desc-produto pull-left" src="commom/img/icon-material.png" alt="icone" title="icone">
+                                    <img class="icon-desc-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-material.png" alt="icone" title="icone">
                                     <p class="txt-detalhe-produto"><strong>Material</strong></p>
                                     <p class="txt-detalhe-produto">100% Acrílico</p>
                                 </div>  
                                 <?php if ($this->_tpl_vars['dados'][0]['qualidade']): ?>
                                     <div class="row bloco-desc-ind">
-                                        <img class="icon-desc-produto pull-left" src="commom/img/icon-qualidade.png" alt="icone" title="icone">
+                                        <img class="icon-desc-produto pull-left" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-qualidade.png" alt="icone" title="icone">
                                         <p class="txt-detalhe-produto"><strong>Qualidade</strong></p>
-                                        <p class="txt-detalhe-produto"><img src="commom/img/3m.png" alt="3M" title="3M"></p>
+                                        <p class="txt-detalhe-produto"><img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/3m.png" alt="3M" title="3M"></p>
                                     </div> 
                                 <?php endif; ?> 
                             </div>
@@ -200,22 +213,26 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                 <?php endif; ?>
                                 <div class="bloco-produto-home">
                                     <?php if ($this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']): ?>
-                                        <img src="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+                                        <img src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                     <?php else: ?>
-                                        <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+                                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                     <?php endif; ?>
                                     <p class="txt-produto-home"><?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
-                                    <a href="calha.php?id=<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['id']; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calha/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavelMarca']; ?>
+/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default" alt="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 " title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
-                                        <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                        <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                         saiba mais
                                     </a>
                                 </div>

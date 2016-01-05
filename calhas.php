@@ -9,6 +9,15 @@
 	$smarty->assign("nome", $_SESSION['nome']);
 	$smarty->assign("pagina", $pagina);
 
+	// $teste = $class->calhaaa();
+	// // echo "<pre>";
+	// // print_r($teste);
+	// // die();
+	// foreach ($teste[1] as $key) {
+	// 	echo "Update calha Set urlAmigavel = 'calha-".$key['urlAmigavel']."' Where id = '".$key['id']."'; ";
+	// 	echo "<br>";
+	// }
+
 	// Traz os modelos para o menu lateral
 	$retornoMenuLateral = $class->PesquisarMenuLateral($_POST);
 	if( $retornoMenuLateral[0] )
@@ -18,6 +27,14 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
+
+	// echo "<pre>";
+	// print_r($retornoMenuLateral);
+	// die();
+
+	// echo "<pre>";
+	// print_r($retornoMenuLateral);
+	// die();
 	// Traz os modelos para o menu lateral
 
 	// Busca
@@ -31,7 +48,9 @@
 	$_GET['p'] = (!$_GET['p'] ? 1 : $_GET['p']);
 	//  Fim Paginação
 
-	if($parametro = $_GET['idMod']){
+	if($url[2]){
+		// $url[1] == "modelo"
+		$parametro = $url[2];
 		$retornoPag = $class->PesquisarCalhasModelo($parametro, null, null);
 		$retorno 	= $class->PesquisarCalhasModelo($parametro, $totalPorPagina, $_GET['p']);
 		if( $retorno[0] )
@@ -44,7 +63,7 @@
 		$LateralModeAtivo = $retorno[1][0]['idMarca'];
 
 	}else{
-		$parametro['idMarca'] 	= $_GET['idMarca'];
+		$parametro['idMarca'] 	= $url[1];
 		$parametro['busca'] 	= $_GET['busca'];
 
 		if($parametro['idMarca'] || $_GET['busca']){
@@ -60,7 +79,9 @@
 					';
 				}	
 			}
-
+	// echo "<pre>";
+	// print_r($retornoMenuLateral);
+	// die();
 		}else{
 			$PaginaSemFiltro = array();
 			for ($i=0; $i < 60; $i++) { 
@@ -91,13 +112,18 @@
 		}
 	}
 	$ultimaPaginacao = end($Numpaginas);
-
+	echo "<pre>";
+	print_r($retorno[1]);
+	die();
+	// $smarty->assign("id", $url[1]);
+	$smarty->assign("url", $url);
+	$smarty->assign("URL", URL);
 	$smarty->assign("LateralModeAtivo", $LateralModeAtivo);
 	$smarty->assign("breadCrumb", "Calhas");
 	$smarty->assign("ultimaPaginacao", $ultimaPaginacao);
-	$smarty->assign("postBusca", $_GET['busca']);
-	$smarty->assign("idMod", $_GET['idMod']);
-	$smarty->assign("idMarca", $_GET['idMarca']);
+	$smarty->assign("postBusca", $url[1]);
+	$smarty->assign("idMod", $url[1]);
+	$smarty->assign("idMarca", $url[1]);
 	$smarty->assign("Numpaginas", $Numpaginas);
 	$smarty->assign("totalPaginas", $totalPaginas);
 	$smarty->assign("menuLateral", $retornoMenuLateral[1]);

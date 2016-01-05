@@ -1,6 +1,6 @@
 <?php 
 
-	$pastaProjeto	= "/";
+	$pastaProjeto	= PASTAPROJETO;
 	$urlCompleta 	= $_SERVER['REQUEST_URI'];
 	$posInicio		= strpos($urlCompleta, $pastaProjeto);
 	$priimeiraEtapa	= substr($urlCompleta, ($posInicio+strlen($pastaProjeto)));
@@ -13,5 +13,4 @@
 	{
 		$pagina			= $priimeiraEtapa;
 	}
-
 ?>

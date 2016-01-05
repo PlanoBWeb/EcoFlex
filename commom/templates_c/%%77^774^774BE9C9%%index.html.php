@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 13:20:51
+<?php /* Smarty version 2.6.12, created on 2016-01-04 15:20:39
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -10,10 +10,13 @@
     <title>Ecoflex - Calha de chuva automotiva</title>
     <meta name="robots" content="index, follow">
     <meta name="description" content="Acessórios para carros, calhas de chuva automotivas é na Ecoflex. Solicite um orçamento!" />
-    <link href="commom/img/icon-tab.png" rel="icon">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-tab.png" rel="icon">
     <!-- Bootstrap -->
-    <link href="commom/css/bootstrap.min.css" rel="stylesheet">
-    <link href="commom/css/estilo.css" rel="stylesheet">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/estilo.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,9 +24,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- vitrine -->
-    <link rel="stylesheet" type="text/css" href="commom/css/vitrine/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="commom/css/vitrine/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="commom/css/vitrine/owl.transitions.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/vitrine/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/vitrine/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/vitrine/owl.transitions.css">
     <!-- vitrine -->
     <meta name="google-site-verification" content="WPU_p881zWfs52gsyB1OOEvEG6ElbcPeTIoqb1W2ghA" />
 </head>
@@ -46,7 +52,8 @@ unset($_smarty_tpl_vars);
 	                                 	<h2 class="">Calhas automotivas</h2>
 	                                 	<p class="">A Ecoflex possui uma vasta linhas de calhas automotivas para os mais diversos modelos. Utilizamos matéria prima de primeira linha, 100% acrílico, tecnologia 3M e instalação simples.</p>
 	                              	</div>
-	                              <img src="commom/img/banner.jpg" alt="banner" title="banner">
+	                              <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner.jpg" alt="banner" title="banner">
 	                           	</div>
 	                            <!-- <div class="item"><img src="commom/img/banner.jpg" alt="banner" title="banner"></div> -->
 	                        </div>
@@ -96,21 +103,24 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         <?php endif; ?>
                         <div class="bloco-produto-home">
                             <?php if ($this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']): ?>
-                                <img src="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+                                <img src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                             <?php else: ?>
-                                <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                             <?php endif; ?>
                             <p class="txt-produto-home"><?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
-                            <a href="calha.php?id=<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['id']; ?>
+                            <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calha/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default" title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
-                                <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                 saiba mais
                             </a>
                         </div>
@@ -124,38 +134,57 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                 <p class="txt-destaque-pag no-border-top">Trabalhamos com as mais diversas marcas.</p>
             </div>
             <div class="row bloco-encapsula-marcas">
-                <img src="commom/img/audi.png" alt="audi" title="audi" class="img-marca">
-                <img src="commom/img/bmw.png" alt="bmw" title="bmw" class="img-marca">
-                <img src="commom/img/chery.png" alt="chery" title="chery" class="img-marca">
-                <img src="commom/img/chevrolet.png" alt="chevrolet" title="chevrolet" class="img-marca">
-                <img src="commom/img/citroen.png" alt="citroen" title="citroen" class="img-marca">
-                <img src="commom/img/dodge.png" alt="dodge" title="dodge" class="img-marca">
-                <img src="commom/img/fiat.png" alt="fiat" title="fiat" class="img-marca">
-                <img src="commom/img/ford.png" alt="ford" title="ford" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/audi.png" alt="audi" title="audi" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/bmw.png" alt="bmw" title="bmw" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/chery.png" alt="chery" title="chery" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/chevrolet.png" alt="chevrolet" title="chevrolet" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/citroen.png" alt="citroen" title="citroen" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/dodge.png" alt="dodge" title="dodge" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/fiat.png" alt="fiat" title="fiat" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/ford.png" alt="ford" title="ford" class="img-marca">
 
-                <img src="commom/img/vwlogo.png" alt="volkswagen" title="volkswagen" class="img-marca">
-                <img src="commom/img/honda.png" alt="honda" title="honda" class="img-marca">
-                <img src="commom/img/hyundai.png" alt="hyundai" title="hyundai" class="img-marca">
-                <img src="commom/img/kia.png" alt="kia" title="kia" class="img-marca">
-                <img src="commom/img/peugeot.png" alt="peugeot" title="peugeot" class="img-marca">
-                <img src="commom/img/mercedes.png" alt="mercedes" title="mercedes" class="img-marca">
-                <img src="commom/img/nissan.png" alt="nissan" title="nissan" class="img-marca">
-                <img src="commom/img/renault.png" alt="renault" title="renault" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/vwlogo.png" alt="volkswagen" title="volkswagen" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/honda.png" alt="honda" title="honda" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/hyundai.png" alt="hyundai" title="hyundai" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/kia.png" alt="kia" title="kia" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/peugeot.png" alt="peugeot" title="peugeot" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/mercedes.png" alt="mercedes" title="mercedes" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/nissan.png" alt="nissan" title="nissan" class="img-marca">
+                <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/renault.png" alt="renault" title="renault" class="img-marca">
             </div>
             <div class="row bloco-parceiro-catalogo">
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="linha-baixo-titulo">
                         <h2 class="titulo-destaque-pag">parceria</h2>
                     </div>
-                    <a href="http://www.topmixfrisos.com.br/" target="_blank"><img class="center-block" src="commom/img/top-mix.png" alt="top mix" title="top mix"></a>
+                    <a href="http://www.topmixfrisos.com.br/" target="_blank"><img class="center-block" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/top-mix.png" alt="top mix" title="top mix"></a>
                 </div> 
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <h2 class="titulo-destaque-pag">Catálogo</h2>
                     <div class="txt-destaque-pag txt-destaque-pag-index">
-                        <img class="img-catalogo" src="commom/img/catalogo.png" alt="Catálogo" title="Catálogo">
+                        <img class="img-catalogo" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/catalogo.png" alt="Catálogo" title="Catálogo">
                         <p class="txt-catalogo">Baixe nosso catálogo de produtos.</p><br>
                         <a href="" class="btn-default btn-download" title="Saiba mais sobre esse produto">
-                            <img src="commom/img/download.png" alt="icone download" title="icone download">
+                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/download.png" alt="icone download" title="icone download">
                             Download
                         </a>
                     </div>

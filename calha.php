@@ -20,7 +20,14 @@
 	}
 
 	// Pesquisa a calha
-	$parametro['id'] = $_GET['id'];
+	if ($url[3]) {
+		$parametro['id'] = $url[3];	
+	}elseif ($url[2]) {
+		$parametro['id'] = $url[2];	
+	}else{
+		$parametro['id'] = $url[1];	
+	}
+	
 	$retorno = $class->PesquisarCalha($parametro, null, null);	
 	if( $retorno[0] )
 	{
@@ -29,6 +36,9 @@
 		$smarty->display("mensagem.html");
 		exit();
 	}
+	// echo "<pre>";
+	// print_r($retorno);
+	// die();
 	$LateralModeAtivo = $retorno[1][0]['idMarca'];
 
 	// Produto em destaque
@@ -42,8 +52,10 @@
 	}
 
 	// echo "<pre>";
-	// print_r($retorno);
+	// print_r($RetornoDestaque);
 	// die();
+	$smarty->assign("url", $url);
+	$smarty->assign("URL", URL);
 	$smarty->assign("LateralModeAtivo", $LateralModeAtivo);
 	$smarty->assign("breadCrumb", "Calha");
 	$smarty->assign("RetornoDestaque", $RetornoDestaque);

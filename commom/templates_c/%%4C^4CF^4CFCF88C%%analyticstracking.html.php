@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-23 11:46:16
+<?php /* Smarty version 2.6.12, created on 2015-11-04 16:18:28
          compiled from inc/analyticstracking.html */ ?>
 <?php echo '
 	<script>

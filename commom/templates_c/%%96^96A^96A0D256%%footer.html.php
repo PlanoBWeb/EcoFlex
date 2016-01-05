@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-26 14:50:57
+<?php /* Smarty version 2.6.12, created on 2016-01-04 12:41:26
          compiled from inc/footer.html */ ?>
 		<footer class="rodape">
 			<article class="bloco-rodape">
@@ -6,7 +6,7 @@
 					<p class="titulo-rodape">Atendimento:</p>
 					<ul>
 						<li class="linha-rodape"><a class="link-rodape" href="tel:01140430356">(11) 40430356</a></li>
-						<li class="linha-rodape"><a class="link-rodape" href="mailto:contato@ecoflexautomotive.com.br">contato@ecoflexautomotive.com.br</a></li>
+						<li class="linha-rodape"><a class="link-rodape" href="mailto:ecoflexautomotive@uol.com.br">ecoflexautomotive@uol.com.br</a></li>
 						<li class="linha-rodape">Seg a Sáb das 9:00 às 18:30hs.</li>
 					</ul>
 			    </div>
@@ -30,7 +30,8 @@
 					<p class="txt-direitos">Ecoflex Automotive - Todos os direitos reservados</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-					<a href="http://www.planobweb.com.br/" target="_blank"><img class="pull-right" src="commom/img/planobweb.jpg" alt="Desenvolvido pela PlanoBWeb" title="Desenvolvido pela PlanoBWeb"></a>
+					<a href="http://www.planobweb.com.br/" target="_blank"><img class="pull-right" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/planobweb.jpg" alt="Desenvolvido pela PlanoBWeb" title="Desenvolvido pela PlanoBWeb"></a>
 					<p class="txt-direitos pull-right">Desenvolvimento:</p>
 				</div>
 			</div>
@@ -39,10 +40,13 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="commom/js/bootstrap.min.js"></script>
+    <script src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/js/bootstrap.min.js"></script>
     <!-- vitrine -->
-    <script src="commom/js/vitrine/owl.carousel.js"></script>
-    <script src="commom/js/funcoes.js"></script>
+    <script src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/js/vitrine/owl.carousel.js"></script>
+    <script src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/js/funcoes.js"></script>
     
     <!-- vitrine -->
     <?php echo '

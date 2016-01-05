@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-26 11:06:26
+<?php /* Smarty version 2.6.12, created on 2016-01-04 17:45:06
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -9,9 +9,12 @@
     <title>Trabalhamos com diversas marcas de carros.</title>
     <meta name="robots" content="index, follow">
     <meta name="description" content="Calhas de chuva automotivas de diversas marcas como Nissan, Volkswagen, Hyundai, Citroen, Toyota" />
-    <link href="commom/img/icon-tab.png" rel="icon">
-    <link href="commom/css/bootstrap.min.css" rel="stylesheet">
-    <link href="commom/css/estilo.css" rel="stylesheet">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-tab.png" rel="icon">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $this->_tpl_vars['URL']; ?>
+commom/css/estilo.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,7 +30,8 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
         <div class="row hidden-xs">
-            <img class="img-banner-interna" src="commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
+            <img class="img-banner-interna" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/banner-produto.jpg" alt="calhas automotivas" title="calhas automotivas">
             <h1 class="titulo-interna">calhas automotivas</h1>
         </div>
         <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -84,21 +88,26 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                                     <?php endif; ?>
                                     <div class="bloco-produto-home">
                                         <?php if ($this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']): ?>
-                                            <img src="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
+                                            <img src="<?php echo $this->_tpl_vars['URL'];  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['caminhoImagem']; ?>
 " title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                         <?php else: ?>
-                                            <img src="commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
+                                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 " alt="<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                         <?php endif; ?>
                                         <p class="txt-produto-home txt-produto-titulo titulo-valor-busca"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
-                                        <a href="calha.php?id=<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['id']; ?>
+                                        <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calha/<?php if ($this->_tpl_vars['url'][1]):  echo $this->_tpl_vars['url'][1]; ?>
+/<?php endif;  if ($this->_tpl_vars['url'][2]):  echo $this->_tpl_vars['url'][2]; ?>
+/<?php endif;  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default" title="Saiba mais <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
-                                            <img src="commom/img/icon-mais.png" alt="icone mais" title="icone mais">
+                                            <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                             saiba mais
                                         </a>
                                     </div>
@@ -108,15 +117,18 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
                         <div class="bloco-paginacao">
                             <?php if ($this->_tpl_vars['totalPaginas'] > 1): ?>
                                 <?php if ($this->_tpl_vars['idMarca']): ?>
-                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
 &idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
 " class="seta-pagin pull-left"> << </a>
                                 <?php elseif ($this->_tpl_vars['postBusca']): ?>
-                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
 &busca=<?php echo $this->_tpl_vars['postBusca']; ?>
 " class="seta-pagin pull-left"> << </a>
                                 <?php else: ?>
-                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas.php?p=<?php echo $this->_tpl_vars['Numpaginas'][0]; ?>
 " class="seta-pagin pull-left"> << </a>
                                 <?php endif; ?>
 
@@ -167,15 +179,18 @@ $this->_sections['j']['last']       = ($this->_sections['j']['iteration'] == $th
                                 <!-- <a href="calhas.php" class="seta-pagin pull-right">  >> </a> -->
 
                                 <?php if ($this->_tpl_vars['idMarca']): ?>
-                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
 &idMarca=<?php echo $this->_tpl_vars['idMarca']; ?>
 " class="seta-pagin pull-right"> >> </a>
                                 <?php elseif ($this->_tpl_vars['postBusca']): ?>
-                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
 &busca=<?php echo $this->_tpl_vars['postBusca']; ?>
 " class="seta-pagin pull-right"> >> </a>
                                 <?php else: ?>
-                                    <a href="calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
+                                    <a href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas.php?p=<?php echo $this->_tpl_vars['ultimaPaginacao']; ?>
 " class="seta-pagin pull-right"> >> </a>
                                 <?php endif; ?>
                             <?php endif; ?>

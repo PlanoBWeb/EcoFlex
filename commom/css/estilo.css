@@ -483,16 +483,19 @@ a:focus{
 }
 
 .busca{
-    width: 198px;
+    /*width: 198px;*/
+    width: 268px;
     height: 34px;
     float: left;
     border: #cacccc solid 1px;
     border-radius: 5px;
     padding-left: 10px;
+    font-size: 14px;
 }
 
 .form-search{
-    width: 260px;
+    /*width: 260px;*/
+    width: 330px;
     float: right;
     margin-top: 10px;
 }
@@ -1471,7 +1474,8 @@ iframe{
 }
 
 .carrega-busca{
-    width: 248px;
+    /*width: 248px;*/
+    width: 318px;
     max-height: 200px;
     height: auto;
     overflow: auto;
@@ -1497,4 +1501,12 @@ iframe{
     color: #404041;
     font-family: 'DroidSans';
     font-size: 0.9em;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.carrega-busca li:hover{
+    color: #b5a015;
+    font-weight: bold;
 }

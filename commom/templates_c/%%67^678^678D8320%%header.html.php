@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-10-26 13:14:08
+<?php /* Smarty version 2.6.12, created on 2016-01-04 16:06:11
          compiled from inc/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'inc/header.html', 36, false),)), $this); ?>
@@ -18,11 +18,15 @@ unset($_smarty_tpl_vars);
 		                <span class="icon-bar"></span>
 		                <span class="icon-bar"></span>
 		            </button>
-		            <img class="busca-mobile" src="commom/img/lupa.png" alt="busca" title="busca">
-		            <a class="navbar-brand" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
+		            <img class="busca-mobile" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/lupa.png" alt="busca" title="busca">
+		            <a class="navbar-brand" href="<?php echo $this->_tpl_vars['URL']; ?>
+home"> <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
 	            </div>
 	            <div class="col-xs-12 search-mobile">
-			    	<form class="form-search" action="calhas.php" method="get" name="search">
+			    	<form class="form-search" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas" method="get" name="search">
 			    		<input autocomplete="off" id="buscaValorMobile" class="busca" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
 " placeholder="Digite o modelo...">
 			    		<div  id="carrega-busca-mobile" class="carrega-busca"></div>
@@ -31,14 +35,19 @@ unset($_smarty_tpl_vars);
 			    </div>
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	             	<ul class="nav navbar-nav">
-		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'index.php'): ?> link-menu-ativo <?php endif; ?>" href="index.php">Home</a></li>
+		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == '' || $this->_tpl_vars['pagina'] == 'home'): ?> link-menu-ativo <?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+home">Home</a></li>
 		                <li class="divisao-menu hidden-xs">|</li>
-		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'quem-somos.php'): ?> link-menu-ativo <?php endif; ?>" href="quem-somos.php">Quem somos</a></li>
+		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'quem-somos'): ?> link-menu-ativo <?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+quem-somos">Quem somos</a></li>
 		                <li class="divisao-menu hidden-xs">|</li>
-		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'localizacao.php'): ?> link-menu-ativo <?php endif; ?>" href="localizacao.php">Localização</a></li>
+		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'localizacao'): ?> link-menu-ativo <?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+localizacao">Localização</a></li>
 		                <li class="divisao-menu hidden-xs">|</li>
-		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'fale-conosco.php'): ?> link-menu-ativo <?php endif; ?>" href="fale-conosco.php">Fale Conosco</a></li>  
-		                <li class="linha-menu visible-xs-block <?php if ($this->_tpl_vars['pagina'] == 'calhas.php'): ?> link-menu-ativo <?php endif; ?>"><a class="link-menu" href="calhas.php">Calhas Automotivas</a></li>  
+		                <li class="linha-menu"><a class="link-menu <?php if ($this->_tpl_vars['pagina'] == 'fale-conosco'): ?> link-menu-ativo <?php endif; ?>" href="<?php echo $this->_tpl_vars['URL']; ?>
+fale-conosco">Fale Conosco</a></li>  
+		                <li class="linha-menu visible-xs-block <?php if ($this->_tpl_vars['pagina'] == 'calhas'): ?> link-menu-ativo <?php endif; ?>"><a class="link-menu" href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">Calhas Automotivas</a></li>  
 		                <!-- <li class="linha-menu visible-xs-block dropdown">
 		                	<a class="link-menu dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Marcas</a>
 			                <ul class="dropdown-menu">
@@ -83,16 +92,20 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 	</nav>
 	<div class="bloco-contato-topo">
     	<div class="col-sm-3 col-md-5">
-			<a class="link-logo hidden-xs" href="index.php"> <img src="commom/img/logo.jpg" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
+			<a class="link-logo hidden-xs" href="<?php echo $this->_tpl_vars['URL']; ?>
+home"> <img src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/logo.png" alt="EcoFlex automotive" title="EcoFlex automotive"> </a>
     	</div>
 		<div class="encapsula-contato-topo pd-none">
 	    	<div class="col-xs-12 col-sm-2 col-md-2 bloco-tel-topo pd-none">
-				<img class="icon-contato-topo" src="commom/img/icon-tel.png" alt="Icone telefone" title="Icone telefone">
+				<img class="icon-contato-topo" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-tel.png" alt="Icone telefone" title="Icone telefone">
 				<a href="tel:01140430356" class="link-contato-topo" title="11  40430356">11  40430356</a>
 	    	</div> 
 	    	<div class="col-xs-12 col-sm-3 col-md-3 bloco-email-topo pd-none">
-				<img class="icon-contato-topo" src="commom/img/icon-email.png" alt="Icone telefone" title="Icone telefone">
-				<a href="mailto:contato@ecoflexautomotive.com.br" class="link-contato-topo" title="contato@ecoflexautomotive.com.br">contato@ecoflexautomotive.com.br</a>
+				<img class="icon-contato-topo" src="<?php echo $this->_tpl_vars['URL']; ?>
+commom/img/icon-email.png" alt="Icone telefone" title="Icone telefone">
+				<a href="mailto:ecoflexautomotive@uol.com.br" class="link-contato-topo" title="ecoflexautomotive@uol.com.br">ecoflexautomotive@uol.com.br</a>
 	    	</div>
 	    	<!-- <div class="col-xs-12 col-sm-2 col-md-2 bloco-local-topo pd-none hidden-xs">
 	    		<img class="icon-contato-topo" src="commom/img/icon-local.png" alt="Icone telefone" title="Icone telefone">
@@ -105,7 +118,8 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 	    	<div class="col-xs-12 col-sm-6 col-md-6 pd-none">
 		    	<nav class="nav-linha-baixo-topo">
 		    		<ul>
-		    			<li class="linha-menu-baixo-topo <?php if ($this->_tpl_vars['pagina'] == 'calhas.php'): ?> linha-menu-baixo-topo-ativo <?php endif; ?>"><a class="link-baixo-topo" href="calhas.php">CALHAS AUTOMOTIVAS</a></li>
+		    			<li class="linha-menu-baixo-topo <?php if ($this->_tpl_vars['pagina'] == 'calhas'): ?> linha-menu-baixo-topo-ativo <?php endif; ?>"><a class="link-baixo-topo" href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas">CALHAS AUTOMOTIVAS</a></li>
 		    			<li class="linha-menu-baixo-topo">
 		    				<a class="link-baixo-topo" href="">MARCAS</a>
 		    				<ul class="drop-down">
@@ -136,7 +150,8 @@ $this->_sections['i']['first']      = ($this->_sections['i']['iteration'] == 1);
 $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $this->_sections['i']['total']);
 ?>
 										<?php if ($this->_tpl_vars['nmTipo'] <> $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']): ?>
-											<li class="linha-drop"><a class="link-drop" href="calhas.php?idMarca=<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['idMarca']; ?>
+											<li class="linha-drop"><a class="link-drop" href="<?php echo $this->_tpl_vars['URL']; ?>
+calhas/<?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 "><?php echo $this->_tpl_vars['menuLateral'][$this->_sections['i']['index']]['marca']; ?>
 </a></li>
 										<?php endif; ?>
@@ -149,7 +164,8 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 		    	</nav>
 		    </div>
 		    <div class="col-xs-12 col-sm-6 col-md-6 pd-none">
-		    	<form class="form-search" action="calhas.php" method="get" name="search">
+		    	<form class="form-search" action="<?php echo $this->_tpl_vars['URL']; ?>
+calhas" method="get" name="search">
 		    		<input class="busca" id="buscaValor" type="search" name="busca" value="<?php echo $this->_tpl_vars['postBusca']; ?>
 " autocomplete="off" placeholder="Digite o modelo...">
 		    		<div  id="carrega-busca" class="carrega-busca"></div>

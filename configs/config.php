@@ -41,6 +41,12 @@ else if( $_SERVER['SERVER_NAME'] == 'planobweb' || $_SERVER['SERVER_NAME'] == '1
 	define("DB_PASS", '');
 	define("DB_BASE", 'ecoflex');
 	define("PATH_SERVIDOR","C:/wamp/www/Clientes/EcoflexAutomotive/Web/");
+	define("PASTAPROJETO", "clientes/EcoflexAutomotive/Web/");
+	if ($_SERVER['SERVER_NAME'] == '192.168.0.105') {
+		define("URL","http://192.168.0.105/clientes/EcoflexAutomotive/Web/");
+	}else{
+		define("URL","http://planobweb/clientes/EcoflexAutomotive/Web/");
+	}
 }
 else
 {
@@ -49,6 +55,8 @@ else
 	define("DB_PASS", 'ec0546ex');
 	define("DB_BASE", 'ecoflexautomot');
 	define("PATH_SERVIDOR","E:/Home/ecoflexautomotive/Web/");
+	define("PASTAPROJETO", "homologacao/");
+	define("URL","http://ecoflexautomotive.com.br/homologacao/");
 }
 
 //Acesso ao MyAdmin

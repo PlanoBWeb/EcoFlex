@@ -20,7 +20,7 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
   $cont = "$ip\r\n";
   $cont .= "$data\r\n";
   $cont .= "$hora\r\n\r\n";
-  if ($pagina == "calha.php") {
+  if ($pagina == "calha") {
     $cont .= "Código Produto: \t$cod\r\n"; 
   }
   $cont .= "Nome: \t$nome\r\n";
@@ -34,18 +34,18 @@ if (empty($_POST['nome'])|| empty($_POST['email'])|| empty($_POST['tel']) || emp
   $headers 	.= "Content-type: text/plain; charset=UTF-8\n";
   $assunto 	.= "Ecoflex Automotive - Contato";
   $conteudo 	.= "$cont\r\n";
-  $headers 	.= "From: contato@ecoflexautomotive.com.br\n"; // remetente-empresa
-  $headers 	.= "Return-Path: contato@ecoflexautomotive.com.br\r\n"; // return-path - empresa
+  $headers 	.= "From: ecoflexautomotive@uol.com.br\n"; // remetente-empresa
+  $headers 	.= "Return-Path: ecoflexautomotive@uol.com.br\r\n"; // return-path - empresa
   $headers 	.= "Bcc: contato@planobweb.com.br\r\n"; // cópia
   $headers 	.= "Reply-To: $email\n";
-  $envio 		= mail("contato@ecoflexautomotive.com.br", $assunto,$conteudo,$headers); //enviado
+  $envio 		= mail("ecoflexautomotive@uol.com.br", $assunto,$conteudo,$headers); //enviado
   
-  if ($pagina == "localizacao.php") {
-    echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-localizacao.php'</script>";
-  }elseif ($pagina == "fale-conosco.php") {
-    echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-fale-conosco.php'</script>";
-  }elseif ($pagina == "calha.php") {
-    echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-produto.php'</script>";
+  if ($pagina == "localizacao") {
+    echo "<script>alert('Enviado com sucesso!!');location.href ='{$URL}obrigado-localizacao'</script>";
+  }elseif ($pagina == "fale-conosco") {
+    echo "<script>alert('Enviado com sucesso!!');location.href ='{$URL}obrigado-fale-conosco'</script>";
+  }elseif ($pagina == "calha") {
+    echo "<script>alert('Enviado com sucesso!!');location.href ='{$URL}obrigado-produto'</script>";
   }
 
   // echo "<script>alert('Enviado com sucesso!!');location.href ='obrigado-fale-conosco.php'</script>";
