@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-04 15:20:39
+<?php /* Smarty version 2.6.12, created on 2016-01-05 10:34:08
          compiled from index.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -116,7 +116,9 @@ commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$
                             <p class="txt-produto-home"><?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
                             <a href="<?php echo $this->_tpl_vars['URL']; ?>
-calha/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+calha/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavelMarca']; ?>
+/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavelModelo']; ?>
+/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default" title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                 <img src="<?php echo $this->_tpl_vars['URL']; ?>

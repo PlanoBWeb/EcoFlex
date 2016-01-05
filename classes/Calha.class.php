@@ -303,11 +303,19 @@ class Calha
 		$sql = "SELECT
 					C.*,
 					M.titulo AS nmMarca,
-					M.urlAmigavel AS urlAmigavelMarca
+					M.urlAmigavel AS urlAmigavelMarca,
+					CM.*,
+					MO.urlAmigavel AS urlAmigavelModelo
 				FROM  
 					" . $this->entidade . " C
 				INNER JOIN marca M
 					ON M.urlAmigavel = C.idMarca
+
+				INNER JOIN calha_modelo CM
+					ON CM.idCalha = C.id
+				INNER JOIN modelo MO
+					ON MO.id = CM.idModelo
+
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY
@@ -624,13 +632,19 @@ class Calha
 					CA.urlAmigavel,
 					CA.descricao, 
 					CA.idMarca, 
-					M.titulo as tituloModelo
+					M.titulo as tituloModelo,
+					M.urlAmigavel AS urlAmigavelModelo,
+					MA.urlAmigavel AS urlAmigavelMarca
 				FROM
 					calha_modelo CM
 				INNER JOIN
 					calha CA ON CM.idCalha = CA.id
 				INNER JOIN
 					modelo M ON CM.idModelo = M.id
+
+				INNER JOIN 
+					marca MA ON CA.idMarca = MA.urlAmigavel
+
 				WHERE
 					1 = 1 ".$query."
 				ORDER BY	

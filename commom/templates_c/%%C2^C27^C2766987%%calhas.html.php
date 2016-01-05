@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-04 17:45:06
+<?php /* Smarty version 2.6.12, created on 2016-01-05 10:27:15
          compiled from calhas.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -101,9 +101,9 @@ commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['dados'][$this->_sec
                                         <p class="txt-produto-home txt-produto-titulo titulo-valor-busca"><?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 </p>
                                         <a href="<?php echo $this->_tpl_vars['URL']; ?>
-calha/<?php if ($this->_tpl_vars['url'][1]):  echo $this->_tpl_vars['url'][1]; ?>
-/<?php endif;  if ($this->_tpl_vars['url'][2]):  echo $this->_tpl_vars['url'][2]; ?>
-/<?php endif;  echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
+calha/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavelMarca']; ?>
+/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavelModelo']; ?>
+/<?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default" title="Saiba mais <?php echo $this->_tpl_vars['dados'][$this->_sections['i']['index']]['descricao']; ?>
 ">
                                             <img src="<?php echo $this->_tpl_vars['URL']; ?>

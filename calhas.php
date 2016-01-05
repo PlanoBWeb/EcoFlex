@@ -112,9 +112,9 @@
 		}
 	}
 	$ultimaPaginacao = end($Numpaginas);
-	echo "<pre>";
-	print_r($retorno[1]);
-	die();
+	// echo "<pre>";
+	// print_r($retorno[1]);
+	// die();
 	// $smarty->assign("id", $url[1]);
 	$smarty->assign("url", $url);
 	$smarty->assign("URL", URL);

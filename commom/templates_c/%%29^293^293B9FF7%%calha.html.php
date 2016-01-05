@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2016-01-05 10:03:54
+<?php /* Smarty version 2.6.12, created on 2016-01-05 10:29:21
          compiled from calha.html */ ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -227,6 +227,7 @@ commom/img/sem-foto.jpg" title="<?php echo $this->_tpl_vars['RetornoDestaque'][$
 </p>
                                     <a href="<?php echo $this->_tpl_vars['URL']; ?>
 calha/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavelMarca']; ?>
+/<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavelModelo']; ?>
 /<?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['urlAmigavel']; ?>
 " class="btn-default" alt="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>
 " title="Saiba mais sobre <?php echo $this->_tpl_vars['RetornoDestaque'][$this->_sections['i']['index']]['descricao']; ?>

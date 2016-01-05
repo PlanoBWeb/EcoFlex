@@ -51,7 +51,7 @@
                                             <img src="{$URL}commom/img/sem-foto.jpg" title="{$dados[i].descricao}" alt="{$dados[i].descricao}">
                                         {/if}
                                         <p class="txt-produto-home txt-produto-titulo titulo-valor-busca">{$dados[i].descricao}</p>
-                                        <a href="{$URL}calha/{if $url[1]}{$url[1]}/{/if}{if $url[2]}{$url[2]}/{/if}{$dados[i].urlAmigavel}" class="btn-default" title="Saiba mais {$dados[i].descricao}">
+                                        <a href="{$URL}calha/{$dados[i].urlAmigavelMarca}/{$dados[i].urlAmigavelModelo}/{$dados[i].urlAmigavel}" class="btn-default" title="Saiba mais {$dados[i].descricao}">
                                             <img src="{$URL}commom/img/icon-mais.png" alt="icone mais" title="icone mais">
                                             saiba mais
                                         </a>
